@@ -137,7 +137,7 @@
             <div class="col-xxl-8">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h4 class="header-title">Overview</h4>
+                        <h4 class="header-title">Hotel Pool (Main)</h4>
                         <div class="dropdown">
                             <a href="#" class="dropdown-toggle drop-arrow-none card-drop"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -159,31 +159,31 @@
                     <div class="bg-light bg-opacity-50">
                         <div class="row text-center">
                             <div class="col-md-3 col-6">
-                                <p class="text-muted mt-3 mb-1">Revenue</p>
+                                <p class="text-muted mt-3 mb-1">DPD1</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
                                     <span>$29.5k</span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
-                                <p class="text-muted mt-3 mb-1">Expenses</p>
+                                <p class="text-muted mt-3 mb-1">DPD3</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-up text-danger me-1"></span>
-                                    <span>$15.07k</span>
+                                    <span>1.89</span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
-                                <p class="text-muted mt-3 mb-1">Investment</p>
+                                <p class="text-muted mt-3 mb-1">Combined CL</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-chart-infographic me-1"></span>
-                                    <span>$3.6k</span>
+                                    <span>2.03</span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
-                                <p class="text-muted mt-3 mb-1">Savings</p>
+                                <p class="text-muted mt-3 mb-1">ph</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-pig me-1"></span>
-                                    <span>$6.9k</span>
+                                    <span>7.56</span>
                                 </h4>
                             </div>
                         </div>
