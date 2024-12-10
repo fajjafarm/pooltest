@@ -1,4 +1,4 @@
-@extends('layouts.vertical',['title' => 'Dashboard'])
+@extends('layouts.vertical',['title' => 'Leisure Overview'])
 
 @section('css')
     @vite(['node_modules/flatpickr/dist/flatpickr.min.css'])
@@ -9,7 +9,7 @@
     <div class="col-12">
         <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column">
             <div class="flex-grow-1">
-                <h4 class="fs-18 fw-semibold m-0">Dashboard</h4>
+                <h4 class="fs-18 fw-semibold m-0">Leisure Overview</h4>
             </div>
             <div class="mt-3 mt-sm-0">
                 <form action="javascript:void(0);">
