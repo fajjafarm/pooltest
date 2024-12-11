@@ -17,6 +17,6 @@ use App\Http\Controllers\Controller;
 class PoolTestResultsController extends Controller {
    public function index() {
       $pooltests = DB::select('select * from pool_tests');
-      return view('index',['pooltests'=> $pooltests]);
+      return view('home',['pooltests'=> $pooltests]);
       }
 }
