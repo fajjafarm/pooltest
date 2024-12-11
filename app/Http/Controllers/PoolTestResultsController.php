@@ -16,7 +16,7 @@ use App\Http\Controllers\Controller;
 
 class PoolTestResultsController extends Controller {
    public function index() {
-      $pooltests = DB::select('select * from pool_tests');
-      return view('dashboards.index',['pooltests'=> $pooltests]);
+      $pooltests = DB::select('select * from pool_tests')->get();;
+      return view('dashboards/index',compact('pooltests'));
       }
 }
