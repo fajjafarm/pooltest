@@ -10,6 +10,6 @@ use App\Http\Controllers\Controller;
 class PoolTestResultsController extends Controller {
    public function index() {
       $pooltests = DB::select('select * from pool_tests');
-      return view('index',compact('pooltests'));
+      return view('dashboards/index',compact('pooltests'));
    }
 }
