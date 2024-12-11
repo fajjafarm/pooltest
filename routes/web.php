@@ -26,5 +26,5 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
 
 use App\Http\Controllers\PoolTestResultsController;
 
-Route::get('home','PoolTestResultsController@index');
+Route::get('dashboards/index','PoolTestResultsController@index');
         
