@@ -1,1 +1,1 @@
-Route::get('index','PoolTestResultsController@index');
+Route::get('dashboards/index','PoolTestResultsController@index');
