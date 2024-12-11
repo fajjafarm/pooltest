@@ -162,21 +162,23 @@
                                 <p class="text-muted mt-3 mb-1">DPD1</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
-                                    <span>$29.5k</span>
+                                    <span>@foreach ($pooltests as $pooltest)
+                     {{ $pooltest->dpd1 }}       
+         @endforeach</span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
                                 <p class="text-muted mt-3 mb-1">DPD3</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-up text-danger me-1"></span>
-                                    <span>1.89</span>
+                                    <span>2.09</span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
                                 <p class="text-muted mt-3 mb-1">Combined CL</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-chart-infographic me-1"></span>
-                                    <span>2.03</span>
+                                    <span>0.2</span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
