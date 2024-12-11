@@ -1,0 +1,1 @@
+Route::get('index','PoolTestResultsController@index');
