@@ -10,13 +10,13 @@ class Controller extends BaseController
     use AuthorizesRequests, ValidatesRequests;
 }
 use Illuminate\Http\Request;
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class PoolTestResultsController extends Controller {
    public function index() {
       $pooltests = DB::select('select * from pool_tests');
-      return view('home',['pooltests'=> $pooltests]);
+      return view('index',['pooltests'=> $pooltests]);
       }
 }
