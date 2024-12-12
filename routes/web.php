@@ -23,5 +23,5 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('{first}/{second}', [RoutingController::class, 'secondLevel'])->name('second');
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
 });
-Route::resource('dashboard.index', 'PoolTestResultsController');
+
         
