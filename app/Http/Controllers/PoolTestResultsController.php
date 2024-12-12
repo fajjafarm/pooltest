@@ -13,7 +13,7 @@ class sharkController extends BaseController {
         $pooltests = pooltests::all();
 
         // load the view and pass the sharks
-        return View::make('dashboard.index')
+        return View::make('dashboards.index')
             ->with('pooltests', $pooltests);
     }
 
