@@ -162,8 +162,8 @@
                                 <p class="text-muted mt-3 mb-1">DPD1</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
-                                    <span>@foreach ($pooltests as $pooltest)
-                     {{ $pooltest->dpd1 }}   
+                                    <span>@foreach ($pooltestresults as $pooltestresults)
+                     {{ $pooltestresults->dpd1 }}   
                   
          @endforeach</span>
                                 </h4>
