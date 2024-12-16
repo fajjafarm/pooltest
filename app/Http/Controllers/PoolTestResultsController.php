@@ -14,7 +14,7 @@ class PoolTestResultsController extends Controller
     public function pooltestresults()
     {
         $pooltestresults =DB::select('select * from pool_tests');
-      return view('/dashboards/index',["pool_id"=>$pooltestresults]);
+      return view('pooltests',["pool_id"=>$pooltestresults]);
  
         
     }

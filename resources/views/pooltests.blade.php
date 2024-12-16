@@ -162,7 +162,10 @@
                                 <p class="text-muted mt-3 mb-1">DPD1</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
-                                    <span>1</span>
+                                    <span>@foreach ($pooltestresults as $pooltestresult)
+                     {{ $pooltestresult->dpd1 }}   
+                  
+         @endforeach</span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
