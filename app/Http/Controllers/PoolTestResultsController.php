@@ -15,7 +15,7 @@ class PoolTestResultsController extends Controller
     {
        
     $pooltestresults =DB::select('select * from pool_tests');
-      return view('pooltests',compact(['var1','var2''varN']));
+      return view('pooltests',compact(['var1','var2','varN']));
  
         
     }
