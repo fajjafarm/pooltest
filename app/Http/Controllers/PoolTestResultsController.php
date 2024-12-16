@@ -13,9 +13,9 @@ class PoolTestResultsController extends Controller
      */
     public function pooltestresults()
     {
-        $pooltestresults ='empty';
+       // $pooltestresults ='empty';
     $pooltestresults =DB::select('select * from pool_tests');
-      return view('pooltests',compact($pooltestresults));
+      return view('pooltests',compact('pooltestresults'));
  
         
     }
