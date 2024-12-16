@@ -165,7 +165,7 @@
                                     <span>
                      {{$pooltestresults}}   
                   
-         @endforeach</span>
+         </span>
                                 </h4>
                             </div>
                             <div class="col-md-3 col-6">
