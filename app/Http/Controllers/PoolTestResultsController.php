@@ -8,10 +8,15 @@ use Illuminate\View\View;
  
 class PoolTestResultsController extends Controller
 {
-    public function index(Request $request): View
+    /**
+     * Show a list of all of the application's pol test results.
+     */
+    public function pooltestresults()
     {
-        $title = "Arran Ferry Forecast";
-        $description = "A rough guide to possible weather realted ferry disruption";
-        $assets = ['chart', 'animation'];
-        return view('pooltests', compact('title','description','assets'));}
+       // $testresults ='empty';
+    $pooltestresults =DB::select('select * from tests');
+      return view('pooltests',compact('pooltestresults'));
+ 
+        
+    }
 }
