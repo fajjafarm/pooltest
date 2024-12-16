@@ -13,8 +13,8 @@ class PoolTestResultsController extends Controller
      */
     public function pooltestresults()
     {
-        $pooltestresults =DB::select('select * from pool_tests');
-      return view('pooltests',["pool_id"=>$pooltestresults]);
+       // $pooltestresults =DB::select('select * from pool_tests');
+      return view('pooltests',['pooltestresults' => ['Balloon Fight', 'Donkey Kong', 'Excitebike']]);
  
         
     }

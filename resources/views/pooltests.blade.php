@@ -9,7 +9,7 @@
     <div class="col-12">
         <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column">
             <div class="flex-grow-1">
-                <h4 class="fs-18 fw-semibold m-0">Leisure Overview</h4>
+                <h4 class="fs-18 fw-semibold m-0">Pool Tests</h4>
             </div>
             <div class="mt-3 mt-sm-0">
                 <form action="javascript:void(0);">
@@ -162,8 +162,8 @@
                                 <p class="text-muted mt-3 mb-1">DPD1</p>
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
-                                    <span>@foreach ($pooltestresults as $pooltestresult)
-                     {{ $pooltestresult->dpd1 }}   
+                                    <span>
+                     {{ echo $pooltestresults }}   
                   
          @endforeach</span>
                                 </h4>
