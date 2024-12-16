@@ -13,8 +13,8 @@ class PoolTestResultsController extends Controller
      */
     public function pooltestresults()
     {
-        $pooltestresults ='empty';
-      return $pooltestresults = pool_tests::all();
+        $pooltestresults =DB::select('select * from pool_tests');
+      return view('/dashboards/index',["pool_id"=>$pooltestresults]);
  
         
     }
