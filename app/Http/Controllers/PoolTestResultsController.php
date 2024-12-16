@@ -13,6 +13,7 @@ class PoolTestResultsController extends Controller
      */
     public function pooltestresults()
     {
+        $pooltestresults ='empty';
       return $pooltestresults = pool_tests::all();
  
         
