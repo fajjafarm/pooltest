@@ -11,10 +11,10 @@ class PoolTestResultsController extends Controller
     /**
      * Show a list of all of the application's pol test results.
      */
-    public function index(): View
+    public function pooltestresults()
     {
-        $pooltestresults = DB::select('select * from pool_tests' );
+      return $pooltestresults = pool_tests::all();
  
-        return view('dashboards.index', ['pooltestresults' => $pooltestresults]);
+        
     }
 }
