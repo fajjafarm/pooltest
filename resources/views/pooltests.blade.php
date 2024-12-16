@@ -164,9 +164,7 @@
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
                                     <span>
                                     <h1>{{ $title }}</h1>
-@foreach ($users as $user)
-<p>{{ $user->name }}</p>
-@endforeach   
+ 
                   
          </span>
                                 </h4>
