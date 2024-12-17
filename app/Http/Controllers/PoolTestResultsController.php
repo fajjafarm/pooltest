@@ -21,10 +21,4 @@ class PoolTestResultsController extends Controller
         
     }
 }
-class TestController extends Controller
-{
-    function test(){
-        $test = 'test';
-        return view('pooltests', compact('test'));
-    }
-}
+
