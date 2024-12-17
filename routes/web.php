@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
-use App\Http\Controllers\PoolTestResults2Controller;
+use App\Http\Controllers\PoolTestResultsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +24,6 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
 });
 
-//Route::get('/pooltests', [PoolTestResults2Controller::class, 'pooltestresults' ] )->name('pooltests');
-Route::get('/pooltests', 'PoolTestResults2Controller@article');
+Route::get('/pooltests', [PoolTestResultsController::class, 'pooltestresults' ] )->name('pooltests');
+
         

@@ -163,7 +163,7 @@
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
                                     <span>
-                     {{$article}}   
+                     {{$pooltestresults}}   
                   
          </span>
                                 </h4>
