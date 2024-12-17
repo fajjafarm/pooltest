@@ -25,4 +25,5 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
 });
 
 Route::get('/pooltests', [PoolTestResultsController::class, 'pooltestresults']);
+Route::get('/pooltests', 'TestController@test');
         
