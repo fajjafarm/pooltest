@@ -8,13 +8,15 @@ use Illuminate\View\View;
  
 class PoolTestResultsController extends Controller
 {
+  $pooltestresults ='0';
+
     /**
      * Show a list of all of the application's pol test results.
      */
     public function pooltestresults()
     {
        // $testresults ='empty';
-    $pooltestresults = DB::select('select * from tests');
+    $this->$pooltestresults = DB::select('select * from tests');
       return view('pooltests',compact('pooltestresults'));
         
     }
