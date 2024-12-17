@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\PoolTestsController;
 /*
 |--------------------------------------------------------------------------
