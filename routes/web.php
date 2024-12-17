@@ -24,4 +24,4 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
 });
 
-Route::get(uri: 'pooltests', [PoolTestsController::class, 'pooltests']);
+Route::get('/pooltests', [PoolTestsController::class, 'pooltests']);
