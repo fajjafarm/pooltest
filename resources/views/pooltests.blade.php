@@ -163,7 +163,10 @@
                                 <h4 class="mb-3">
                                     <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
                                     <span>
-                     {{$pooltests}}   
+                                    @foreach ($pooltests as $pooltest)
+    This is user {{ $pooltest->dpd1 }}
+@endforeach
+                    
                   
          </span>
                                 </h4>
