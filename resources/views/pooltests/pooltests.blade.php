@@ -491,8 +491,8 @@
                                         <th scope="col" class="text-muted">DPD3</th>
                                         <th scope="col" class="text-muted">Combined CL</th>
                                         <th scope="col" class="text-muted">pH</th>
+                                        <th scope="col" class="text-muted">Temp. &deg;C</th>
                                         <th scope="col" class="text-muted">Tested By</th>
-                                        <th scope="col" class="text-muted">Due At</th>
                                         <th scope="col" class="text-muted">Tested at</th>
                                         <th scope="col" class="text-muted">Status</th>
                                     </tr>
@@ -503,21 +503,14 @@
                                         <td>
                                             <a href="#!" class="fw-medium text-reset">{{ $pooltest->id }}</a>
                                         </td>
-                                        <td>
-                                            <div class="avatar-xs d-inline-block me-1">
-                                                <span class="avatar-title bg-primary-subtle text-primary fw-semibold rounded-circle">
-                                                    A
-                                                </span>
-                                            </div>
-                                            <a href="#!" class="text-reset">{{ $pooltest->dpd1 }}</a>
-                                        </td>
+                                        <td><a href="#!" class="text-reset">{{ $pooltest->dpd1 }}</a></td>
                                         <td>{{ $pooltest->dpd3 }}</td>
                                         <td class="text-success">{{ $pooltest->ccl }}</td>
                                         <td class="text-danger">{{ $pooltest->ph }}</td>
-                                        <td>Daninio</td>
                                         <td>
-                                            <span class="align-middle">18 Apr,24 <small class="text-muted">06:22:09 pm</small></span>
+                                            <span class="align-middle">18 Apr,24 <small class="text-muted">30.8&deg;C</small></span>
                                         </td>
+                                        <td>Daninio</td>
                                         <td><span class="align-middle">18 Apr,24 <small class="text-muted">06:22:09 pm</small></span></td>
                                         <td>
                                         <span class="badge bg-success-subtle text-success p-1">Success</span>
