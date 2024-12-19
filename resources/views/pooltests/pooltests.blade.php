@@ -510,7 +510,7 @@
                                         <td class="text-danger">{{ $pooltest->water_temp }}</span>
                                         </td>
                                         <td>Daninio</td>
-                                        <td><span class="align-middle"> <small class="text-muted">{{ $pooltest->tested_at }}</small></span></td>
+                                        <td><span class="align-middle"> <small class="text-muted">{{ $pooltest->test_time }}</small></span></td>
                                         <td>
                                         <span class="badge bg-success-subtle text-success p-1">Success</span>
                                         </td>
