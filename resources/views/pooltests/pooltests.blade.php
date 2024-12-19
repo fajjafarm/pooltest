@@ -507,8 +507,7 @@
                                         <td>{{ $pooltest->dpd3 }}</td>
                                         <td class="text-success">{{ $pooltest->ccl }}</td>
                                         <td class="text-danger">{{ $pooltest->ph }}</td>
-                                        <td>
-                                            <span class="align-middle">18 Apr,24 <small class="text-muted">30.8&deg;C</small></span>
+                                        <td class="text-danger">{{ $pooltest->water_temp }}</span>
                                         </td>
                                         <td>Daninio</td>
                                         <td><span class="align-middle">18 Apr,24 <small class="text-muted">06:22:09 pm</small></span></td>
