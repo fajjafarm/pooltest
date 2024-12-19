@@ -14,7 +14,8 @@ use App\Http\Controllers\PoolTestsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
+Route::get('/dashboards/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
+
 require __DIR__ . '/auth.php';
 
 Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {

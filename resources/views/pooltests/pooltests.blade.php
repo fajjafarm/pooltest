@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => 'E-Wallet Dashboard'])
+@extends('layouts.vertical', ['title' => 'Pool Tests'])
 
 @section('css')
     @vite(['node_modules/flatpickr/dist/flatpickr.min.css'])
@@ -122,7 +122,9 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header d-flex flex-wrap align-items-center gap-2">
-                                <h4 class="header-title me-auto mb-0">Overview</h4>
+                                <h4 class="header-title me-auto mb-0">Results for pool: @foreach ($pooltests as $pooltest)
+    {{ $pooltest->pool_id }}
+@endforeach</h4>
 
                                 <a href="javascript: void(0);" class="btn btn-soft-primary">
                                     Export <i class="ti ti-file-export ms-1"></i>
@@ -145,7 +147,7 @@
                                             <p class="text-muted mt-3 mb-1">Revenue</p>
                                             <h4 class="mb-3">
                                                 <span class="ti ti-square-rounded-arrow-down text-success me-1"></span>
-                                                <span class="fw-semibold">$29.5k</span>
+                                                <span class="fw-semibold"></span>
                                             </h4>
                                         </div>
                                         <div class="col-md col-6">
