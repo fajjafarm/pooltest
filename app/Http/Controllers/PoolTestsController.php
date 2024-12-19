@@ -18,7 +18,7 @@ class PoolTestsController extends Controller
        $pooltests ='empty';
     $pooltests =  DB::table('pool_tests')->get();
     //dd($pooltests);
-      return view('dashboards/pooltests',compact('pooltests'));
+      return view('pooltests/pooltests',compact('pooltests'));
         
     }
 }
