@@ -513,15 +513,14 @@
                                         </td>
                                         <td>{{ $pooltest->dpd3 }}</td>
                                         <td class="text-success">{{ $pooltest->ccl }}</td>
-                                        <td>20 Apr,24 <small class="text-muted">10:31:23 am</small></td>
-                                        <td>Credit</td>
+                                        <td>20 Apr,24 <small class="text-muted">{{ $pooltest->ph }}</small></td>
+                                        <td>Daninio</td>
                                         <td>
-                                            <img src="/images/cards/mastercard.svg" alt="" height="24" class="me-1">
-                                            <span class="align-middle">{{ $pooltest->ph }}</span>
+                                            <span class="align-middle">18 Apr,24 <small class="text-muted">06:22:09 pm</small></span>
                                         </td>
-                                        <td><span class="badge bg-success-subtle text-success p-1">Success</span></td>
+                                        <td><span class="align-middle">18 Apr,24 <small class="text-muted">06:22:09 pm</small></span></td>
                                         <td>
-                                            <a href="javascript: void(0);" class="text-muted fs-20"> <i class="ti ti-edit"></i></a>
+                                        <span class="badge bg-success-subtle text-success p-1">Success</span>
                                         </td>
                                     </tr>@endforeach
 
