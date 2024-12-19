@@ -510,7 +510,7 @@
                                         <td class="text-danger">{{ $pooltest->water_temp }}</span>
                                         </td>
                                         <td>Daninio</td>
-                                        <td><span class="align-middle">18 Apr,24 <small class="text-muted">06:22:09 pm</small></span></td>
+                                        <td><span class="align-middle"> <small class="text-muted">06:22:09 pm</small></span></td>
                                         <td>
                                         <span class="badge bg-success-subtle text-success p-1">Success</span>
                                         </td>
@@ -525,7 +525,7 @@
                                         </td>
                                         <td>Invoice #1908</td>
                                         <td class="text-danger">-AUD $90.99</td>
-                                        <td>18 Apr,24 <small class="text-muted">06:22:09 pm</small></td>
+                                        <td> <small class="text-muted">06:22:09 pm</small></td>
                                         <td>Debit</td>
                                         <td>
                                             <img src="/images/cards/visa.svg" alt="" height="24" class="me-1">
