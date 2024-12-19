@@ -513,7 +513,7 @@
                                         </td>
                                         <td>{{ $pooltest->dpd3 }}</td>
                                         <td class="text-success">{{ $pooltest->ccl }}</td>
-                                        <td>20 Apr,24 <small class="text-muted">{{ $pooltest->ph }}</small></td>
+                                        <td class="text-danger">{{ $pooltest->ph }}</td>
                                         <td>Daninio</td>
                                         <td>
                                             <span class="align-middle">18 Apr,24 <small class="text-muted">06:22:09 pm</small></span>
