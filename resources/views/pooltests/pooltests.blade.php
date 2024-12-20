@@ -52,7 +52,7 @@
                             </div>
 
                             <div class="card-body pt-0">
-                                <h2 class="fw-bold">$92,652.36 <a href="#!" class="text-muted"><i class="ti ti-eye"></i></a></h2>
+                                <h2 class="fw-bold">Pool Test Submit buttons<a href="#!" class="text-muted"><i class="ti ti-eye"></i></a></h2>
 
                                 <div class="row g-2 mt-2 pt-1">
                                     <div class="col">

@@ -21,4 +21,7 @@ class PoolTestsController extends Controller
       return view('pooltests/pooltests',compact('pooltests'));
         
     }
+
+
+
 }
