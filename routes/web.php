@@ -16,7 +16,7 @@ use App\Http\Controllers\PoolTestsController;
 */
 Route::get('/dashboards/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
 
-Route::get('/equipment-check', 'EquipmentCheckController@index');
+Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
 Route::post('/equipment-check', 'EquipmentCheckController@store');
 
 require __DIR__ . '/auth.php';
