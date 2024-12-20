@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PoolTestsController;
+use App\Http\Controllers\EquipmentCheckController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,7 @@ use App\Http\Controllers\PoolTestsController;
 Route::get('/dashboards/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
 
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
-Route::post('/equipment-check', 'EquipmentCheckController@store');
+Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
 
 require __DIR__ . '/auth.php';
 
