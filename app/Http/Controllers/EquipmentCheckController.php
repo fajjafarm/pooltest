@@ -13,13 +13,13 @@ class EquipmentCheckController extends Controller
             'Torpedo Buoy', 'Rope', 'Reach Poles', 'Defib', 'Mask', 
             'Goggles', 'Gloves', 'Apron', 'Drench Shower', 'Eye Wash'
         ];
-        return view('equipment-check', compact('equipmentTypes'));
+        
         
         $equipmentLocations = [
             'Spa Pool', 'Hotel Pool', 'Hot Tub', 'Spa Pool Plantroom', 'Hotel Pool Plantroom', 
             'Hot Tub Plantroom'
         ];
-        return view('equipment-check', compact('equipmentLocations'));
+        return view('equipment-check', compact('equipmentLocations', 'equipmentTypes'));
     }
 
     public function store(Request $request)
