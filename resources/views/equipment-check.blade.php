@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Starter Page'])
+@extends('layouts.vertical', ['title' => 'Add Equipment and PPE Checks'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Starter'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Add Equipment and PPE Checks'])
     <div class="container mt-5">
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
