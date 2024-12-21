@@ -15,11 +15,11 @@ class EquipmentCheckController extends Controller
         ];
         return view('equipment-check', compact('equipmentTypes'));
         
-        $equipmentLocation = [
+        $equipmentLocations = [
             'Spa Pool', 'Hotel Pool', 'Hot Tub', 'Spa Pool Plantroom', 'Hotel Pool Plantroom', 
             'Hot Tub Plantroom'
         ];
-        return view('equipment-check', compact('equipmentLocation'));
+        return view('equipment-check', compact('equipmentLocations'));
     }
 
     public function store(Request $request)
