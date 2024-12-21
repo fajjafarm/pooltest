@@ -14,12 +14,19 @@ class EquipmentCheckController extends Controller
             'Goggles', 'Gloves', 'Apron', 'Drench Shower', 'Eye Wash'
         ];
         return view('equipment-check', compact('equipmentTypes'));
+        
+        $equipmentLocation = [
+            'Spa Pool', 'Hotel Pool', 'Hot Tub', 'Spa Pool Plantroom', 'Hotel Pool Plantroom', 
+            'Hot Tub Plantroom'
+        ];
+        return view('equipment-check', compact('equipmentTypes'));
     }
 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
             'equipment_type' => 'required',
+            'equipment_location' => 'required',
             'check_date' => 'required|date',
             'status' => 'required|boolean',
             'comments' => 'nullable|string',

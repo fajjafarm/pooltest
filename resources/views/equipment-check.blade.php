@@ -8,7 +8,16 @@
     @endif
 
     <form action="/equipment-check" method="POST">
-        @csrf
+        @csrf        
+        <div class="mb-3">
+            <label for="equipment_type" class="form-label">Location</label>
+            <select class="form-select" id="equipment_location" name="equipment_location" required>
+                <option value="">Select Location</option>
+                @foreach($equipmentLocations as $location)
+                    <option value="{{ $location }}">{{ $location }}</option>
+                @endforeach
+            </select>
+        </div>
         <div class="mb-3">
             <label for="equipment_type" class="form-label">Equipment Type</label>
             <select class="form-select" id="equipment_type" name="equipment_type" required>
@@ -34,8 +43,8 @@
             <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
         </div>
         <div class="mb-3">
-            <label for="comments" class="form-label">Company</label>
-            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+            <label for="company" class="form-label">Company</label>
+            <textarea class="form-control" id="company" name="company" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
