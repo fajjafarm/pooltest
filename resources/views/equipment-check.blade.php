@@ -10,7 +10,7 @@
     <form action="/equipment-check" method="POST">
         @csrf        
         <div class="mb-3">
-            <label for="equipment_type" class="form-label">Location</label>
+            <label for="equipment_location" class="form-label">Location</label>
             <select class="form-select" id="equipment_location" name="equipment_location" required>
                 <option value="">Select Location</option>
                 @foreach($equipmentLocations as $location)
