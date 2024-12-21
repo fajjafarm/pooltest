@@ -33,6 +33,10 @@
             <label for="comments" class="form-label">Comments</label>
             <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
         </div>
+        <div class="mb-3">
+            <label for="comments" class="form-label">Company</label>
+            <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
