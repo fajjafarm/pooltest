@@ -34,8 +34,9 @@
         <div class="mb-3">
             <label for="status" class="form-label">Status</label>
             <select class="form-select" id="status" name="status" required>
-                <option value="1">Checked</option>
-                <option value="0">Not Checked</option>
+                <option value="Checked - Okay">Checked - Okay</option>
+                <option value="Checked - Issue found and reported">Checked - Issue Found and reported</option>
+                <option value="Check not completed">Check not completed - reschedule</option>
             </select>
         </div>
         <div class="mb-3">
