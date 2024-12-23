@@ -27,6 +27,6 @@ class PoolTestController extends Controller
 
         PoolTest::create($validatedData);
 
-        return redirect('/')->with('success', 'Pool test result submitted successfully!');
+        return redirect('/pooltest/create')->with('success', 'Pool test result submitted successfully!');
     }
 }
