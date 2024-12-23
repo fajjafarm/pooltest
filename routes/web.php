@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PoolTestsController;
+use App\Http\Controllers\PoolTestController;
 use App\Http\Controllers\EquipmentCheckController;
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,10 @@ use App\Http\Controllers\EquipmentCheckController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/pooltest/create', [PoolTestController::class, 'create'])->name('pooltest.create');
+Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.store');
 Route::get('/dashboards/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
 
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
