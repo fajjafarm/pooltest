@@ -15,8 +15,8 @@ class PoolTestController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            `pool_id` => '1',
-            `user_id` => '1',
+            `pool_id` => 'required|numeric',
+            `user_id` => 'required|numeric',
             'dpd1' => 'required|numeric',
             'dpd3' => 'required|numeric',
             'ph' => 'required|numeric',
