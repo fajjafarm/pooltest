@@ -4,8 +4,8 @@
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Submit a Pool Test'])
 
     <div class="container mt-5">
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
+    @if(session('success'))  
+        <div class="alert alert-success">{{ session('success') }}   @include('flash-message')</div>
     @endif
         <h2>Submit Pool Test Results</h2>
         <form action="{{ route('pooltest.store') }}" method="POST">
