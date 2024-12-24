@@ -6,7 +6,11 @@
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
-
+@if (Session::has('success'))
+    <div class="alert alert-success">
+        {{ Session::get('success') }}
+    </div>
+@endif
     <form action="/equipment-check" method="POST">
         @csrf        
         <div class="mb-3">
