@@ -18,7 +18,7 @@ use App\Http\Controllers\EquipmentCheckController;
 */
 
 Route::resource('temperatureChecks', TemperatureCheckController::class);
-Route::get('/temperature_checks', [TemperatureCheckController::class, 'latest'])->name('temperatureChecks.index');
+Route::get('/temperatureChecks', [TemperatureCheckController::class, 'latest'])->name('temperatureChecks.index');
 Route::get('/pooltest/create', [PoolTestController::class, 'create'])->name('pooltest.create');
 Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.store');
 Route::get('/dashboards/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
