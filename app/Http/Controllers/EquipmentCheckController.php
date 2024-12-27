@@ -19,6 +19,7 @@ class EquipmentCheckController extends Controller
             'Spa Pool', 'Hotel Pool', 'Hot Tub', 'Spa Pool Plantroom', 'Hotel Pool Plantroom', 
             'Hot Tub Plantroom'
         ];
+        
         return view('equipment-check', compact('equipmentLocations', 'equipmentTypes'));
     }
 

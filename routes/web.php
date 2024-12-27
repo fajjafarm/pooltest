@@ -21,8 +21,8 @@ use App\Http\Controllers\EquipmentCheckController;
 
 
 
-Route::get('/pooltest/submit', [PoolTestController::class, 'create'])->name('pooltest.create');
-Route::post('/pooltest/submit', [PoolTestController::class, 'store'])->name('pooltest.store');
+Route::get('/pooltest/submit', [PoolTestController::class, 'create'])->name('pooltest.submit');
+Route::post('/pooltest/submit', [PoolTestController::class, 'store'])->name('pooltest.submit');
 
 Route::get('/dashboards/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
 

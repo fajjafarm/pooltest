@@ -9,7 +9,7 @@ class PoolTestController extends Controller
 {
     public function create()
     {
-        return view('pooltest.create');
+        return view('pooltest.submit');
     }
 
     public function store(Request $request)
@@ -27,6 +27,6 @@ class PoolTestController extends Controller
 
         PoolTest::create($validatedData);
 
-        return redirect('/pooltest/create')->with('success', 'Pool test result submitted successfully!');
+        return redirect('/pooltest/submit')->with('success', 'Pool test result submitted successfully!');
     }
 }
