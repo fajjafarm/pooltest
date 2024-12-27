@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Temperature Checks</h1>
-    <a href="{{ route('temperatureChecks.create') }}" class="btn btn-primary mb-3">Submit New Temperature Check</a>
+    <a href="{{ route('temperatureChecks.index') }}" class="btn btn-primary mb-3">Submit New Temperature Check</a>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -24,7 +24,7 @@
                     <td>{{ $check->created_at }}</td>
                     <td>notes tbc</td>
                     <td>
-                        <a href="{{ route('temperatureChecks.show', $check->id) }}">View</a>
+                        <a href="{{ route('temperatureChecks.index', $check->id) }}">View</a>
                     </td>
                 </tr>
             @endforeach
