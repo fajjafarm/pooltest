@@ -7,6 +7,12 @@ use App\Models\PoolTest;
 
 class PoolTestController extends Controller
 {
+    public function pooltests()
+    {
+       // $testresults ='empty';
+    $pooltests = DB::select('select * from pool_tests');
+      return view('pooltests', compact('pooltests'));
+    }
     public function create()
     {
         return view('pooltest.submit');
