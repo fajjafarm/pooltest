@@ -14,7 +14,7 @@ class TemperatureCheckController extends Controller
      */
     public function index()
     {
-        $temperatureChecks = TemperatureCheck::latest()->paginate(10);
+        $temperatureChecks = 'blank';
         return view('temperatureChecks.index', compact('temperatureChecks'));
     }
 
