@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\PoolTestsController;
+use App\Http\Controllers\PoolTestResultsController;
 use App\Http\Controllers\PoolTestController;
 use App\Http\Controllers\EquipmentCheckController;
 
@@ -24,7 +24,7 @@ use App\Http\Controllers\EquipmentCheckController;
 Route::get('/pooltest/submit', [PoolTestController::class, 'create'])->name('pooltest.submit');
 Route::post('/pooltest/submit', [PoolTestController::class, 'store'])->name('pooltest.store');
 
-Route::get('/dashboards/pooltests', [PoolTestsController::class, 'pooltests'])->name('pooltests');
+Route::get('/dashboards/pooltests', [PoolTestResultsController::class, 'pooltests'])->name('pooltests');
 
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
 Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
