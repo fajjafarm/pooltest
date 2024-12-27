@@ -14,7 +14,7 @@ class TemperatureCheckController extends Controller
      */
     public function index()
     {
-        $temperatureChecks = 'blank';
+        $temperatureChecks = DB::select('select * from teperature_checks');
         return view('temperatureChecks.index', compact('temperatureChecks'));
     }
 

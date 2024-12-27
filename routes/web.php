@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PoolTestsController;
 use App\Http\Controllers\PoolTestController;
 use App\Http\Controllers\EquipmentCheckController;
-use App\Http\Controllers\TemperatureCheckController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +18,8 @@ use App\Http\Controllers\TemperatureCheckController;
 |
 */
 
-//Route::resource('temperatureChecks', TemperatureCheckController::class);
-Route::get('/temperatureChecks', [TemperatureCheckController::class, 'index'])->name('temperatureChecks.index');
-Route::post('/temperatureChecks', [TemperatureCheckController::class, 'create'])->name('temperatureChecks.index');
+
+
 
 Route::get('/pooltest/create', [PoolTestController::class, 'create'])->name('pooltest.create');
 Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.store');
