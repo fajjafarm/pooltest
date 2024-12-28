@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWaterBalanceTestsTable2 extends Migration
+class CreateWaterBalanceChecksTable extends Migration
 {
     /**
      * Run the migrations.
