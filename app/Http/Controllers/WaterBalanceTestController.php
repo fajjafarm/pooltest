@@ -18,8 +18,7 @@ class WaterBalanceTestController extends Controller
             'calcium_hardness' => $request->input('calcium_hardness'),
             'ph' => $request->input('ph'),
             'pool_id' => $request->input('pool_id'),
-            'water_balance' => $water_balance;
-            
+            'water_balance' => $water_balance    
         ]);
 
         $waterTest->save();
