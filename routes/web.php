@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 //use App\Http\Controllers\PoolTestResultsController;
 use App\Http\Controllers\PoolTestController;
 use App\Http\Controllers\EquipmentCheckController;
+use App\Http\Controllers\WaterBalanceTestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,8 @@ use App\Http\Controllers\EquipmentCheckController;
 
 
 
+
+Route::post('/submit-water-test', [WaterBalanceTestController::class, 'submitWaterTest']);
 
 Route::get('/pooltest/submit', [PoolTestController::class, 'create'])->name('pooltest.submit');
 Route::post('/pooltest/submit', [PoolTestController::class, 'store'])->name('pooltest.store');
