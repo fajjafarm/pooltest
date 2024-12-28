@@ -18,6 +18,7 @@ class CreateWaterBalanceTestsTable extends Migration
             $table->float('alkalinity');
             $table->float('calcium_hardness');
             $table->float('ph');
+            $table->float('water_balance');
             $table->unsignedBigInteger('pool_id');
             $table->timestamps(); // Adds created_at and updated_at columns
 
