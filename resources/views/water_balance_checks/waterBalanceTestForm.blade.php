@@ -1,16 +1,18 @@
-@extends('layouts.vertical', ['title' => 'Starter Page'])
+@extends('layouts.vertical', ['title' => 'Submit Water Balance Test'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Starter'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Submit Water Balance Test'])
 
     <body>
 
-@if(session('status'))  
-        <div class="alert alert-success">{{ session('status') }} </div>
+@if(session('success'))  
+        <div class="alert alert-success">{{ session('success') }} </div>
+    @endif
+    @if(session('error'))  
+        <div class="alert alert-error">{{ session('error') }} </div>
     @endif
 
 
-    <h2>Submit Water Balance Test</h2>
         <form action="{{ route('water_balance_checks.waterBalanceTestForm') }}" method="POST">
             @csrf
             <div class="mb-3">

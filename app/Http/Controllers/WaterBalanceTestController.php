@@ -22,8 +22,12 @@ class WaterBalanceTestController extends Controller
         ]);
 
         $waterTest->save();
-        return redirect()->back()->with('status', 'Water Balance Test Recorded');
-            
+        if ($water_balance < 100){
+        return redirect()->back()->with('success', 'Water Balance Test Recorded');
+        }
+        if ($water_balance >= 100){
+            return redirect()->back()->with('error', 'Water Balance Test Recorded as being Corrosive, please see supervisor for action');
+            }
       //  return response()->json([
       //      'status' => 'success',
        //     'message' => 'Water balance test submitted successfully.',
