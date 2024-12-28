@@ -11,7 +11,7 @@ class WaterBalanceTestController extends Controller
     {
         // Validation would typically go here, e.g., 
         // $request->validate([...]);
-        $water_balance = $request->input('alkalinity')+$request->input('calcium_hardness'),
+        $water_balance = $request->input('alkalinity')+$request->input('calcium_hardness');
 
         $waterTest = new WaterBalanceTest([
             'alkalinity' => $request->input('alkalinity'),
