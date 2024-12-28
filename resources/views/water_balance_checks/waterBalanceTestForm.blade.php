@@ -7,7 +7,7 @@
     @if(session('status'))
     <div style="color: green; margin-bottom: 10px;">{{ session('status') }}</div>
 @endif
-    <form action="{{ route('submit-water-test') }}" method="POST">
+    <form action="{{ route('/water_balance_checks/waterBalanceTestForm') }}" method="POST">
         @csrf
         <label for="alkalinity">Alkalinity:</label>
         <input type="number" name="alkalinity" id="alkalinity" step="0.01" required>
