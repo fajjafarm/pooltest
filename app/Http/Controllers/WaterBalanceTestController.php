@@ -22,11 +22,12 @@ class WaterBalanceTestController extends Controller
         ]);
 
         $waterTest->save();
-
-        return response()->json([
-            'status' => 'success',
-            'message' => 'Water balance test submitted successfully.',
-            'data' => $waterTest
-        ]);
+        return redirect()->back()->with('status', 'Water Balance Test Recorded');
+            
+      //  return response()->json([
+      //      'status' => 'success',
+       //     'message' => 'Water balance test submitted successfully.',
+      //      'data' => $waterTest
+       // ]);
     }
 }
