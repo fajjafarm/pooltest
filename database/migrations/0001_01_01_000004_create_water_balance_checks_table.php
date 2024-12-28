@@ -23,7 +23,7 @@ class CreateWaterBalanceChecksTable extends Migration
             $table->timestamps(); // Adds created_at and updated_at columns
 
             // Assuming you have a pools table where 'id' is the primary key
-            $table->foreign('pool_id')->references('id')->on('pools')->onDelete('cascade');
+          //  $table->foreign('pool_id')->references('id')->on('pools')->onDelete('cascade');
         });
     }
 
