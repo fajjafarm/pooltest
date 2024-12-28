@@ -7,6 +7,9 @@
     @if(session('status'))
     <div style="color: green; margin-bottom: 10px;">{{ session('status') }}</div>
 @endif
+@if(session('status'))  
+        <div class="alert alert-success">{{ session('status') }} </div>
+    @endif
     <form action="{{ route('water_balance_checks.waterBalanceTestForm') }}" method="POST">
         @csrf
         <label for="alkalinity">Alkalinity:</label>

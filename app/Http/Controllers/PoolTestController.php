@@ -33,7 +33,7 @@ class PoolTestController extends Controller
         $validatedData['ccl'] = $validatedData['dpd3'] - $validatedData['dpd1'];
 
         PoolTest::create($validatedData);
-
-        return redirect('/pooltest/submit')->with('success', 'Pool test result submitted successfully!');
+        
+        return redirect()->back()->with('success', 'Pool test result submitted successfully!');
     }
 }
