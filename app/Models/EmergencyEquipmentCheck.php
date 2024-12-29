@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class EmergencyEquipmentCheck extends Model
 {
-    protected $fillable = ['equipment_type', 'equipment_location', 'check_date', 'status', 'comments'];
+    protected $fillable = ['equipment_type', 'equipment_location', 'check_date', 'condition', 'comments'];
 }

@@ -29,7 +29,7 @@ class EquipmentCheckController extends Controller
             'equipment_type' => 'required',
             'equipment_location' => 'required',
             'check_date' => 'required|date',
-            'status' => 'required',
+            'condition' => 'required',
             'comments' => 'nullable|string',
         ]);
 

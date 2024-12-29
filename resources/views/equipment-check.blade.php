@@ -36,9 +36,9 @@
             <label for="conditon" class="form-label">conditon</label>
             <select class="form-select" id="conditon" name="conditon" required>
                 <option value="">status</option>
-                @foreach($equipmentTypes as $type)
-                    <option value="{{ $type }}">{{ $type }}</option>
-                @endforeach
+                <option value="">Checked - Okay</option>
+                <option value="">Checked - Not Okay</option>
+                <option value="">Not able to complete Check - Reschedule</option>
             </select>
         </div>
         <div class="mb-3">

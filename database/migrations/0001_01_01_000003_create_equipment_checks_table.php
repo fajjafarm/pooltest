@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('location');
             $table->string('equipment_type');
             $table->date('check_date');
-            $table->boolean('status')->default(false); // true for checked, false for not checked
+            $table->boolean('condition')
             $table->text('comments')->nullable();
             $table->string('checked_by');
             $table->timestamps();
