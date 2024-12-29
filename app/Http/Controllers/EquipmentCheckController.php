@@ -30,7 +30,7 @@ class EquipmentCheckController extends Controller
             'equipment_location' => 'required',
             'check_date' => 'required|date',
             'condition' => 'required',
-            'comments' => 'nullable|string',
+            'comments' => 'nullable|string'
         ]);
 
         EmergencyEquipmentCheck::create($validatedData);

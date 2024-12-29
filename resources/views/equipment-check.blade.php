@@ -42,16 +42,8 @@
             </select>
         </div>
         <div class="mb-3">
-            <label for="check_date" class="form-label">Check Date</label>
-            <input type="date" class="form-control" id="check_date" name="check_date" required>
-        </div>
-        <div class="mb-3">
             <label for="comments" class="form-label">Comments</label>
             <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
-        </div>
-        <div class="mb-3">
-            <label for="company" class="form-label">Company</label>
-            <textarea class="form-control" id="company" name="company" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
