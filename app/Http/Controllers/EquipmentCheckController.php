@@ -11,7 +11,7 @@ class EquipmentCheckController extends Controller
     {
         $equipmentTypes = [
             'Torpedo Buoy', 'Rope', 'Reach Poles', 'Defib', 'Mask', 
-            'Goggles', 'Gloves', 'Apron', 'Drench Shower', 'Eye Wash'
+            'Goggles', 'Gloves', 'Apron', 'Drench Shower', 'Eye Wash', 'First Aid Stock', 'First Aid Grab Bag'
         ];
         
         
@@ -29,12 +29,12 @@ class EquipmentCheckController extends Controller
             'equipment_type' => 'required',
             'equipment_location' => 'required',
             'check_date' => 'required|date',
-            'status' => 'required|boolean',
+            'status' => 'required',
             'comments' => 'nullable|string',
         ]);
 
         EmergencyEquipmentCheck::create($validatedData);
-
-        return redirect('/equipment-check')->with('success', 'Equipment check recorded successfully!');
+        
+        return redirect()->back()->with('success', 'Equipment check recorded successfully!');
     }
 }
