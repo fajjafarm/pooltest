@@ -33,8 +33,8 @@
             </select>
         </div>
         <div class="mb-3">
-            <label for="status" class="form-label">Status</label>
-            <select class="form-select" id="status" name="status" required>
+            <label for="conditon" class="form-label">conditon</label>
+            <select class="form-select" id="conditon" name="conditon" required>
                 <option value="">status</option>
                 @foreach($equipmentTypes as $type)
                     <option value="{{ $type }}">{{ $type }}</option>
