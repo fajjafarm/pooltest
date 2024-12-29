@@ -3,8 +3,14 @@
 @section('content')
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Add Equipment and PPE Checks'])
     <div class="container mt-5">
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
+    @if(session('success'))  
+        <div class="alert alert-success">{{ session('success') }} </div>
+    @endif
+    @if(session('error'))  
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                        <iconify-icon icon="solar:danger-triangle-bold-duotone" class="fs-20 me-1"></iconify-icon>
+                        <div class="lh-1"><strong>Error - </strong> {{ session('error') }}</div>
+                    </div>
     @endif
     <form action="/equipment-check" method="POST">
         @csrf        
@@ -21,6 +27,15 @@
             <label for="equipment_type" class="form-label">Equipment Type</label>
             <select class="form-select" id="equipment_type" name="equipment_type" required>
                 <option value="">Select Equipment</option>
+                @foreach($equipmentTypes as $type)
+                    <option value="{{ $type }}">{{ $type }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <select class="form-select" id="status" name="status" required>
+                <option value="">status</option>
                 @foreach($equipmentTypes as $type)
                     <option value="{{ $type }}">{{ $type }}</option>
                 @endforeach
