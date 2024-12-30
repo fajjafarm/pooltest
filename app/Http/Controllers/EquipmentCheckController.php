@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\EmergencyEquipmentCheck;
+use Illuminate\Http\Request;
 
 class EquipmentCheckController extends Controller
 {
@@ -29,11 +28,20 @@ class EquipmentCheckController extends Controller
         $validatedData = $request->validate([
             'equipment_type' => 'required',
             'equipment_location' => 'required',
-            'check_date' => 'required|date',
             'condition' => 'required',
             'comments' => 'nullable|string'
         ]);
-        $validatedData->save();
+
+        $equipmentCheck = new EmergencyEquipmentCheck([
+            'equipment_type' => $request->input('equipment_type'),
+            'equipment_location' => $request->input('equipment_location'),
+            'condition' => $request->input('condition'),
+            'comments' => $request->input('comments')              
+        ]);
+
+        $equipmentCheck->save();
+
+        //$validatedData->save();
         //EmergencyEquipmentCheck::create($validatedData);
         
         return redirect()->back()->with('success', 'Equipment check recorded successfully!');
