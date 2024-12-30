@@ -25,7 +25,7 @@ use App\Http\Controllers\WaterBalanceTestController;
 
 Route::post('/water_balance_checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
 
-Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
+//Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
 Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
 
 Route::get('/pooltest/submit', [PoolTestController::class, 'create'])->name('pooltest.submit');
