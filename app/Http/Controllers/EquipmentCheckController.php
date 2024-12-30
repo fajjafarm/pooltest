@@ -33,8 +33,8 @@ class EquipmentCheckController extends Controller
             'condition' => 'required',
             'comments' => 'nullable|string'
         ]);
-
-        EmergencyEquipmentCheck::create($validatedData);
+        $validatedData->save();
+        //EmergencyEquipmentCheck::create($validatedData);
         
         return redirect()->back()->with('success', 'Equipment check recorded successfully!');
     }
