@@ -12,7 +12,7 @@
                         <div class="lh-1"><strong>Error - </strong> {{ session('error') }}</div>
                     </div>
     @endif
-    <form action="/equipment-check" method="POST">
+    <form action="{{ route('equipment-checks') }}" method="POST">
         @csrf        
         <div class="mb-3">
             <label for="equipment_location" class="form-label">Location</label>
