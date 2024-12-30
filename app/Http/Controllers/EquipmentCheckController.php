@@ -38,12 +38,16 @@ class EquipmentCheckController extends Controller
             'condition' => $request->input('condition'),
             'comments' => $request->input('comments')              
         ]);
-
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Water balance test submitted successfully.',
+            'data' => $equipmentCheck
+        ]);
         $equipmentCheck->save();
 
         //$validatedData->save();
         //EmergencyEquipmentCheck::create($validatedData);
         
-        return redirect()->back()->with('success', 'Equipment check recorded successfully!');
+        //return redirect()->back()->with('success', 'Equipment check recorded successfully!');
     }
 }
