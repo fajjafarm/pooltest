@@ -29,8 +29,11 @@ Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->nam
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
 
 
-Route::get('/pooltest/submit', [PoolTestController::class, 'create'])->name('pooltest.submit');
-Route::post('/pooltest/submit', [PoolTestController::class, 'store'])->name('pooltest.store');
+
+
+
+Route::get('/pooltest', [PoolTestController::class, 'create'])->name('pooltest.create');
+Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.store');
 
 Route::get('/dashboards/pooltests', [PoolTestController::class, 'pooltests'])->name('pooltests');
 

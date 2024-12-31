@@ -45,9 +45,9 @@ class EquipmentCheckController extends Controller
         ]);
         $equipmentCheck->save();
 
-        //$validatedData->save();
-        //EmergencyEquipmentCheck::create($validatedData);
+        $validatedData->save();
+    EmergencyEquipmentCheck::create($validatedData);
         
-        //return redirect()->back()->with('success', 'Equipment check recorded successfully!');
+        return redirect()->back()->with('success', 'Equipment check recorded successfully!');
     }
 }

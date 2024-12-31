@@ -7,10 +7,7 @@
     @if(session('success'))  
         <div class="alert alert-success">{{ session('success') }}   @include('flash-message')</div>
     @endif
-    @if (Session::has('success'))
-    <div class="alert alert-success">
-        {{ Session::get('success') }}
-    </div>
+
 @endif
         <h2>Submit Pool Test Results</h2>
         <form action="{{ route('pooltest.store') }}" method="POST">
