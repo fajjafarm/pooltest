@@ -8,7 +8,6 @@
         <div class="alert alert-success">{{ session('success') }}   @include('flash-message')</div>
     @endif
 
-@endif
         <h2>Submit Pool Test Results</h2>
         <form action="{{ route('pooltest.store') }}" method="POST">
             @csrf
