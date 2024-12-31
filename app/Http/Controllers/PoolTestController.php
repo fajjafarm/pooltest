@@ -32,7 +32,15 @@ class PoolTestController extends Controller
             'comments' => 'required',
         ]);
 
-        PoolTest::create($validatedData);
+        $pooltest = new PoolTest([
+        'dpd1' => $request->input('dpd1'),
+        'dpd3' => $request->input('dpd3'),
+        'ccl' => $request->input('dpd3')-$request->input('dpd1'),
+        'ph' => $request->input('ph'),
+        'comments' => $request->input('comments'),
+        ]);
+        $pooltest->save();
+       // PoolTest::create($validatedData);
 
         return redirect()->route('pooltest.create')->with('success', 'Pool test data submitted successfully!');
     }
