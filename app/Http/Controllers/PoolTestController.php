@@ -41,7 +41,12 @@ class PoolTestController extends Controller
         ]);
         $pooltest->save();
        // PoolTest::create($validatedData);
-
-        return redirect()->route('pooltest.create')->with('success', 'Pool test data submitted successfully!');
+       if ($request->input('dpd3')-$request->input('dpd1') > 1){
+        return redirect()->route('pooltest.create')->with('error', 'Combined Chlorine High!');
+        }
+        if ($request->input('dpd3')-$request->input('dpd1') <=1 ){
+            return redirect()->route('pooltest.create')->with('success', 'Pool test data submitted successfully!');
+            }
+        
     }
 }
