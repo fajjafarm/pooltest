@@ -31,9 +31,9 @@ Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name
 
 
 
-
-Route::get('/pooltest', [PoolTestController::class, 'create'])->name('pooltest.create');
 Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.store');
+Route::get('/pooltest', [PoolTestController::class, 'create'])->name('pooltest.create');
+
 
 Route::get('/dashboards/pooltests', [PoolTestController::class, 'pooltests'])->name('pooltests');
 
