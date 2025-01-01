@@ -6,7 +6,7 @@
     @if(session('success'))  
         <div class="alert alert-success">{{ session('success') }}   </div>
     @endif
-    @if(session('notgood'))  
+    @if(session('error'))  
     <div class="alert alert-danger d-flex align-items-center" role="alert">
                         <iconify-icon icon="solar:danger-triangle-bold-duotone" class="fs-20 me-1"></iconify-icon>
                         <div class="lh-1"><strong>Error - </strong> {{ session('error') }}</div>
