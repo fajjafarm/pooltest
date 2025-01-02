@@ -16,8 +16,11 @@ class ActionLogsTable extends Migration
     Schema::create('action_logs', function (Blueprint $table) {
         $table->id();
         $table->string('action_type');
+        $table->string('check_id');
+        $table->string('issue');->nullable();
         $table->string('escalation')->nullable();
         $table->text('comments')->nullable();
+        $table->string('resolved_status');
         $table->string('actioned_by');
         $table->timestamps();
     });
