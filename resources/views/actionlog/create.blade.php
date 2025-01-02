@@ -17,7 +17,7 @@
             @csrf
             <input type="hidden" name="test_id" value="{{ $testId }}">
             <input type="hidden" name="logged_by" value="{{ $testId }}">
-            <input type="hidden" name="issue" value="{{ $issue }}">
+            
             <div class="mb-3">
             <label for="action_type" class="form-label">Action Type</label>
             <select class="form-select" id="action_type" name="action_type" required>
