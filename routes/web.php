@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PoolTestController;
 use App\Http\Controllers\EquipmentCheckController;
 use App\Http\Controllers\WaterBalanceTestController;
-
+use App\Http\Controllers\ActionLogController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +28,8 @@ Route::post('/water_balance_checks/waterBalanceTestForm', [WaterBalanceTestContr
 Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
 
-
+Route::get('/actionlog/{testId}', [ActionLogController::class, 'create'])->name('actionlog.create');
+Route::post('/actionlog', [ActionLogController::class, 'store'])->name('actionlog.store');
 
 Route::get('/pooltest', [PoolTestController::class, 'create'])->name('pooltest.create');
 Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.store');
