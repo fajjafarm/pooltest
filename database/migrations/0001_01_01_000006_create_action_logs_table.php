@@ -17,7 +17,7 @@ class ActionLogsTable extends Migration
         $table->id();
         $table->string('action_type');
         $table->string('check_id');
-        $table->string('issue');->nullable();
+        $table->string('issue')->nullable();
         $table->string('escalation')->nullable();
         $table->text('comments')->nullable();
         $table->string('resolved_status');
