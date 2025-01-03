@@ -20,8 +20,9 @@ class CreateActionLogsTable extends Migration
         $table->string('issue')->nullable();
         $table->string('escalation')->nullable();
         $table->text('comments')->nullable();
-        $table->string('resolved_status');
-        $table->string('actioned_by');
+        $table->string('progress');->nullable();
+        $table->string('logged_by');->nullable();
+        $table->string('actioned_by');->nullable();
         $table->timestamps();
     });
 }

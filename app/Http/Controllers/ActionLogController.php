@@ -42,9 +42,8 @@ class ActionLogController extends Controller
             'action_type' => 'required|string',
             'escalation' => 'nullable|string',
             'progress' => 'nullable|string',
-            'comments' => 'nullable|string',
-            'actioned_by' => 'required|string',
-        ]);
+            'comments' => 'nullable|string'
+             ]);
 
         ActionLog::create($request->all()+ ['user_id' => auth()->id()]);
 

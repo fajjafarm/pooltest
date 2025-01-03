@@ -28,7 +28,7 @@
             </select>
             </div>
             <div class="mb-3">
-            <label for="escalation" class="form-label">Action Type</label>
+            <label for="escalation" class="form-label">Escalated to</label>
             <select class="form-select" id="escalation" name="escalation" required>
                 <option value="">Select Escalation Type</option>
                 @foreach($escalationTypes as $escalation)
@@ -37,7 +37,7 @@
             </select>
             </div>
             <div class="mb-3">
-            <label for="progress" class="form-label">Action Type</label>
+            <label for="progress" class="form-label">Progress</label>
             <select class="form-select" id="progress" name="progress" required>
                 <option value="">Select Progress</option>
                 @foreach($progressTypes as $progress)

@@ -12,7 +12,7 @@ class ActionLog extends Model
         'check_id',
         'issue',
         'comments', 
-        'resolved_status',
+        'progress',
         'actioned_by'
     ];
 }
