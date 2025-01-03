@@ -13,6 +13,7 @@ class ActionLog extends Model
         'issue',
         'comments', 
         'progress',
+        'logged_by',
         'actioned_by'
     ];
 }
