@@ -25,7 +25,8 @@ class ActionLogController extends Controller
         $progressTypes = [
             'Not Started', 'In Progress', 'Unable to Complete', 'Complete'
         ];
-        return view('actionlog.create', compact('testId', 'actionTypes','escalationTypes','progressTypes'));
+        $user_id => auth()->id();
+        return view('actionlog.create', compact('testId', 'actionTypes','escalationTypes','progressTypes','user_id'));
     }
 
     /**
