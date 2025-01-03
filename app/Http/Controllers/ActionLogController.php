@@ -20,8 +20,7 @@ class ActionLogController extends Controller
             'Temperature', 'Water Balance', 'Training', 'Servicing', 'Eye Wash', 'First Aid Stock', 'First Aid Grab Bag'
         ];
         $escalationTypes = [
-            'Pool Test', 'Equipment Check', 'PPE', 'Maintenance', 'Cleaning', 
-            'Temperature', 'Water Balance', 'Training', 'Servicing', 'Supervisor/Manager'
+            'Double Checked - No further action needed', 'Raised to Supervisor/Manager', 'Reported to Duty Manager', 'Reported to Maintenance', 'Training', 'Schedule External Servicing'
         ];
         $progressTypes = [
             'Not Started', 'In Progress', 'Unable to Complete', 'Complete'
