@@ -16,8 +16,8 @@ class ActionLogController extends Controller
     public function create($testId)
     {
         $actionTypes = [
-            'Pool Test', 'Equipment Check', 'PPE', 'Maintenance', 'Cleaning', 
-            'Temperature', 'Water Balance', 'Training', 'Servicing', 'Eye Wash', 'First Aid Stock', 'First Aid Grab Bag'
+            'Pool Test - error','Pool Test - warning', 'Equipment Check Query', 'PPE Query', 'Maintenance Query', 'Cleaning', 
+            'Temperature - Low','Temperature - High', 'Water Balance - Corrosive','Water Balance - Sacle forming', 'Training', 'Servicing', 'Eye Wash', 'First Aid Stock', 'First Aid Grab Bag'
         ];
         $escalationTypes = [
             'Double Checked - No further action needed', 'Raised to Supervisor/Manager', 'Reported to Duty Manager', 'Reported to Maintenance', 'Training', 'Schedule External Servicing'
@@ -41,6 +41,7 @@ class ActionLogController extends Controller
         $request->validate([
             'action_type' => 'required|string',
             'escalation' => 'nullable|string',
+            'logged_by' => 'nullable|string',
             'progress' => 'nullable|string',
             'comments' => 'nullable|string'
              ]);
