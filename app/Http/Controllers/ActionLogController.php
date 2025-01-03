@@ -46,7 +46,7 @@ class ActionLogController extends Controller
             'comments' => 'nullable|string'
              ]);
 
-        ActionLog::create($request->all()+ ['user_id' => auth()->id()]);
+        ActionLog::create($request->all()+ ['logged_by' => auth()->id()]);
 
         return redirect()->route('actionlog.create', ['testId' => $request->test_id])->with('success', 'Action logged successfully!');
     }
