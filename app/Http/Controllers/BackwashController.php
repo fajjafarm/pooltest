@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BackwashController extends Controller
 {
-    public function index()
+    public function create()
     {
         $backwashTypes = [
             'Scheduled','Corrective Action', 'Code Brown', 'Service'
@@ -16,12 +16,7 @@ class BackwashController extends Controller
             'Scheduled','Corrective Action', 'Code Brown', 'Service'
         ];
         $backwashes = Backwash::all();
-        return view('backwashes.index', compact('backwashes', 'backwashTypes'));
-    }
-
-    public function create()
-    {
-        return view('backwashes.create');
+        return view('backwashes.create', compact('backwashes', 'backwashTypes'));
     }
 
     public function store(Request $request)
