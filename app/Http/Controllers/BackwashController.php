@@ -23,14 +23,17 @@ class BackwashController extends Controller
     {
         $validatedData = $request->validate([
             'pool_id' => 'required|exists:pool_list,pool_id',
-            'pump1_before_pressure' => 'nullable|numeric',
-            'pump1_after_pressure' => 'nullable|numeric',
+            'filter1_before_pressure' => 'nullable|numeric',
+            'filter1_after_pressure' => 'nullable|numeric',
+            'filter1_backwashed' => 'boolean',
             'basket1_cleaned' => 'boolean',
-            'pump2_before_pressure' => 'nullable|numeric',
-            'pump2_after_pressure' => 'nullable|numeric',
+            'filter2_before_pressure' => 'nullable|numeric',
+            'filter2_after_pressure' => 'nullable|numeric',
+            'filter2_backwashed' => 'boolean',
             'basket2_cleaned' => 'boolean',
-            'pump3_before_pressure' => 'nullable|numeric',
-            'pump3_after_pressure' => 'nullable|numeric',
+            'filter3_before_pressure' => 'nullable|numeric',
+            'filter3_after_pressure' => 'nullable|numeric',
+            'filter2_backwashed' => 'boolean',
             'basket3_cleaned' => 'boolean',
             'reason_for_backwash' => 'required|string',
             'issues' => 'nullable|string'
