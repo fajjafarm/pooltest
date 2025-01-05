@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Log an Backwash'])
+@extends('layouts.vertical', ['title' => 'Log a Backwash'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Log an Backwash'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Log a Backwash'])
     <div class="container mt-5">
     @if(session('success'))  
         <div class="alert alert-success">{{ session('success') }}   </div>
@@ -22,10 +22,10 @@
         
         @for($i = 1; $i <= 3; $i++)
         <div class="mb-3">
-                <label for="pump{{ $i }}_before_pressure">Pump {{ $i }} Before Pressure:</label>
+                <label for="filter{{ $i }}_before_pressure">Filter {{ $i }} Before Pressure:</label>
                 <input type="number" step="0.01" name="pump{{ $i }}_before_pressure">
-                <label for="pump{{ $i }}_after_pressure">Pump {{ $i }} After Pressure:</label>
-                <input type="number" step="0.01" name="pump{{ $i }}_after_pressure">
+                <label for="filter{{ $i }}_after_pressure">Filter {{ $i }} After Pressure:</label>
+                <input type="number" step="0.01" name="filter{{ $i }}_after_pressure">
                 <label for="filter{{ $i }}_backwashed">Filter Backwash?</label>
             <input type="checkbox" name="filter{{ $i }}_backwashed" value="1">
             <label for="basket{{ $i }}_cleaned">Basket Cleaned?</label>
