@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class BackwashController extends Controller
 {
+    public function index()
+    {
+        $backwashes = Backwash::all();
+        return view('backwashes.index', compact('backwashes'));
+    }
+
     public function create()
     {
         $backwashTypes = [
