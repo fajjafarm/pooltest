@@ -3,8 +3,7 @@
 @section('content')
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'View All Backwashes'])
     <div class="container mt-5">
-    <h1>Backwash Records</h1>
-
+   
 @if(session('success'))
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
@@ -48,7 +47,10 @@
         @foreach($backwashes as $backwash)
         <tr>
             <td>{{ $backwash->pool_id }}</td>
-            <td>{{ $backwash->filter1_backwashed }}</td>
+            <td>
+            @if($backwash->filter1_backwashed == 1)<div class="alert alert-success d-flex align-items-center" role="alert"><iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon></div>@endif
+            @if($backwash->filter1_backwashed == 0)<div class="alert alert-warning d-flex align-items-center" role="alert"><iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon></div>@endif    
+            </td>
             <td>{{ $backwash->filter2_backwashed }}</td>
             <td>{{ $backwash->filter3_backwashed }}</td>
             <td>{{ $backwash->filter1_before_pressure }}</td>
