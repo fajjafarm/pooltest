@@ -25,8 +25,7 @@ class CreateBackwashesTable extends Migration
             $table->string('performed_by');
             $table->timestamps();
 
-            $table->foreign('pool_id')->references('id')->on('pools')->onDelete('cascade');
-        });
+            });
     }
 
     public function down()
