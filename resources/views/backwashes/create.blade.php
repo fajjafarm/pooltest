@@ -37,7 +37,7 @@
             <label for="basket{{ $i }}_cleaned">Basket Cleaned?</label>
             <input type="checkbox" name="basket{{ $i }}_cleaned" value="1">
             </div>
-        @endforeach
+        @endfor
 
       
         <label for="pump1_status" class="form-label">Pump 1 Status</label>
