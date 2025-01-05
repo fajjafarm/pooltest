@@ -13,14 +13,15 @@
 <div class="table-responsive-sm">
 <table class="table table-striped mb-0">
     <thead>
-        <tr>
+        <tr class="table-dark">
             <th>&nbsp;</th>
             <th colspan="3">Filter Backwashed?</th>
             <th colspan="6">Filter Pressures (bar)</th>
             <th colspan="3">Pump Status</th>
+            <th colspan="3">Baskets Cleaned?</th>
             <th colspan="4">&nbsp;</th>
 </tr>
-<tr>
+<tr class="table-dark">
             <th>Pool ID</th>
             <th>F1</th>
             <th>F2</th>
@@ -34,6 +35,9 @@
             <th>Pump 1</th>
             <th>Pump 2</th>
             <th>Pump 3</th>
+            <th>B1</th>
+            <th>B2</th>
+            <th>B3</th>
             <th>Reason</th>
             <th>Issues</th>
             <th>Performed By</th>
@@ -56,7 +60,9 @@
             <td>{{ $backwash->pump1_status }}</td>
             <td>{{ $backwash->pump2_status }}</td>
             <td>{{ $backwash->pump3_status }}</td>
-            <td>{{ $backwash->basket_cleaned ? 'Yes' : 'No' }}</td>
+            <td>{{ $backwash->basket1_cleaned ? 'Yes' : 'No' }}</td>
+            <td>{{ $backwash->basket2_cleaned ? 'Yes' : 'No' }}</td>
+            <td>{{ $backwash->basket3_cleaned ? 'Yes' : 'No' }}</td>
             <td>{{ $backwash->reason_for_backwash }}</td>
             <td>{{ $backwash->issues ?? 'None' }}</td>
             <td>{{ $backwash->performed_by }}</td>
