@@ -29,13 +29,13 @@
         @for($i = 1; $i <= 3; $i++)
         <div class="mb-3">
                 <label for="filter{{ $i }}_before_pressure">Filter {{ $i }} Before Pressure:</label>
-                <input type="number" step="0.01" name="pump{{ $i }}_before_pressure">
+                <input type="number" step="0.01" name="filter{{ $i }}_before_pressure">
                 <label for="filter{{ $i }}_after_pressure">Filter {{ $i }} After Pressure:</label>
                 <input type="number" step="0.01" name="filter{{ $i }}_after_pressure">
                 <label for="filter{{ $i }}_backwashed">Filter Backwash?</label>
             <input type="checkbox" name="filter{{ $i }}_backwashed" value="1">
             <label for="basket{{ $i }}_cleaned">Basket Cleaned?</label>
-            <input type="checkbox" name="basket_cleaned{{ $i }}" value="1">
+            <input type="checkbox" name="basket{{ $i }}_cleaned" value="1">
             </div>
         @endfor
 
@@ -43,12 +43,6 @@
             <label for="issues">Issues:</label>
             <textarea name="issues"></textarea>
         </div>
-
-        <div class="mb-3">
-            <label for="performed_by">Performed By:</label>
-            <input type="text" name="performed_by" required>
-        </div>
-
         <button type="submit">Submit</button>
     </form>
     </div>
