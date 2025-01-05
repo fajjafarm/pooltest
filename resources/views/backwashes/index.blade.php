@@ -15,7 +15,7 @@
         <tr class="table-dark">
             <th>&nbsp;</th>
             <th colspan="3">Filter Backwashed?</th>
-            <th colspan="6">Filter Pressures (bar)</th>
+            <th colspan="6">Filter Pressures Before/After</th>
             <th colspan="3">Pump Status</th>
             <th colspan="3">Baskets Cleaned?</th>
             <th colspan="4">&nbsp;</th>
@@ -25,15 +25,15 @@
             <th>F1</th>
             <th>F2</th>
             <th>F3</th>
-            <th>F1 before</th>
-            <th>F1 After</th>
-            <th>F2 Before</th>
-            <th>F2 After</th>
-            <th>F3 Before</th>
-            <th>F3 After</th>
-            <th>Pump 1</th>
-            <th>Pump 2</th>
-            <th>Pump 3</th>
+            <th>F1 B</th>
+            <th>F1 A</th>
+            <th>F2 B</th>
+            <th>F2 A</th>
+            <th>F3 B</th>
+            <th>F3 A</th>
+            <th>P1</th>
+            <th>P2</th>
+            <th>P3</th>
             <th>B1</th>
             <th>B2</th>
             <th>B3</th>
