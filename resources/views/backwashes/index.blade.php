@@ -48,11 +48,17 @@
         <tr>
             <td>{{ $backwash->pool_id }}</td>
             <td>
-            @if($backwash->filter1_backwashed == 1)<div class="alert alert-success d-flex align-items-center" role="alert"><iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon></div>@endif
-            @if($backwash->filter1_backwashed == 0)<div class="alert alert-warning d-flex align-items-center" role="alert"><iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon></div>@endif    
+            @if($backwash->filter1_backwashed == 1)<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->filter1_backwashed == 0)<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon><@endif    
             </td>
-            <td>{{ $backwash->filter2_backwashed }}</td>
-            <td>{{ $backwash->filter3_backwashed }}</td>
+            <td>
+            @if($backwash->filter2_backwashed == 1)<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->filter2_backwashed == 0)<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon><@endif    
+            </td>
+            <td>
+            @if($backwash->filter3_backwashed == 1)<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->filter3_backwashed == 0)<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon><@endif    
+            </td>
             <td>{{ $backwash->filter1_before_pressure }}</td>
             <td>{{ $backwash->filter1_after_pressure }}</td>
             <td>{{ $backwash->filter2_before_pressure }}</td>
