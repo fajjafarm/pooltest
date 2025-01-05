@@ -82,7 +82,7 @@
             </td>
             <td>
             @if($backwash->basket1_cleaned == '1')<iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon>@endif
-            @if($backwash->basket1_cleaned == '0')<iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon>@endif 
+            @if($backwash->basket1_cleaned == '0')<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif 
             </td>
             <td>
             @if($backwash->basket2_cleaned == '1')<iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon>@endif
