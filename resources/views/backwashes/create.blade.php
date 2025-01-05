@@ -38,15 +38,30 @@
             <input type="checkbox" name="basket{{ $i }}_cleaned" value="1">
             </div>
         @endforeach
-        @for($i = 1; $i <= 3; $i++)
-        <label for="pump{{ $i }}_status" class="form-label">Pump {{ $i }} Status</label>
-            <select class="form-select" id="pump{{ $i }}_status" name="pump{{ $i }}_status" required>
+
+      
+        <label for="pump1_status" class="form-label">Pump 1 Status</label>
+            <select class="form-select" id="pump1_status" name="pump1_status" required>
                 <option value="">Select Pump Status</option>
                 @foreach($pumpStatus as $pump)
                     <option value="{{ $pump }}">{{ $pump }}</option>
                 @endforeach
             </select>
-            @endforeach
+            <label for="pump2_status" class="form-label">Pump 1 Status</label>
+            <select class="form-select" id="pump2_status" name="pump2_status" required>
+                <option value="">Select Pump Status</option>
+                @foreach($pumpStatus as $pump)
+                    <option value="{{ $pump }}">{{ $pump }}</option>
+                @endforeach
+            </select>
+            <label for="pump3_status" class="form-label">Pump 1 Status</label>
+            <select class="form-select" id="pump3_status" name="pump3_status" required>
+                <option value="">Select Pump Status</option>
+                @foreach($pumpStatus as $pump)
+                    <option value="{{ $pump }}">{{ $pump }}</option>
+                @endforeach
+            </select>
+          
         <div class="mb-3">
             <label for="issues">Issues:</label>
             <textarea name="issues"></textarea>
