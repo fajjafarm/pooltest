@@ -10,7 +10,7 @@
 
 <a href="{{ route('backwashes.create') }}">Log a New Backwash Record</a>
 <div class="table-responsive-sm">
-<table class="table table-striped mb-0">
+<table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
             <th>&nbsp;</th>
@@ -48,8 +48,8 @@
         <tr>
             <td>{{ $backwash->pool_id }}</td>
             <td>
-            @if($backwash->filter1_backwashed == 1)<div class="alert alert-success d-flex align-items-center" role="alert"><iconify-icon icon="solar:check-read-line-duotone" class="fs-5 me-1"></iconify-icon></div>@endif
-            @if($backwash->filter1_backwashed == 0)<div class="alert alert-warning d-flex align-items-center" role="alert"><iconify-icon icon="solar:shield-warning-line-duotone" class="fs-5 me-1"></iconify-icon></div>@endif    
+            @if($backwash->filter1_backwashed == 1)<div class="alert alert-success d-flex align-items-center" role="alert"><iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon></div>@endif
+            @if($backwash->filter1_backwashed == 0)<div class="alert alert-warning d-flex align-items-center" role="alert"><iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon></div>@endif    
             </td>
             <td>{{ $backwash->filter2_backwashed }}</td>
             <td>{{ $backwash->filter3_backwashed }}</td>
