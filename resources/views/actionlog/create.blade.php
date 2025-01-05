@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Log an Action'])
+@extends('layouts.vertical', ['title' => 'Log a Backwash'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Log an Action'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Log a Backwash'])
     <div class="container mt-5">
     @if(session('success'))  
         <div class="alert alert-success">{{ session('success') }}   </div>

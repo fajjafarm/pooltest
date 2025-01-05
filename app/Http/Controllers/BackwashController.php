@@ -9,8 +9,14 @@ class BackwashController extends Controller
 {
     public function index()
     {
+        $backwashTypes = [
+            'Scheduled','Corrective Action', 'Code Brown', 'Service'
+        ];
+        $backwashTypes = [
+            'Scheduled','Corrective Action', 'Code Brown', 'Service'
+        ];
         $backwashes = Backwash::all();
-        return view('backwashes.index', compact('backwashes'));
+        return view('backwashes.index', compact('backwashes', 'backwashTypes'));
     }
 
     public function create()
