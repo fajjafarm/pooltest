@@ -18,6 +18,12 @@
         <div class="mb-3">
             <label for="pool_id">Pool ID:</label>
             <input type="number" name="pool_id" required>
+            <select class="form-select" id="reason_for_backwash" name="reason_for_backwash" required>
+                <option value="">Select Reason for Backwash</option>
+                @foreach($backwashTypes as $type)
+                    <option value="{{ $type }}">{{ $type }}</option>
+                @endforeach
+            </select>
         </div>
         
         @for($i = 1; $i <= 3; $i++)
@@ -29,18 +35,9 @@
                 <label for="filter{{ $i }}_backwashed">Filter Backwash?</label>
             <input type="checkbox" name="filter{{ $i }}_backwashed" value="1">
             <label for="basket{{ $i }}_cleaned">Basket Cleaned?</label>
-            <input type="checkbox" name="basket_cleaned" value="1">
+            <input type="checkbox" name="basket_cleaned{{ $i }}" value="1">
             </div>
         @endfor
-
-       <div class="mb-3">
-        <select class="form-select" id="reason_for_backwash" name="reason_for_backwash" required>
-                <option value="">Select Reason for Backwash</option>
-                @foreach($backwashTypes as $type)
-                    <option value="{{ $type }}">{{ $type }}</option>
-                @endforeach
-            </select>
-        </div>
 
         <div class="mb-3">
             <label for="issues">Issues:</label>
