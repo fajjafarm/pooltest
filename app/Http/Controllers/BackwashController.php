@@ -22,7 +22,7 @@ class BackwashController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'pool_id' => 'required|exists:pools,id',
+            'pool_id' => 'required|exists:pool_list,pool_id',
             'pump1_before_pressure' => 'nullable|numeric',
             'pump1_after_pressure' => 'nullable|numeric',
             'basket1_cleaned' => 'boolean',
