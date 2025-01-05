@@ -14,13 +14,14 @@
 <table>
     <thead>
         <tr>
-            <th>Pool ID</th>
+            <th>&nbsp;</th>
             <th colspan="3">Filter Backwashed?</th>
             <th colspan="6">Filter Pressures (bar)</th>
             <th colspan="3">Pump Status</th>
             <th colspan="4">&nbsp;</th>
 </tr>
 <tr>
+            <th>Pool ID</th>
             <th>F1</th>
             <th>F2</th>
             <th>F3</th>
