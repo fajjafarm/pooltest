@@ -10,8 +10,8 @@
 @endif
 
 <a href="{{ route('backwashes.create') }}">Log a New Backwash Record</a>
-
-<table>
+<div class="table-responsive-sm">
+<table class="table table-striped mb-0">
     <thead>
         <tr>
             <th>&nbsp;</th>
@@ -65,6 +65,6 @@
         </tr>
         @endforeach
     </tbody>
-</table>
+</table></div>
     </div>
 @endsection
