@@ -37,8 +37,12 @@
         </div>
 
         <div>
-            <label for="reason_for_backwash">Reason for Backwash:</label>
-            <input type="text" name="reason_for_backwash" required>
+        <select class="form-select" id="reason_for_backwash" name="reason_for_backwash" required>
+                <option value="">Select Reason for Backwash</option>
+                @foreach($backwashTypes as $type)
+                    <option value="{{ $type }}">{{ $type }}</option>
+                @endforeach
+            </select>
         </div>
 
         <div>
