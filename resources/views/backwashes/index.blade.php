@@ -66,13 +66,21 @@
             <td>{{ $backwash->filter3_before_pressure }}</td>
             <td>{{ $backwash->filter3_after_pressure }}</td>
             <td>
+            @if($backwash->pump1_status == 'Running')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->pump1_status == 'Off - Standby')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
+            @if($backwash->pump1_status == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
+            </td>
+            <td>
             @if($backwash->pump2_status == 'Running')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
             @if($backwash->pump2_status == 'Off - Standby')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
             @if($backwash->pump2_status == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
             </td>
-            <td>{{ $backwash->pump2_status }}</td>
-            <td>{{ $backwash->pump3_status }}</td>
-            <td>{{ $backwash->basket1_cleaned ? 'Yes' : 'No' }}</td>
+            <td>
+            @if($backwash->pump3_status == 'Running')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->pump3_status == 'Off - Standby')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
+            @if($backwash->pump3_status == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
+            </td>
+            <td>{{ $backwash->basket1_cleaned ? '<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>' : '<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>' }}</td>
             <td>{{ $backwash->basket2_cleaned ? 'Yes' : 'No' }}</td>
             <td>{{ $backwash->basket3_cleaned ? 'Yes' : 'No' }}</td>
             <td>{{ $backwash->reason_for_backwash }}</td>
