@@ -33,11 +33,10 @@ class BackwashController extends Controller
             'pump3_after_pressure' => 'nullable|numeric',
             'basket3_cleaned' => 'boolean',
             'reason_for_backwash' => 'required|string',
-            'issues' => 'nullable|string',
-            'performed_by' => 'required|string'
+            'issues' => 'nullable|string'
         ]);
 
-        Backwash::create($validatedData);
+        Backwash::create($validatedData+ ['performed_by' => auth()->id()]);
 
         return redirect()->route('backwashes.create')->with('success', 'Backwash record created successfully.');
     }
