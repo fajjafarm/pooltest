@@ -8,6 +8,7 @@ use App\Http\Controllers\PoolTestController;
 use App\Http\Controllers\EquipmentCheckController;
 use App\Http\Controllers\WaterBalanceTestController;
 use App\Http\Controllers\ActionLogController;
+use App\Http\Controllers\BackwashController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,9 @@ Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name
 
 Route::get('/actionlog/{testId}', [ActionLogController::class, 'create'])->name('actionlog.create');
 Route::post('/actionlog', [ActionLogController::class, 'store'])->name('actionlog.store');
+
+Route::get('/backwashes', [BackwashController::class, 'create'])->name('backwash.create');
+Route::post('/backwashes', [BackwashController::class, 'store'])->name('backwash.store');
 
 Route::get('/pooltest', [PoolTestController::class, 'create'])->name('pooltest.create');
 Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.store');
