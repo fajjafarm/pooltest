@@ -81,20 +81,17 @@
             @if($backwash->pump3_status == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
             </td>
             <td>
-            @if($backwash->basket1_cleaned == 'Running')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
-            @if($backwash->basket1_cleaned == 'Off - Standby')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
-            @if($backwash->basket1_cleaned == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
+            @if($backwash->basket1_cleaned == '1')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->basket1_cleaned == '0')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
             </td>
             <td>
-            @if($backwash->basket2_cleaned == 'Running')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
-            @if($backwash->basket2_cleaned == 'Off - Standby')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
-            @if($backwash->basket2_cleaned == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
+            @if($backwash->basket2_cleaned == '1')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->basket2_cleaned == '0')<iconify-icon icon="solar:cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
             </td>
             <td>
-            @if($backwash->basket3_cleaned == 'Running')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
-            @if($backwash->basket3_cleaned == 'Off - Standby')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
-            @if($backwash->basket4_cleaned == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
-            </td>
+            @if($backwash->basket3_cleaned == '1')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->basket3_cleaned == '0')<iconify-icon icon="solar:cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
+             </td>
             <td>{{ $backwash->reason_for_backwash }}</td>
             <td>{{ $backwash->issues ?? 'None' }}</td>
             <td>{{ $backwash->performed_by }}</td>
