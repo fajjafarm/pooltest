@@ -57,7 +57,7 @@
             </td>
             <td>
             @if($backwash->filter3_backwashed == 1)<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
-            @if($backwash->filter3_backwashed == 0)<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon><@endif    
+            @if($backwash->filter3_backwashed == 0)<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif    
             </td>
             <td>{{ $backwash->filter1_before_pressure }}</td>
             <td>{{ $backwash->filter1_after_pressure }}</td>
@@ -65,7 +65,11 @@
             <td>{{ $backwash->filter2_after_pressure }}</td>
             <td>{{ $backwash->filter3_before_pressure }}</td>
             <td>{{ $backwash->filter3_after_pressure }}</td>
-            <td>{{ $backwash->pump1_status }}</td>
+            <td>
+            @if($backwash->pump2_status == 'Running')<iconify-icon icon="solar:check-read-line-duotone" class="fs-20 me-1"></iconify-icon>@endif
+            @if($backwash->pump2_status == 'Off - Standby')<iconify-icon icon="solar:shield-cross-line-duotone" class="fs-20 me-1"></iconify-icon>@endif 
+            @if($backwash->pump2_status == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-line-duotone" class="fs-20 me-1"></iconify-icon>@endif   
+            </td>
             <td>{{ $backwash->pump2_status }}</td>
             <td>{{ $backwash->pump3_status }}</td>
             <td>{{ $backwash->basket1_cleaned ? 'Yes' : 'No' }}</td>
