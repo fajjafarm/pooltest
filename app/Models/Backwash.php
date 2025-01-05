@@ -8,7 +8,7 @@ class Backwash extends Model
 {
     protected $fillable = [
         'pool_id', 
-        'pfilter1_before_pressure', 
+        'filter1_before_pressure', 
         'filter1_after_pressure',
         'filter1_backwashed', 
         'basket1_cleaned',
@@ -21,6 +21,9 @@ class Backwash extends Model
         'filter3_backwashed',
         'basket3_cleaned',
         'reason_for_backwash',
+        'pump1_status',
+        'pump2_status',
+        'pump3_status',
         'issues',
         'performed_by'
     ];

@@ -38,7 +38,15 @@
             <input type="checkbox" name="basket{{ $i }}_cleaned" value="1">
             </div>
         @endfor
-
+        @for($i = 1; $i <= 3; $i++)
+        <label for="pump{{ $i }}_status" class="form-label">Pump {{ $i }} Status</label>
+            <select class="form-select" id="pump{{ $i }}_status" name="pump{{ $i }}_status" required>
+                <option value="">Select Pump Status</option>
+                @foreach($pumpStatus as $pump)
+                    <option value="{{ $pump }}">{{ $pump }}</option>
+                @endforeach
+            </select>
+            @endforeach
         <div class="mb-3">
             <label for="issues">Issues:</label>
             <textarea name="issues"></textarea>

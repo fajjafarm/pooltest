@@ -15,8 +15,11 @@ class BackwashController extends Controller
         $backwashTypes = [
             'Scheduled','Corrective Action', 'Code Brown', 'Service'
         ];
+        $pumpStatus = [
+            'Running','Off - Standby', 'Off - Maintenance'
+        ];
         $backwashes = Backwash::all();
-        return view('backwashes.create', compact('backwashes', 'backwashTypes'));
+        return view('backwashes.create', compact('backwashes', 'backwashTypes', 'pumpStatus'));
     }
 
     public function store(Request $request)
@@ -33,9 +36,12 @@ class BackwashController extends Controller
             'basket2_cleaned' => 'boolean',
             'filter3_before_pressure' => 'nullable|numeric',
             'filter3_after_pressure' => 'nullable|numeric',
-            'filter2_backwashed' => 'boolean',
+            'filter3_backwashed' => 'boolean',
             'basket3_cleaned' => 'boolean',
             'reason_for_backwash' => 'required|string',
+            'pump1_status' => 'required|string',
+            'pump2_status' => 'required|string',
+            'pump3_status' => 'required|string',
             'issues' => 'nullable|string'
         ]);
 
