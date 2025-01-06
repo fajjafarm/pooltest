@@ -101,7 +101,10 @@
                     </button></td>
 
 
-            <td><iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $backwash->performed_by }}"></iconify-icon></td>
+            <td>
+            <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $backwash->performed_by }}" data-bs-original-title="Backwash Logged By">
+            <iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $backwash->performed_by }}"></iconify-icon>
+                    </button></td>
             <td>{{ $backwash->created_at }}</td>
           
         </tr>
