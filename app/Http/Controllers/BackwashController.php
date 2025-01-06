@@ -10,7 +10,7 @@ class BackwashController extends Controller
     public function index()
     {
         $backwashes = Backwash::all();
- 
+        
         return view('backwashes.index', compact('backwashes'));
     }
 
@@ -52,7 +52,7 @@ class BackwashController extends Controller
             'issues' => 'nullable|string'
         ]);
 
-        Backwash::create($validatedData+ ['performed_by' => auth()->user()->name]);
+        Backwash::create($validatedData+ ['performed_by' => auth()->id()]);
 
         return redirect()->route('backwashes.create')->with('success', 'Backwash record created successfully.');
     }
