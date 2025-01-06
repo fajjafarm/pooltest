@@ -94,7 +94,7 @@
              </td>
             <td>{{ $backwash->reason_for_backwash }}</td>
             <td>{{ $backwash->issues ?? 'None' }}</td>
-            <td>{{ $backwash->performed_by }}</td>
+            <td><iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $backwash->performed_by }}"></iconify-icon></td>
             <td>{{ $backwash->created_at }}</td>
           
         </tr>
