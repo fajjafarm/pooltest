@@ -52,7 +52,7 @@ class BackwashController extends Controller
             'issues' => 'nullable|string'
         ]);
 
-        Backwash::create($validatedData+ ['performed_by' => auth()->name()]);
+        Backwash::create($validatedData+ ['performed_by' => auth()->user()]);
 
         return redirect()->route('backwashes.create')->with('success', 'Backwash record created successfully.');
     }
