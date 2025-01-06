@@ -67,18 +67,18 @@
             <td>{{ $backwash->filter3_after_pressure }}</td>
             <td>
             @if($backwash->pump1_status == 'Running')<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
-            @if($backwash->pump1_status == 'Off - Standby')<div class="alert alert-warning d-flex align-items-center btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif 
-            @if($backwash->pump1_status == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-broken" class="fs-20 me-1"></iconify-icon>@endif   
+            @if($backwash->pump1_status == 'Off - Standby')<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif 
+            @if($backwash->pump1_status == 'Off - Maintenance')<div class="btn btn-soft-alert btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:shield-warning-broken" class="fs-20 me-1"></iconify-icon></div>@endif   
             </td>
             <td>
             @if($backwash->pump2_status == 'Running')<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
             @if($backwash->pump2_status == 'Off - Standby')<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif 
-            @if($backwash->pump2_status == 'Off - Maintenance')<iconify-icon icon="solar:shield-warning-broken" class="fs-20 me-1"></iconify-icon>@endif   
+            @if($backwash->pump2_status == 'Off - Maintenance')<div class="btn btn-soft-alert btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:shield-warning-broken" class="fs-20 me-1"></iconify-icon></div>@endif   
             </td>
             <td>
             @if($backwash->pump3_status == 'Running')<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
             @if($backwash->pump3_status == 'Off - Standby')<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif 
-            @if($backwash->pump3_status == 'Off - Maintenance')<div class="alert alert-warning d-flex align-items-center btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:shield-warning-broken" class="fs-20 me-1"></iconify-icon></div>@endif   
+            @if($backwash->pump3_status == 'Off - Maintenance')<div class="btn btn-soft-alert btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:shield-warning-broken" class="fs-20 me-1"></iconify-icon></div>@endif   
             </td>
             <td>
             @if($backwash->basket1_cleaned == '1')<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
