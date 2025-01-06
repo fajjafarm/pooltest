@@ -10,8 +10,7 @@ class BackwashController extends Controller
     public function index()
     {
         $backwashes = Backwash::all();
-        $userID = $backwashes->performed_by;
-        $performedBy = 
+      
         return view('backwashes.index', compact('backwashes'));
     }
 
