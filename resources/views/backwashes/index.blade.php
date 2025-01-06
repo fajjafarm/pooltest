@@ -96,7 +96,7 @@
             <td>
 
 
-            <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="{{ $backwash->issues ?? 'None' }}" data-bs-original-title="Backwash Info">
+            <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $backwash->issues ?? 'None' }}" data-bs-original-title="Backwash Info">
                         Info
                     </button></td>
 
