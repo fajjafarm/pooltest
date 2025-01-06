@@ -49,15 +49,15 @@
             <td>{{ $backwash->pool_id }}</td>
             <td>
             @if($backwash->filter1_backwashed == 1)<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
-            @if($backwash->filter1_backwashed == 0)<iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon><@endif    
+            @if($backwash->filter1_backwashed == 0)<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif    
             </td>
             <td>
             @if($backwash->filter2_backwashed == 1)<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
-            @if($backwash->filter2_backwashed == 0)<iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon><@endif    
+            @if($backwash->filter2_backwashed == 0)<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div><@endif    
             </td>
             <td>
             @if($backwash->filter3_backwashed == 1)<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
-            @if($backwash->filter3_backwashed == 0)<iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon>@endif    
+            @if($backwash->filter3_backwashed == 0)<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif    
             </td>
             <td>{{ $backwash->filter1_before_pressure }}</td>
             <td>{{ $backwash->filter1_after_pressure }}</td>
