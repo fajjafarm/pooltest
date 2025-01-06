@@ -47,7 +47,7 @@
         @foreach($backwashes as $backwash)
         <tr>
             <td>{{ $backwash->pool_id }}</td>
-            <td style="text-align: center;">
+            <td>
             @if($backwash->filter1_backwashed == 1)<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
             @if($backwash->filter1_backwashed == 0)<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif    
             </td>
@@ -93,7 +93,14 @@
             @if($backwash->basket3_cleaned == '0')<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif 
              </td>
             <td>{{ $backwash->reason_for_backwash }}</td>
-            <td>{{ $backwash->issues ?? 'None' }}</td>
+            <td>
+
+
+            <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="{{ $backwash->issues ?? 'None' }}" data-bs-original-title="Backwash Info">
+                        Info
+                    </button></td>
+
+
             <td><iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $backwash->performed_by }}"></iconify-icon></td>
             <td>{{ $backwash->created_at }}</td>
           
