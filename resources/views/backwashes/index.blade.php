@@ -47,7 +47,7 @@
         @foreach($backwashes as $backwash)
         <tr>
             <td>{{ $backwash->pool_id }}</td>
-            <td>
+            <td style="text-align: center;">
             @if($backwash->filter1_backwashed == 1)<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
             @if($backwash->filter1_backwashed == 0)<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif    
             </td>
