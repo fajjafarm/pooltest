@@ -39,8 +39,8 @@ Route::get('/actionlog/{testId}', [ActionLogController::class, 'create'])->name(
 Route::post('/actionlog', [ActionLogController::class, 'store'])->name('actionlog.store');
 
 //Route::get('/backwashes/view', [BackwashController::class, 'index'])->name('backwashes.index');
-Route::get('/backwashes/view/{poolId}', [BackwashController::class, 'index'])->name('backwashes.index');
-Route::get('/backwashes/create/{poolId}', [BackwashController::class, 'create'])->name('backwashes.create');
+Route::get('/backwashes/view/{poolID}', [BackwashController::class, 'index'])->name('backwashes.index');
+Route::get('/backwashes/create/{poolID}', [BackwashController::class, 'create'])->name('backwashes.create');
 Route::post('/backwashes', [BackwashController::class, 'store'])->name('backwashes.store');
 
 Route::get('/pooltest', [PoolTestController::class, 'create'])->name('pooltest.create');
