@@ -8,7 +8,7 @@
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
 
-<a href="{{ route('backwashes.create') }}/{{$poolID}">Log a New Backwash Record</a>
+<a href="{{ route('backwashes.create') }}/{{$poolID}}">Log a New Backwash Record</a>
 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
     <thead>
