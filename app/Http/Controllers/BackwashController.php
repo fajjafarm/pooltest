@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class BackwashController extends Controller
 {
-    public function index()
+    public function index($poolID)
     {
-        $backwashes = Backwash::all();
+        $backwashes = Backwash::where('pool_id', $poolID)->get();;
         
-        return view('backwashes.index', compact('backwashes'));
+        return view('backwashes.index', compact('backwashes','poolID'=>$poolID));
     }
 
     public function create()
