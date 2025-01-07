@@ -59,6 +59,6 @@ class BackwashController extends Controller
 
         Backwash::create($validatedData+ ['performed_by' => auth()->id()]);
 
-        return redirect()->route('backwashes.index')->with('success', 'Backwash record created successfully.');
+        return redirect()->back()->with('success', 'Backwash record created successfully.');
     }
 }
