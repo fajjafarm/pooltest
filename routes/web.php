@@ -22,7 +22,8 @@ use App\Http\Controllers\BackwashController;
 
 
 
-
+Route::get('/pools/create', [PoolController::class, 'create'])->name('pools.create');
+Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
 
 Route::post('/water_balance_checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
 
