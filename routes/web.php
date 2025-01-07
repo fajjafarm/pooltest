@@ -25,7 +25,7 @@ use App\Http\Controllers\ClientController;
 Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
 Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
 
-Route::get('/pools/create', [PoolController::class, 'create'])->name('pools.create');
+Route::get('/pools/create/{ClientID?}', [PoolController::class, 'create'])->name('pools.create');
 Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
 
 //regularuser access but only if they are associated with the company

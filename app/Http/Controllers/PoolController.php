@@ -2,14 +2,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\PoolList;
+use App\Models\ClientList;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class PoolController extends Controller
 {
-    public function create()
+    public function create($ClientID)
     {
-        return view('pools.create');
+        return view('pools.create','ClientID');
     }
 
     public function store(Request $request)
