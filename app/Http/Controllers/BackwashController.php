@@ -21,7 +21,7 @@ class BackwashController extends Controller
         
     }
 
-    public function create()
+    public function create($poolID)
     {
         $backwashTypes = [
             'Scheduled','Corrective Action', 'Code Brown', 'Service'
@@ -32,8 +32,9 @@ class BackwashController extends Controller
         $pumpStatus = [
             'Running','Off - Standby', 'Off - Maintenance'
         ];
+        $poolName = PoolList::where('pool_id', $poolID)->get('pool_name');
         $backwashes = Backwash::all();
-        return view('backwashes.create', compact('backwashes', 'backwashTypes', 'pumpStatus'));
+        return view('backwashes.create', compact('backwashes', 'backwashTypes', 'pumpStatus','poolId', 'poolName'));
     }
 
     public function store(Request $request)
