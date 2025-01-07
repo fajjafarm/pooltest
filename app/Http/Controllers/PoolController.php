@@ -16,7 +16,7 @@ class PoolController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'client_id' => 'required|integer',
+            'client_id' => 'required|string',
             'pool_name' => 'required|string|max:255',
             'pool_type' => 'required|string|max:255',
             'length' => 'required|numeric',
