@@ -9,7 +9,7 @@ class PoolList extends Model
 {
     use HasFactory;
 
-    protected $table = 'pool_lists';
+    protected $table = 'pool_list';
     protected $primaryKey = 'id';
     public $incrementing = false;
     protected $keyType = 'string';
