@@ -9,6 +9,7 @@ use App\Http\Controllers\EquipmentCheckController;
 use App\Http\Controllers\WaterBalanceTestController;
 use App\Http\Controllers\ActionLogController;
 use App\Http\Controllers\BackwashController;
+use App\Http\Controllers\PoolController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
