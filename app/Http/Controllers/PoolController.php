@@ -10,8 +10,7 @@ class PoolController extends Controller
 {
     public function create($clientID)
     {
-        $companyName = Client::where('client_id', $clientID)->get('company_name');
-        $companyName = implode(",", $companyName);
+        $companyName = Client::where('client_id', $clientID)->first('company_name');
         return view('pools.create',compact('clientID','companyName'));
     }
 
