@@ -9,9 +9,14 @@ class BackwashController extends Controller
 {
     public function index($poolID)
     {
-        $backwashes = Backwash::where('pool_id', $poolID)->get();;
-        
+        if (isset($poolID)) {
+        $backwashes = Backwash::where('pool_id', $poolID)->get();
         return view('backwashes.index', compact('backwashes','poolID'=>$poolID));
+        }else {
+        $backwashes = Backwash::all();
+        return view('backwashes.index', compact('backwashes'));
+        }
+        
     }
 
     public function create()
