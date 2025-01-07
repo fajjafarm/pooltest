@@ -12,6 +12,7 @@ class BackwashController extends Controller
      //   if (isset($poolID)) {
         $backwashes = Backwash::where('pool_id', $poolID)->get();
        // $poolName = PoolList::where('pool_name', $poolID)->get();
+       $poolID=$poolID;
         $poolName = PoolList::where('pool_id', $poolID)->get('pool_name');
         return view('backwashes.index', compact('backwashes','poolID','poolName'));
        // }else {
