@@ -23,7 +23,7 @@ use App\Http\Controllers\ClientController;
 */
 //super admin access only
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
-Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
+Route::get('/clients/create/', [ClientController::class, 'create'])->name('clients.create');
 Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
 
 Route::get('/pools/create/{ClientID?}', [PoolController::class, 'create'])->name('pools.create');

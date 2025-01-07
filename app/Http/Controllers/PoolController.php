@@ -10,7 +10,7 @@ class PoolController extends Controller
 {
     public function create($ClientID)
     {
-        return view('pools.create','ClientID');
+        return view('pools.create',compact('ClientID'));
     }
 
     public function store(Request $request)
