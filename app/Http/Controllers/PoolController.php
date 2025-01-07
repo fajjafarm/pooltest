@@ -8,9 +8,9 @@ use Illuminate\Support\Str;
 
 class PoolController extends Controller
 {
-    public function create($ClientID)
+    public function create($clientID)
     {
-        return view('pools.create',compact('ClientID'));
+        return view('pools.create',compact('clientID'));
     }
 
     public function store(Request $request)
