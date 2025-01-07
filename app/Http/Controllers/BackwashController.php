@@ -7,15 +7,22 @@ use Illuminate\Http\Request;
 
 class BackwashController extends Controller
 {
+    if (isset($poolID)){
     public function index($poolID)
     {
-        if (isset($poolID)) {
+        
         $backwashes = Backwash::where('pool_id', $poolID)->get();
+       // $poolName = Pools::where('pool_id', $poolID)->get('pool_name');
         return view('backwashes.index', compact('backwashes','poolID'));
-        }else {
+        }
+    }
+        else {
+            public function index($poolID)
+    {
         $backwashes = Backwash::all();
         return view('backwashes.index', compact('backwashes'));
         }
+    }
         
     }
 

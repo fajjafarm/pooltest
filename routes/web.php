@@ -32,7 +32,7 @@ Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name
 Route::get('/actionlog/{testId}', [ActionLogController::class, 'create'])->name('actionlog.create');
 Route::post('/actionlog', [ActionLogController::class, 'store'])->name('actionlog.store');
 
-Route::get('/backwashes/view', [BackwashController::class, 'index'])->name('backwashes.index');
+//Route::get('/backwashes/view', [BackwashController::class, 'index'])->name('backwashes.index');
 Route::get('/backwashes/view/{backwashId}', [BackwashController::class, 'index'])->name('backwashes.index');
 Route::get('/backwashes', [BackwashController::class, 'create'])->name('backwashes.create');
 Route::post('/backwashes', [BackwashController::class, 'store'])->name('backwashes.store');
