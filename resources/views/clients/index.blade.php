@@ -1,14 +1,14 @@
-@extends('layouts.vertical', ['title' => 'Backwash Record for {{ $poolID }}'])
+@extends('layouts.vertical', ['title' => 'Client List'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Backwash Record for {{ $poolID }}'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Client List'])
     <div class="container mt-5">
    
 @if(session('success'))
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
 
-<a href="{{ route('backwashes.create') }}">Log a New Backwash Record</a>
+<a href="{{ route('clients.create') }}">Add a new Client</a>
 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
     <thead>
