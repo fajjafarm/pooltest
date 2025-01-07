@@ -35,7 +35,7 @@ class BackwashController extends Controller
         $poolID = $poolID;
         $poolName = PoolList::where('pool_id', $poolID)->get('pool_name');
         $backwashes = Backwash::all();
-        return view('backwashes.create', compact('backwashes', 'backwashTypes', 'pumpStatus','poolId', 'poolName'));
+        return view('backwashes.create', compact('backwashes', 'backwashTypes', 'pumpStatus','poolID', 'poolName'));
     }
 
     public function store(Request $request)
