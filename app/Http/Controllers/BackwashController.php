@@ -33,7 +33,7 @@ class BackwashController extends Controller
             'Running','Off - Standby', 'Off - Maintenance'
         ];
         $poolID = $poolID;
-        $poolName = PoolList::where('pool_id', $poolID)->get('pool_name');
+        $poolName = PoolList::where('pool_id', $poolID)->first('pool_name');
         $backwashes = Backwash::all();
         return view('backwashes.create', compact('backwashes', 'backwashTypes', 'pumpStatus','poolID', 'poolName'));
     }
