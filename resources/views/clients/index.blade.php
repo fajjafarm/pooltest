@@ -14,11 +14,11 @@
     <thead>
         <tr class="table-dark">
             <th>Company Name</th>
-            <th>Address</th>
             <th>Contact Name</th>
             <th>Phone</th>
             <th>Email</th>
             <th>Website</th>
+            <th>Address</th>
             <th>Website</th>
             <th>Vat</th>
             <th>Company Reg. No</th>
@@ -27,29 +27,59 @@
             <th>Users</th>
             <th>Schedules</th>
             <th>Equipment</th>
+            <th>Since</th>
 </tr>
     </thead>
     <tbody>
         @foreach($clients as $client)
         <tr>
             <td>{{ $client->company_name }}</td>
-            <td><button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $client->company_address }}  ?? 'None' }}" data-bs-original-title="Backwash Info">
-                        Address
-                    </button></td>
-            <td>{{ $client->company_post_code }} </td>
             <td>{{ $client->client_contact }} </td>
             <td>{{ $client->client_phone }}</td>
             <td>{{ $client->client_email }}</td>
             <td>{{ $client->company_website }}</td>
+            <td><button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $client->company_address }}  ?? 'None' }}" data-bs-original-title="Backwash Info">
+                        Address
+                    </button></td>
+            <td>{{ $client->company_post_code }} </td>
             <td>{{ $client->vat_number }}</td>
             <td>{{ $client->company_registration_number }}</td>
             <td><div class="btn btn-soft-warning btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:shield-warning-broken" class="fs-20 me-1"></iconify-icon></td>
             <td><button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $client->description ?? 'None' }}" data-bs-original-title="Backwash Info">
              Description</button></td>
-             <td>
-            <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $client->performed_by }}" data-bs-original-title="Backwash Logged By">
-            <iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $client->performed_by }}"></iconify-icon>
-                    </button></td>
+             <td>                                    <div class="hstack gap-1 justify-content-end">
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-eye"></i></a>
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-edit fs-16"></i></a>
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-trash"></i></a>
+                                    </div></td>
+                                    <td>                                    <div class="hstack gap-1 justify-content-end">
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-eye"></i></a>
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-edit fs-16"></i></a>
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-trash"></i></a>
+                                    </div></td>
+                                    <td>                                    <div class="hstack gap-1 justify-content-end">
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-eye"></i></a>
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-edit fs-16"></i></a>
+                                        <a href="javascript:void(0);"
+                                            class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                class="ti ti-trash"></i></a>
+                                    </div></td>
             <td>{{ $client->created_at }}</td>
           
         </tr>
