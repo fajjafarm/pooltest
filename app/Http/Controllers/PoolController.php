@@ -35,6 +35,6 @@ class PoolController extends Controller
         $pool->fill($validatedData);
         $pool->save();
 
-        return redirect()->route('pools.index')->with('success', 'Pool added successfully.');
+        return redirect()->back()->with('success', 'Pool added successfully.');
     }
 }
