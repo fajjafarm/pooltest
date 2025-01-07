@@ -20,12 +20,14 @@ use App\Http\Controllers\PoolController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-
+//super admin access only
+Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
+Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
 
 Route::get('/pools/create', [PoolController::class, 'create'])->name('pools.create');
 Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
 
+//regularuser access but only if they are associated with the company
 Route::post('/water_balance_checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
 
 Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
