@@ -12,7 +12,7 @@
                         <div class="lh-1"><strong>Error - </strong> {{ session('notgood') }}</div>
                     </div>
     @endif
-        <h2>Log a Backwash for $poolName</h2>
+        <h2>Log a Backwash for {{$poolName}}</h2>
         <form action="{{ route('backwashes.store') }}" method="POST">
         @csrf
         <div class="mb-3">
