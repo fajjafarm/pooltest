@@ -26,6 +26,7 @@ class CreatePoolListTable extends Migration
             $table->decimal('ideal_air_temp', 5, 2);
             $table->timestamps();
 
+            
         });
     }
 
