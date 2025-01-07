@@ -17,7 +17,7 @@ class BackwashController extends Controller
        // }else {
       //  $backwashes = Backwash::all();
       //  return view('backwashes.index', compact('backwashes'));
-        }
+      //  }
         
     }
 
