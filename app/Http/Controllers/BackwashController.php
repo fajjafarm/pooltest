@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\PoolList
 use App\Models\Backwash;
 use Illuminate\Http\Request;
 
@@ -11,8 +11,8 @@ class BackwashController extends Controller
     {
         if (isset($poolID)) {
         $backwashes = Backwash::where('pool_id', $poolID)->get();
-       // $poolName = Pools::where('pool_id', $poolID)->get('pool_name');
-        return view('backwashes.index', compact('backwashes','poolID'));
+        $poolName = PoolList::where('pool_id', $poolID)->get('pool_name');
+        return view('backwashes.index', compact('backwashes','poolID','poolName'));
         }else {
         $backwashes = Backwash::all();
         return view('backwashes.index', compact('backwashes'));
