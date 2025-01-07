@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\PoolList;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PoolController extends Controller
 {
