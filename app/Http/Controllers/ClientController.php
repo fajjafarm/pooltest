@@ -7,6 +7,15 @@ use Illuminate\Support\Str;
 
 class ClientController extends Controller
 {
+    public function index()
+    {
+        
+        $clients = Client::::all();
+       
+        return view('clients.index', compact('clients'));
+        
+        
+    }
     public function create()
     {
         return view('clients.create');
