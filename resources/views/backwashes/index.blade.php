@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => 'Backwash Record for {{ $poolID }}'])
+@extends('layouts.vertical', ['title' => 'Backwash Record for '.$poolID])
 
 @section('content')
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Backwash Record for '.$poolName])
@@ -8,7 +8,7 @@
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
 
-<a href="{{ route('backwashes.create') }}/{{ $backwash->pool_id }}">Log a New Backwash Record</a>
+<a href="">Log a New Backwash Record</a>
 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
     <thead>
