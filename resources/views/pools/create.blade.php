@@ -12,12 +12,11 @@
                         <div class="lh-1"><strong>Error - </strong> {{ session('notgood') }}</div>
                     </div>
     @endif
-        <h2>Add a New Pool</h2>
+        <h2>Add a New Pool for {{$clientName}} </h2>
         <form action="{{ route('pools.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="client_id">Client ID: {{$clientID}}</label>
-            <input type="number" name="client_id" class="form-control" required>
+        <input type="hidden" id="client_id" name="client_id" value="{{$clientID}}" />
         </div>
         <div class="mb-3">
             <label for="pool_name">Pool Name:</label>
