@@ -41,7 +41,7 @@
             <td><button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $client->description ?? 'None' }} VAT: {{ $client->vat_number ?? 'None' }} REG:{{ $client->company_registration_number ?? 'None' }}" data-bs-original-title="Backwash Info">
              Description</button></td>
              <td>                                    <div class="hstack gap-1 justify-content-end">
-                                        <a href="{{ route('clients.create') }}/{{ $client->company_id }}"
+                                        <a href="{{ route('clients.create') }}/{{ $client->client_id }}"
                                             class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
                                                 class="ti ti-eye"></i></a>
                                         <a href="javascript:void(0);"
