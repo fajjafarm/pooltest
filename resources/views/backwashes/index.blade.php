@@ -1,7 +1,7 @@
 @extends('layouts.vertical', ['title' => 'Backwash Record for {{ $poolID }}'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Backwash Record for '.$pooName])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Backwash Record for '.$poolName])
     <div class="container mt-5">
    
 @if(session('success'))
