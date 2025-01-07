@@ -12,12 +12,12 @@
                         <div class="lh-1"><strong>Error - </strong> {{ session('notgood') }}</div>
                     </div>
     @endif
-        <h2>Log a Backwash</h2>
+        <h2>Log a Backwash for {{$poolName}}</h2>
         <form action="{{ route('backwashes.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="pool_id">Pool ID:</label>
-            <input type="number" name="pool_id" required>
+        <input type="hidden" id="pool_id" name="pool_id" value="{{$poolID}}" />
+
             <select class="form-select" id="reason_for_backwash" name="reason_for_backwash" required>
                 <option value="">Select Reason for Backwash</option>
                 @foreach($backwashTypes as $type)

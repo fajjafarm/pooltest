@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\PoolList
+use App\Models\PoolList;
 use App\Models\Backwash;
 use Illuminate\Http\Request;
 
