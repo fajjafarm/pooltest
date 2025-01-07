@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Log a Backwash'])
+@extends('layouts.vertical', ['title' => 'Adda a New Pool'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Log a Backwash'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Add a New Pool'])
     <div class="container mt-5">
     @if(session('success'))  
         <div class="alert alert-success">{{ session('success') }}   </div>
