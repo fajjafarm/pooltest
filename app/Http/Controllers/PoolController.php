@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PoolList;
-use App\Models\ClientList;
+use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
