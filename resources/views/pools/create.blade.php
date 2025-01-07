@@ -16,7 +16,7 @@
         <form action="{{ route('pools.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="client_id">Client ID:</label>
+            <label for="client_id">Client ID: {($clientID)}</label>
             <input type="number" name="client_id" class="form-control" required>
         </div>
         <div class="mb-3">
