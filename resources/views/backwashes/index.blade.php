@@ -7,8 +7,17 @@
 @if(session('success'))
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
+
 <div class="card">
-<div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
+                <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
+                    <h4 class="header-title">Doctor List</h4>
+                    <div>
+                        <a href="https://leisure.glensloss.co.uk/hospital/add-doctors" class="btn btn-success bg-gradient"><i
+                                class="ti ti-plus me-1"></i> Add Doctor</a>
+                        <a href="#" class="btn btn-secondary bg-gradient"><i class="ti ti-file-import me-1"></i>
+                            Import</a>
+                    </div>
+                </div>
 <a href="{{ route('backwashes.create', ['poolID' => $poolID ])}}">Log a New Backwash Record</a>
 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
@@ -109,5 +118,5 @@
         @endforeach
     </tbody>
 </table></div>
-    </div></div></div>
+    </div></div>
 @endsection
