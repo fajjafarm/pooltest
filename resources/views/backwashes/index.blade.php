@@ -8,7 +8,8 @@
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
 <div class="row">
-<div class="card">
+        <div class="col-12">
+            <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
                     <h4 class="header-title">Backwash List for {{$poolName}} </h4>
                     <div>
