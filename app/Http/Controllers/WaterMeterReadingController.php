@@ -12,7 +12,7 @@ class WaterMeterReadingController extends Controller
     {
         $readings = WaterMeterReading::all();
         //$poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
-        return view('water-meter-readings.index', compact('readings','pool_name'));
+        return view('water-meter-readings.index', compact('readings'));
     }
 
     public function store(Request $request)
