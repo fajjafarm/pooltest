@@ -17,7 +17,7 @@
                                 class="ti ti-plus me-1"></i> Record a Backwash</a>
                         
                     </div>
-                </div>
+                </div></div>
 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
     <thead>
@@ -117,5 +117,5 @@
         @endforeach
     </tbody>
 </table></div>
-    </div></div></div>
+    </div></div>
 @endsection
