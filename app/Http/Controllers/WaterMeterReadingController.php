@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\WaterMeterReading;
+use App\Models\PoolList;
 use Illuminate\Http\Request;
 
 class WaterMeterReadingController extends Controller
@@ -10,7 +11,8 @@ class WaterMeterReadingController extends Controller
     public function index()
     {
         $readings = WaterMeterReading::all();
-        return view('water-meter-readings.index', compact('readings'));
+        //$poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
+        return view('water-meter-readings.index', compact('readings','pool_name'));
     }
 
     public function store(Request $request)

@@ -12,7 +12,7 @@
                 <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
                     <h4 class="header-title">Water Meter Readings </h4>
                     <div>
-                        <a href="{{ route('readings.create', ['poolID' => $poolID ])}}" class="btn btn-success bg-gradient"><i
+                        <a href="" class="btn btn-success bg-gradient"><i
                                 class="ti ti-plus me-1"></i> Add a Water Meter Reading</a>
                         
                     </div>
