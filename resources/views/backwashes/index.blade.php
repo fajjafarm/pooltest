@@ -8,6 +8,7 @@
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
 <div class="card">
+<div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
 <a href="{{ route('backwashes.create', ['poolID' => $poolID ])}}">Log a New Backwash Record</a>
 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
@@ -108,5 +109,5 @@
         @endforeach
     </tbody>
 </table></div>
-    </div></div>
+    </div></div></div>
 @endsection
