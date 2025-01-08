@@ -27,7 +27,7 @@ Route::get('/clients', [ClientController::class, 'index'])->name('clients.index'
 Route::get('/clients/create/', [ClientController::class, 'create'])->name('clients.create');
 Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
 
-Route::get('water-meter-readings', [WaterMeterReadingController::class, 'index']);->name('water-meter-readings.create');
+Route::get('water-meter-readings', [WaterMeterReadingController::class, 'index'])->name('water-meter-readings.create');
 
 Route::get('/pools/create/{clientID}', [PoolController::class, 'create'])->name('pools.create');
 Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
