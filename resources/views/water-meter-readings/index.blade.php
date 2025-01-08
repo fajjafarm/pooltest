@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => 'Backwash Record for'.$poolName])
+@extends('layouts.vertical', ['title' => 'Backwash Record for'])
 
 @section('content')
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Backwash Records'])
