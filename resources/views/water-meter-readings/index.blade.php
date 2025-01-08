@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Backwash Record for'])
+@extends('layouts.vertical', ['title' => 'Water Meter Readings'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Backwash Records'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Water MEter Readings'])
     <div class="container mt-5">
    
 @if(session('success'))
@@ -18,7 +18,6 @@
                     </div>
                 </div>
 <div class="table-responsive-sm">
-<h1>Water Meter Readings</h1>
     <ul>
         @foreach ($readings as $reading)
             <li>{{ $reading->reading_id }} - Reading: {{ $reading->meter_reading }} at Plantroom: {{ $reading->plantroom_id }} by User: {{ $reading->logged_by }}</li>
