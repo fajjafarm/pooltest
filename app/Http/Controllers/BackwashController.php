@@ -10,7 +10,7 @@ class BackwashController extends Controller
     public function index($poolID)
     {
      //   if (isset($poolID)) {
-        $backwashes = Backwash::where('pool_id', $poolID)->get();
+        $backwashes = Backwash::where('pool_id', $poolID)->orderBy('created_at', 'desc')->get();
        // $poolName = PoolList::where('pool_name', $poolID)->get();
        $poolID=$poolID;
         $poolName = PoolList::where('pool_id', $poolID)->get('pool_name');
