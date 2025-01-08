@@ -10,7 +10,7 @@
 
 <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
-                    <h4 class="header-title">Backwash List for {{$poolName['pool_name']}} </h4>
+                    <h4 class="header-title">Backwash List for {{$poolName}} </h4>
                     <div>
                         <a href="{{ route('backwashes.create', ['poolID' => $poolID ])}}" class="btn btn-success bg-gradient"><i
                                 class="ti ti-plus me-1"></i> Record a Backwash</a>
