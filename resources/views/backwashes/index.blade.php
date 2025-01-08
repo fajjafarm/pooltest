@@ -13,7 +13,6 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th>&nbsp;</th>
             <th colspan="3">Filter Backwashed?</th>
             <th colspan="6">Filter Pressures Before/After</th>
             <th colspan="3">Pump Status</th>
@@ -21,7 +20,6 @@
             <th colspan="4">&nbsp;</th>
 </tr>
 <tr class="table-dark">
-            <th>Pool ID</th>
             <th>F1</th>
             <th>F2</th>
             <th>F3</th>
@@ -46,7 +44,6 @@
     <tbody>
         @foreach($backwashes as $backwash)
         <tr>
-            <td>{{ $backwash->pool_id }}</td>
             <td>
             @if($backwash->filter1_backwashed == 1)<div class="btn btn-soft-success btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:check-circle-broken" class="fs-20 me-1"></iconify-icon></div>@endif
             @if($backwash->filter1_backwashed == 0)<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle"><iconify-icon icon="solar:alarm-turn-off-broken" class="fs-20 me-1"></iconify-icon></div>@endif    
