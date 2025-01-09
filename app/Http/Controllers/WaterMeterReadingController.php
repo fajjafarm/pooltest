@@ -23,13 +23,13 @@ class WaterMeterReadingController extends Controller
         $poolID = $poolID;
         $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
         $WaterMeterReading = WaterMeterReading::all();
-        return view('WaterMeterReading.create', compact('WaterMeterReading','poolID', 'poolName'));
+        return view('water-meter-readings.create', compact('WaterMeterReading','poolID', 'poolName'));
     }
 
     public function store(Request $request)
     {
         WaterMeterReading::create($request->all()+ ['logged_by' => auth()->id()]);
-        return redirect()->route('readings.index')->with('success', 'Reading logged successfully.');
+        return redirect()->route('water-meter-readings.index')->with('success', 'Reading logged successfully.');
     }
 
     // Add more methods like show, edit, update, destroy if needed
