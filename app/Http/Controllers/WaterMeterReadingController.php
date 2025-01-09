@@ -10,7 +10,7 @@ class WaterMeterReadingController extends Controller
 {
     public function index($poolID)
     {
-        $watermeterreadings = WaterMeterReading::where('pool_id', $poolID)->orderBy('created_at', 'desc')->get();
+        $watermeterreadings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
         $poolID=$poolID;
          $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
