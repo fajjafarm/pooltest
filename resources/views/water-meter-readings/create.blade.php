@@ -13,7 +13,7 @@
                     </div>
     @endif
     <h1>Add Water Meter Reading</h1>
-    <form action="{{ route('readings.store') }}" method="POST">
+    <form action="{{ route('water-meter-readings.store') }}" method="POST">
         @csrf
         <div class="mb-3">
         <input type="number" name="meter_reading" placeholder="Meter Reading" required></div>
