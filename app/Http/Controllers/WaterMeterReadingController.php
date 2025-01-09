@@ -8,11 +8,22 @@ use Illuminate\Http\Request;
 
 class WaterMeterReadingController extends Controller
 {
-    public function index()
+    public function index($pool_id)
     {
+        $watermeterreadings = WaterMeterReading::where('pool_id', $poolID)->orderBy('created_at', 'desc')->get();
+        // $poolName = PoolList::where('pool_name', $poolID)->get();
+        $poolID=$poolID;
+         $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
         $readings = WaterMeterReading::all();
         //$poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
-        return view('water-meter-readings.index', compact('readings'));
+        return view('water-meter-readings.index', compact('readings', ,'poolID','poolName'));
+    }
+    public function create($poolID)
+    {
+        $poolID = $poolID;
+        $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
+        $WaterMeterReading = WaterMeterReading::all();
+        return view('WaterMeterReading.create', compact('WaterMeterReading','poolID', 'poolName'));
     }
 
     public function store(Request $request)

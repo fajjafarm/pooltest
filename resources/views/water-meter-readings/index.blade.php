@@ -1,7 +1,7 @@
 @extends('layouts.vertical', ['title' => 'Water Meter Readings'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Water MEter Readings'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Water Meter Readings'])
     <div class="container mt-5">
    
 @if(session('success'))
