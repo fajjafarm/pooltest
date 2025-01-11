@@ -23,6 +23,18 @@
                         
                     </div>
                 </div>
+
+                <div class="row">
+                <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title mb-3">Stepline Chart</h4>
+                    <div dir="ltr">
+                        <div id="line-chart-stepline" class="apex-charts" data-colors="#0acf97"></div>
+                    </div>
+                </div>
+                <!-- end card body-->
+            </div>
+</div>
 <div class="table-responsive-sm">
     <ul>
         @foreach ($readings as $reading)
