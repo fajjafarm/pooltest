@@ -17,10 +17,7 @@
         @csrf
         <div class="mb-3">
         <input type="number" name="meter_reading" placeholder="Meter Reading" required></div>
-        <div class="mb-3">
-        <input type="number" name="plantroom_id" placeholder="Plantroom ID" required></div>
-        <div class="mb-3">
-        <input type="number" name="logged_by" placeholder="Logged By (User ID)" required></div>
+        <input type="hidden" name="plantroom_id" placeholder="Plantroom ID" required>
         <div class="mb-3">
         <button type="submit">Submit Reading</button></div>
     </form>
