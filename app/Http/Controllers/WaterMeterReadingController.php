@@ -30,7 +30,7 @@ class WaterMeterReadingController extends Controller
     public function store(Request $request)
     {
         WaterMeterReading::create($request->all()+ ['logged_by' => auth()->id()]);
-        return redirect()->route('water-meter-readings.index',[$request->'pool_id'])->with('success', 'Reading logged successfully.');
+        return redirect()->route('water-meter-readings.index',[$request->input('pool_id')])->with('success', 'Reading logged successfully.');
     }
 
     // Add more methods like show, edit, update, destroy if needed
