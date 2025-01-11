@@ -25,14 +25,12 @@
                 </div>
 
                 
-                <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title mb-3">Stepline Chart</h4>
-                    <div dir="ltr">
-                        <div id="line-chart-stepline" class="apex-charts" data-colors="#0acf97"></div>
-                    </div>
-                </div>
-                <!-- end card body-->
+                
+
+
+
+
+                
             </div>
 </div>
 <div class="table-responsive-sm">
@@ -42,4 +40,11 @@
         @endforeach
     </ul></div>
     </div></div>
+@endsection
+@section('scripts')
+<script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+    <script src="https://apexcharts.com/samples/assets/series1000.js"></script>
+    <script src="https://apexcharts.com/samples/assets/github-data.js"></script>
+    <script src="https://apexcharts.com/samples/assets/irregular-data-series.js"></script>
+    @vite(['resources/js/pages/chart-apex-area.js'])
 @endsection
