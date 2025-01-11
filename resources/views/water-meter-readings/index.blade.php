@@ -29,5 +29,5 @@
             <li>{{ $reading->reading_id }} - Reading: {{ $reading->meter_reading }} at Plantroom: {{ $reading->plantroom_id }} by User: {{ $reading->logged_by }}</li>
         @endforeach
     </ul></div>
-    </div>
+    </div></div>
 @endsection
