@@ -18,6 +18,7 @@
         <div class="mb-3">
         <input type="number" name="meter_reading" placeholder="Meter Reading" required></div>
         <input type="hidden" id="plantroom_id" name="plantroom_id" value="{{$plantroomID}}" />
+        <input type="hidden" id="pool_id" name="pool_id" value="{{$poolID}}" />
         <div class="mb-3">
         <button type="submit">Submit Reading</button></div>
     </form>
