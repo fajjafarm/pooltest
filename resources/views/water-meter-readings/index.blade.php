@@ -23,8 +23,8 @@
                         
                     </div>
                 </div>
-</div>
-                <div class="row">
+
+                
                 <div class="card">
                 <div class="card-body">
                     <h4 class="header-title mb-3">Stepline Chart</h4>
