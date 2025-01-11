@@ -13,7 +13,7 @@
                         <div class="lh-1"><strong>Error - </strong> {{ session('notgood') }}</div>
                     </div>
     @endif
-
+    <div class="row">
 <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
                     <h4 class="header-title">Water Meter Readings </h4>
@@ -23,7 +23,7 @@
                         
                     </div>
                 </div>
-
+</div>
                 <div class="row">
                 <div class="card">
                 <div class="card-body">
