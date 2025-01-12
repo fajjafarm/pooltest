@@ -6,6 +6,7 @@ use App\Models\WaterMeterReading;
 use App\Models\PoolList;
 use Illuminate\Http\Request;
 
+
 class WaterMeterReadingController extends Controller
 {
     public function index($poolID)
@@ -15,23 +16,8 @@ class WaterMeterReadingController extends Controller
         // $poolName = PoolList::where('pool_name', $poolID)->get();
         $poolID=$poolID;
          $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
-        $readings = WaterMeterReading::all();
-        //$poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
-
-        $labels = [];
-        $values = [];
-
-        foreach ($watermeterreadings as $watermeterreading){
-            $labels[]=$watermeterreading['created_at'];
-            $values[]=$watermeterreading['meter_reading'];
-
-        }
-        $chart = $chart->barChart()
-        ->setTitle('Water Meter Reading')
-        ->addData('Litres', $values->values()->toArray())
-        ->setXAxis($labels->keys()->toArray());
-
-        return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','labels','values', 'chart'));
+        
+           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','labels','values', 'chart'), ['chart' => $chart->build($poolID)]);
     }
     public function create($poolID)
     {
