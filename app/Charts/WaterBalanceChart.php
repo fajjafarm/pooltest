@@ -9,7 +9,7 @@ class WaterBalanceChart
 {
     public function build($poolID): OriginalAreaChart
     {
-        return (new OriginalAreaChart)
+        return (new OriginalAreaChart);
 
         $readings = WaterMeterReading::all();
         //$poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
