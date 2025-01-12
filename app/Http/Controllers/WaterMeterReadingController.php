@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class WaterMeterReadingController extends Controller
 {
-    public function index($poolID)
+    public function index($poolID , $chart)
     {
         $watermeterreadings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
