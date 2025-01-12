@@ -37,12 +37,13 @@
             <!-- end card -->
 
 
+            {!! $chart->container() !!}
+ 
+ <script src="{{ $chart->cdn() }}"></script>
 
-                       <div class="container">
-        <h1>Monthly Sales</h1>
-        {!! $chart->container() !!}
-    </div>
-    {!! $chart->script() !!}
+ {{ $chart->script() }}
+
+
                 
             </div>
 </div>
@@ -55,7 +56,3 @@
     </div></div>
 @endsection
 
-@section('scripts')
-    <script src="https://apexcharts.com/samples/assets/irregular-data-series.js"></script>
-    @vite(['resources/js/pages/chart-apex-area.js'])
-@endsection
