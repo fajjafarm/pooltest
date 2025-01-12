@@ -15,9 +15,7 @@ class WaterMeterReadingController extends Controller
     {
         $readings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
-        $poolID=$poolID;
-        $chart = $chart;
-         $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
+        $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
          $chart = (new WaterBalanceChart);
         $chart = $chart->build($poolID) ;
            return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart'));
