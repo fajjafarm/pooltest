@@ -3,6 +3,7 @@
 namespace App\Charts;
 use App\Models\WaterMeterReading;
 
+use marineusde\LarapexCharts\LarapexChart;
 use marineusde\LarapexCharts\Charts\AreaChart AS OriginalAreaChart;
 use marineusde\LarapexCharts\Options\XAxisOption;
 
