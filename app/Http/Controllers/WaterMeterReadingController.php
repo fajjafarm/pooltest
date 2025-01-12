@@ -7,20 +7,29 @@ use App\Models\PoolList;
 use App\Charts\WaterBalanceChart;
 use Illuminate\Http\Request;
 use marineusde\LarapexCharts\Facades\LarapexChart;
+use ArielMejiaDev\LarapexCharts\LarapexChart;
 
 
 
 class WaterMeterReadingController extends Controller
 {
-    public function index($poolID)
+    public function index($poolID, LarapexChart $chart)
     {
         $readings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
         $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
-         $chart = new WaterBalanceChart();
+        
+        $chart = $chart->barChart()
+        ->setTitle('Monthly Sales')
+        ->addData('litres',  $readings->values()->toArray())
+        ->setXAxis( $readings->keys()->toArray());
         
            return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart'));
     }
+
+
+
+
     public function create($poolID)
     {
         $poolID = $poolID;

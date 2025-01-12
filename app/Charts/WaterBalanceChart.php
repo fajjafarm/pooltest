@@ -7,6 +7,7 @@ use marineusde\LarapexCharts\LarapexChart;
 use marineusde\LarapexCharts\Charts\AreaChart AS OriginalAreaChart;
 use marineusde\LarapexCharts\Options\XAxisOption;
 
+
 class WaterBalanceChart
 {
     public function build($poolID): OriginalAreaChart
