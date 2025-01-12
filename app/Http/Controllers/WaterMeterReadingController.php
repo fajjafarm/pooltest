@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\WaterMeterReading;
 use App\Models\PoolList;
 use Illuminate\Http\Request;
+use App\Charts\WaterBalanceChart;
 
 
 class WaterMeterReadingController extends Controller
