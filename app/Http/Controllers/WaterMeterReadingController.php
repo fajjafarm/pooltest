@@ -6,6 +6,7 @@ use App\Models\WaterMeterReading;
 use App\Models\PoolList;
 use App\Charts\WaterBalanceChart;
 use Illuminate\Http\Request;
+use marineusde\LarapexCharts\Facades\LarapexChart;
 
 
 
