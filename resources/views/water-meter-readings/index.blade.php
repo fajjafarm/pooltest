@@ -38,7 +38,11 @@
 
 
 
-
+                       <div class="container">
+        <h1>Monthly Sales</h1>
+        {!! $chart->container() !!}
+    </div>
+    {!! $chart->script() !!}
                 
             </div>
 </div>
@@ -50,10 +54,8 @@
     </ul></div>
     </div></div>
 @endsection
+
 @section('scripts')
-<script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
-    <script src="https://apexcharts.com/samples/assets/series1000.js"></script>
-    <script src="https://apexcharts.com/samples/assets/github-data.js"></script>
     <script src="https://apexcharts.com/samples/assets/irregular-data-series.js"></script>
     @vite(['resources/js/pages/chart-apex-area.js'])
 @endsection

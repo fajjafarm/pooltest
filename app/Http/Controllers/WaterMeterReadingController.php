@@ -16,7 +16,21 @@ class WaterMeterReadingController extends Controller
          $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
         $readings = WaterMeterReading::all();
         //$poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
-        return view('water-meter-readings.index', compact('readings' ,'poolID','poolName'));
+
+        $labels = [];
+        $values = [];
+
+        foreach ($watermeterreadings as $watermeterreading){
+            $labels[]=$watermeterreading['created_at'];
+            $values[]=$watermeterreading['meter_reading'];
+
+        }
+        $chart = $chart->barChart()
+        ->setTitle('Water Meter Reading')
+        ->addData('Litres', $values->values()->toArray())
+        ->setXAxis($labels->keys()->toArray());
+
+        return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','labels','values', 'chart'));
     }
     public function create($poolID)
     {
