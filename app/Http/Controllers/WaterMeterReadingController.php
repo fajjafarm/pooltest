@@ -23,12 +23,12 @@ class WaterMeterReadingController extends Controller
 
         foreach ($watermeterreadings as $watermeterreading){
             $labels[]=$watermeterreading['created_at'];
-            $values[]=$watermeterreading['meter_reading'];
+            $litres[]=$watermeterreading['meter_reading'];
 
         }
         $chart = $chart->barChart()
         ->setTitle('Monthly Sales')
-        ->addData('litres',  $values->values()->toArray())
+        ->addData('litres',  $litres->values()->toArray())
         ->setXAxis( $labels->keys()->toArray());
         
            return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart'));
