@@ -28,8 +28,8 @@ class WaterMeterReadingController extends Controller
         }
         $chart = $chart->barChart()
         ->setTitle('Monthly Sales')
-        ->addData('litres',  $litres->values()->toArray())
-        ->setXAxis( $labels->keys()->toArray());
+        ->addData('litres',  $litres)
+        ->setXAxis( $labels);
         
            return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart'));
     }
