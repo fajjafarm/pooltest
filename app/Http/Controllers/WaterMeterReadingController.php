@@ -16,7 +16,7 @@ class WaterMeterReadingController extends Controller
         $poolID=$poolID;
          $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
         
-           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','labels','values', 'chart'), ['chart' => $chart->build($poolID)]);
+           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName'), ['chart' => $chart->build($poolID)]);
     }
     public function create($poolID)
     {
