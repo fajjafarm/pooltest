@@ -38,15 +38,18 @@
         
     },
     "autoload": {
+        
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "ArielMejiaDev\\LarapexCharts\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "ArielMejiaDev\\LarapexCharts\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -73,6 +76,13 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+         "providers": [
+                "ArielMejiaDev\\LarapexCharts\\LarapexChartsServiceProvider"
+            ],
+            "aliases": {
+                "LarapexChart": "ArielMejiaDev\\LarapexCharts\\Facades\\LarapexChart"
+            }
         }
     },
     "config": {
