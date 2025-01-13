@@ -35,7 +35,8 @@
                 <!-- end card body-->
             </div>
             <!-- end card -->
-
+            <div class="card">
+            <div class="card-body">
             <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
             {!! $chart->container() !!}
@@ -43,7 +44,10 @@
  <script src="{{ $chart->cdn() }}"></script>
 
  {{ $chart->script() }}
-
+ </div>
+                <!-- end card body-->
+            </div>
+            <!-- end card -->
                 
             </div>
 </div>
