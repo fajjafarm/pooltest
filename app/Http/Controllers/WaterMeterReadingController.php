@@ -23,8 +23,7 @@ class WaterMeterReadingController extends Controller
 
         foreach ($watermeterreadings as $watermeterreading){
 
-            $watermeterreading['created_at'] =$watermeterreading['created_at']->created_at->format('d.m.Y');
-            $labels[]=$watermeterreading['created_at'];
+            $labels[]=$watermeterreading['created_at']->format('d.m.Y');
             $litres[]=$watermeterreading['meter_reading'];
 
         }
