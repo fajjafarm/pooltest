@@ -16,7 +16,7 @@
     <div class="row">
 <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
-                    <h4 class="header-title">Water Meter Readings </h4>
+                    <h4 class="header-title">{{ $reading->plantroom_id }} </h4>
                     <div>
                         <a href="{{ route('water-meter-readings.create', ['poolID' => $poolID ])}}" class="btn btn-success bg-gradient"><i
                                 class="ti ti-plus me-1"></i> Add a Water Meter Reading</a>
@@ -26,7 +26,6 @@
 
             <div class="card">
             <div class="card-body">
-            <h4 class="header-title mb-4">Water Meter Readings</h4>
             <div dir="ltr">
             
 
