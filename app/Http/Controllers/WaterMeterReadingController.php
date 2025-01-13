@@ -28,7 +28,7 @@ class WaterMeterReadingController extends Controller
 
         }
         $chart = $chart->barChart()
-        ->setTitle('Monthly Sales')
+        ->setTitle('Litres')
         ->addData('litres',  $litres)
         ->setXAxis( $labels);
         
