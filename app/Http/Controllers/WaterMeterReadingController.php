@@ -33,7 +33,7 @@ class WaterMeterReadingController extends Controller
         ->addData('litres',  $litres)
         ->setXAxis( $labels);
         
-           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart'));
+           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart','labels','litres'));
     }
 
 

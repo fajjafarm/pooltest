@@ -39,13 +39,94 @@
             <div class="card-body">
             <h4 class="header-title mb-4">Water Meter Readings</h4>
             <div dir="ltr">
+            <script>//
+// AREA CHART WITH NULL VALUES
+//
+var colors = ["#39afd1"];
+var dataColors = $("#area-chart-nullvalues").data('colors');
+if (dataColors) {
+    colors = dataColors.split(",");
+}
+var options = {
+    colors: colors,
+    series: [{
+        name: 'Network',
+        data: [
+
+            @foreach ($readings as $reading)
+            {
+            x: {{ $reading->created_at }},
+            y: {{ $reading->meter_reading }},
+        },
+            @endforeach
+        {
+                        x: 'Pending',
+            y: null
+                }
+        
+        ],
+    }],
+    chart: {
+        type: 'area',
+        height: 350,
+        animations: {
+            enabled: false
+        },
+        zoom: {
+            enabled: false
+        },
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        curve: 'straight'
+    },
+    fill: {
+        opacity: 0.8,
+        type: 'pattern',
+        pattern: {
+            style: ['verticalLines', 'horizontalLines'],
+            width: 5,
+            height: 6
+        },
+    },
+    markers: {
+        size: 5,
+        hover: {
+            size: 9
+        }
+    },
+    title: {
+        text: 'Network Monitoring',
+    },
+    tooltip: {
+        intersect: true,
+        shared: false
+    },
+    theme: {
+        palette: 'palette1'
+    },
+    xaxis: {
+        type: 'datetime',
+    },
+    yaxis: {
+        title: {
+            text: 'Bytes Received'
+        }
+    }
+};
+
+
+var chart = new ApexCharts(
+    document.querySelector("#area-chart-nullvalues"),
+    options
+);
+
+chart.render();
+</script>
             <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-            {!! $chart->container() !!}
- 
- <script src="{{ $chart->cdn() }}"></script>
-
- {{ $chart->script() }}
  </div>
                 <!-- end card body-->
             </div>
