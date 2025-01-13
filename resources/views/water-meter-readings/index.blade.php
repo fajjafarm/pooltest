@@ -24,22 +24,11 @@
                     </div>
                 </div>
 
-                
-                <div class="card">
-                <div class="card-body">
-                    <h4 class="header-title mb-4">Area Chart with Null values</h4>
-                    <div dir="ltr">
-                    <div id="line-chart" class="apex-charts" data-colors="#ffbc00"></div>
-                    </div>
-                </div>
-                <!-- end card body-->
-            </div>
-            <!-- end card -->
             <div class="card">
             <div class="card-body">
             <h4 class="header-title mb-4">Water Meter Readings</h4>
             <div dir="ltr">
-            <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+            
 
             {!! $chart->container() !!}
  
@@ -62,11 +51,5 @@
     </div></div>
 @endsection
 
-@section('scripts')
-<script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
-    <script src="https://apexcharts.com/samples/assets/series1000.js"></script>
-    <script src="https://apexcharts.com/samples/assets/github-data.js"></script>
-    <script src="https://apexcharts.com/samples/assets/irregular-data-series.js"></script>
-    @vite(['resources/js/pages/chart-apex-area.js'])
-@endsection
+
 
