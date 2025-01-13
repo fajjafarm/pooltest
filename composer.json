@@ -10,6 +10,7 @@
         "laravel/tinker": "^2.9"
     },
     "name": "arielmejiadev/larapex-charts",
+    "version": "8.1.0",
     "description": "Package to provide easy api to build apex charts on Laravel",
     "keywords": [
         "arielmejiadev",
