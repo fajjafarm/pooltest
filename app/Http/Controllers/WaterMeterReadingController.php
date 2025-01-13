@@ -19,13 +19,13 @@ class WaterMeterReadingController extends Controller
         $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
         $watermeterreadings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'asc')->get();
         
-        $diffs = array();
+        $diffs[$i] = array();
         $count = 0;
         $prevNum =0;
 $diffs = 0;
 foreach($watermeterreadings as $i =>$watermeterreading) { 
     
-    $diffs[$i] = $watermeterreading['reading'] - $prevNum; 
+    $diffs[$i]['diff'] = $watermeterreading['reading'] - $prevNum; 
     $prevNum = $watermeterreading['reading'];
     $i++;
 
