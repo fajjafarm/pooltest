@@ -73,7 +73,7 @@ Info
             
           
         </tr>
-        @endforeach
+        @endfor
     </tbody>
 </table>
     </div>
