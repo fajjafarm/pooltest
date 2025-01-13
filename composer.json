@@ -9,24 +9,6 @@
         "laravel/framework": "^11.9",
         "laravel/tinker": "^2.9"
     },
-    "name": "arielmejiadev/larapex-charts",
-    "version": "8.1.0",
-    "description": "Package to provide easy api to build apex charts on Laravel",
-    "keywords": [
-        "arielmejiadev",
-        "larapex",
-        "charts",
-        "apexcharts"
-    ],
-    "homepage": "https://larapex-charts.netlify.app/",
-    "license": "MIT",
-    "type": "library",
-    "authors": [
-        {
-            "name": "ArielMejiaDev",
-            "email": "arielmejiadev@gmail.com"
-        }
-    ],
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/pail": "^1.1",
@@ -38,18 +20,15 @@
         
     },
     "autoload": {
-        
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "ArielMejiaDev\\LarapexCharts\\": "src"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/",
-            "ArielMejiaDev\\LarapexCharts\\Tests\\": "tests"
+            "Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -76,14 +55,7 @@
     "extra": {
         "laravel": {
             "dont-discover": []
-        },
-         "providers": [
-                "ArielMejiaDev\\LarapexCharts\\LarapexChartsServiceProvider"
-            ],
-            "aliases": {
-                "LarapexChart": "ArielMejiaDev\\LarapexCharts\\Facades\\LarapexChart"
-            }
-        
+        }
     },
     "config": {
         "optimize-autoloader": true,
