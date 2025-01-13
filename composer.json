@@ -83,7 +83,7 @@
             "aliases": {
                 "LarapexChart": "ArielMejiaDev\\LarapexCharts\\Facades\\LarapexChart"
             }
-        }
+        
     },
     "config": {
         "optimize-autoloader": true,
