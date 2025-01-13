@@ -56,7 +56,7 @@
     <tbody>
     
    
-    @foreach (array_combine($readings , $diffs) ) 
+    @foreach array_combine($readings , $diffs) 
         <tr>
             <td>
             {{ $reading->meter_reading }}    
