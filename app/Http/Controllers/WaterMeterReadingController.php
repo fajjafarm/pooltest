@@ -24,10 +24,10 @@ class WaterMeterReadingController extends Controller
         $prevNum =0;
 $diffs = 0;
 foreach($watermeterreadings as $i =>$watermeterreading) { 
-
-    $diffs[$count++] = $watermeterreading['reading'] - $prevNum; 
+    
+    $diffs[$i] = $watermeterreading['reading'] - $prevNum; 
     $prevNum = $watermeterreading['reading'];
-
+    $i++;
 
 } 
 
