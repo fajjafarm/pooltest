@@ -54,7 +54,7 @@
                    </tr>
     </thead>
     <tbody>
-    @for ($i = 0; $i < count($reading->column['reading']); $i++)
+    @for ($i = 0; $i < count($readings->column['meter_reading']); $i++)
     
         <tr>
             <td>
