@@ -56,7 +56,7 @@
     <tbody>
     
     {{$i = 0;}}
-    @foreach ($readings as $reading) {{$i = 0;}}
+    @foreach ($readings as $reading) 
         <tr>
             <td>
             {{ $reading->meter_reading }}    
