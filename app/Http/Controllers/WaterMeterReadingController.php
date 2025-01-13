@@ -18,6 +18,20 @@ class WaterMeterReadingController extends Controller
         // $poolName = PoolList::where('pool_name', $poolID)->get();
         $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
         $watermeterreadings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'asc')->get();
+        
+        $diffs = array();
+        $count = 0;
+        $prevNum =0;
+$diffs = 0;
+foreach($watermeterreadings as $i =>$watermeterreading) { 
+
+    $diffs[$count++] = $watermeterreading['reading'] - $prevNum; 
+    $prevNum = $watermeterreading['reading'];
+
+
+} 
+
+
         $labels = [];
         $values = [];
 
@@ -32,7 +46,7 @@ class WaterMeterReadingController extends Controller
         ->addData('litres',  $litres)
         ->setXAxis( $labels);
         
-           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart','labels','litres'));
+           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart','labels','litres','diffs'));
     }
 
 
