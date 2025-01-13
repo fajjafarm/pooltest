@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <h4 class="header-title mb-4">Area Chart with Null values</h4>
                     <div dir="ltr">
-                        <div id="area-chart-nullvalues" class="apex-charts" data-colors="#39afd1"></div>
+                    <div id="line-chart" class="apex-charts" data-colors="#ffbc00"></div>
                     </div>
                 </div>
                 <!-- end card body-->
