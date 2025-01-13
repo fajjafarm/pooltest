@@ -35,6 +35,7 @@
                 <!-- end card body-->
             </div>
             <!-- end card -->
+
             <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
             {!! $chart->container() !!}
@@ -42,7 +43,6 @@
  <script src="{{ $chart->cdn() }}"></script>
 
  {{ $chart->script() }}
-
 
                 
             </div>
@@ -54,5 +54,13 @@
         @endforeach
     </ul></div>
     </div></div>
+@endsection
+
+@section('scripts')
+<script src="https://apexcharts.com/samples/assets/stock-prices.js"></script>
+    <script src="https://apexcharts.com/samples/assets/series1000.js"></script>
+    <script src="https://apexcharts.com/samples/assets/github-data.js"></script>
+    <script src="https://apexcharts.com/samples/assets/irregular-data-series.js"></script>
+    @vite(['resources/js/pages/chart-apex-area.js'])
 @endsection
 
