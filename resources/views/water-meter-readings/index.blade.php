@@ -55,14 +55,14 @@
     </thead>
     <tbody>
     
-    {{$i = 0;}}
-    @foreach ($readings as $reading) 
+   
+    @foreach ($readings as $reading & $diffs as $diff) 
         <tr>
             <td>
             {{ $reading->meter_reading }}    
             </td>
             <td>
-            {{ $diffs }}
+            {{ $diff }}
             </td>
             <td>
 Info
