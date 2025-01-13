@@ -37,6 +37,8 @@
             <!-- end card -->
             <div class="card">
             <div class="card-body">
+            <h4 class="header-title mb-4">Water Meter Readings</h4>
+            <div dir="ltr">
             <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
             {!! $chart->container() !!}
