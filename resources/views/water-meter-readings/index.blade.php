@@ -42,11 +42,40 @@
             </div>
 </div>
 <div class="table-responsive-sm">
-    <ul>
-        @foreach ($readings as $reading)
-            <li>{{ $reading->reading_id }} - Reading: {{ $reading->meter_reading }} at Plantroom: {{ $reading->plantroom_id }} by User: {{ $reading->logged_by }}</li>
+<table class="table table-striped mb-0 table-sm">
+    <thead>
+<tr class="table-dark">
+            <th>Reading</th>
+            <th>Difference (l/day)</th>
+            <th>Action? </th>
+            <th>Logged by</th>
+            <th>Reading Time</th>
+            
+                   </tr>
+    </thead>
+    <tbody>
+    @foreach ($readings as $reading)
+        <tr>
+            <td>
+            {{ $reading->meter_reading }}    
+            </td>
+            <td>
+               TBA
+            </td>
+            <td>
+Info
+            </td>
+            <td> <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $reading->logged_by }}" data-bs-original-title="Reading Logged By">
+            <iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $reading->logged_by }}"></iconify-icon>
+                    </button></td>
+            <td>{{ $reading->created_at }}</td>
+            
+          
+        </tr>
         @endforeach
-    </ul></div>
+    </tbody>
+</table>
+    </div>
     </div></div>
 @endsection
 
