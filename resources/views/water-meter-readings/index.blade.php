@@ -54,13 +54,14 @@
                    </tr>
     </thead>
     <tbody>
-    @foreach ($readings as $reading)
+    @for ($i = 0; $i < count($reading->column['reading']); $i++)
+    
         <tr>
             <td>
-            {{ $reading->meter_reading }}    
+            {{ $reading->meter_reading[$i] }}    
             </td>
             <td>
-               TBA
+            {{ $diffs[$i] }}
             </td>
             <td>
 Info
