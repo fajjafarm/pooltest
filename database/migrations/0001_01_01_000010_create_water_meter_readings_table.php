@@ -11,8 +11,9 @@ class CreateWaterMeterReadingsTable extends Migration
         Schema::create('water_meter_readings', function (Blueprint $table) {
             $table->ulid('reading_id')->primary();
             $table->float('meter_reading');
-            $table->unsignedBigInteger('plantroom_id');
-            $table->unsignedBigInteger('logged_by');
+            $table->float('difference');
+            $table->float('plantroom_id');
+            $table->float('logged_by');
             $table->timestamps();
 
             //$table->foreign('logged_by')->references('id')->on('users')->onDelete('cascade');

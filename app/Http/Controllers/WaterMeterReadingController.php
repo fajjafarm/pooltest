@@ -63,7 +63,9 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
 
     public function store(Request $request)
     {
-        WaterMeterReading::create($request->all()+ ['logged_by' => auth()->id()]);
+        $latestreading = WaterMeterReading::pluck('meter_reading', $poolID)->orderBy('created_at', 'desc')->get();
+        $diff = $request->input('meter_reading')-$latestreading;
+        WaterMeterReading::create($request->all()+ ['logged_by' => auth()->id()]+ ['difference' => $diff]);
         return redirect()->route('water-meter-readings.index',[$request->input('pool_id')])->with('success', 'Reading logged successfully.');
     }
 

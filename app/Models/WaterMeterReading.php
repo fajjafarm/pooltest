@@ -22,6 +22,7 @@ class WaterMeterReading extends Model
     protected $fillable = [
         'reading_id', 
         'meter_reading', 
+        'difference',
         'plantroom_id', 
         'logged_by'
     ];
