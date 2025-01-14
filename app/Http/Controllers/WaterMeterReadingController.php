@@ -65,7 +65,7 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
     {
         $latestreadings = WaterMeterReading::where('meter_reading', $request->input('plantroom_id'))->latest()->first();
 
-        $diff = $request->input('meter_reading')-$latestreadings;
+        $diff = $request->input('meter_reading')-21000;
         WaterMeterReading::create($request->all()+ ['logged_by' => auth()->id()]+ ['difference' => $diff]);
         return redirect()->route('water-meter-readings.index',[$request->input('plantroom_id')])->with('success', 'Reading logged successfully.');
     }
