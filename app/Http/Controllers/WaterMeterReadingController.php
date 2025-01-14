@@ -66,11 +66,11 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
         $latestreadings = WaterMeterReading::where('meter_reading', $request->input('pool_id'))->orderBy('created_at', 'desc')->limit(1)->get();
         foreach($latestreadings as $i =>$watermeterreading) { 
     
-            $diffs = $watermeterreading['meter_reading'] 
+            $diffs = $watermeterreading['meter_reading'] ;
             
         
         } 
-        $diff = $request->input('meter_reading')-$latestreading['meter_reading'];
+        $diff = $request->input('meter_reading')-$diffs;
         WaterMeterReading::create($request->all()+ ['logged_by' => auth()->id()]+ ['difference' => $diff]);
         return redirect()->route('water-meter-readings.index',[$request->input('pool_id')])->with('success', 'Reading logged successfully.');
     }
