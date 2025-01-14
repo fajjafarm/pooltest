@@ -73,7 +73,7 @@ Info
             <td>{{ $reading->created_at }}</td>
             
           
-        </tr>{{$i++;}}
+        </tr>
         @endforeach
     </tbody>
 </table>
