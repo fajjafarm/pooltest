@@ -56,13 +56,13 @@
     <tbody>
     
    
-    @foreach array_combine($readings , $diffs)
+    @foreach ($readings as $key => $reading)  
         <tr>
             <td>
             {{ $reading->meter_reading }}    
             </td>
             <td>
-            {{ $diff }}
+            {{ $diff['$key'] }}
             </td>
             <td>
 Info
