@@ -62,7 +62,7 @@
             {{ $reading->meter_reading }}    
             </td>
             <td>
-            {{ $diffs->$key }}
+            {{ $diffs }}
             </td>
             <td>
 Info
