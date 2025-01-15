@@ -47,7 +47,7 @@
 <tr class="table-dark">
             <th>Reading</th>
             <th>Difference (l/day)</th>
-            <th>Action? </th>
+            <th>Result </th>
             <th>Logged by</th>
             <th>Reading Time</th>
             
