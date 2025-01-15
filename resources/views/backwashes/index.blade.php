@@ -28,7 +28,7 @@
             <th colspan="4">&nbsp;</th>
 </tr>
 <tr class="table-dark">
-            <th>F1</th>
+            <th>F1.</th>
             <th>F2</th>
             <th>F3</th>
             <th>F1 B</th>
