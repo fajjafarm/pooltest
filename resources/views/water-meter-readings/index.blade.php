@@ -66,7 +66,7 @@
             </td>
             <td>
             @if($reading->difference < '999')<button type="button" class="btn btn-soft-info">Low Water Usage</button>@endif
-            @if($reading->difference > '1000' && $reading->difference < '2500')<button type="button" class="btn btn-soft-success">Normal Water Usage</button>@endif 
+            @if($reading->difference >= '1000' && $reading->difference < '2500')<button type="button" class="btn btn-soft-success">Normal Water Usage</button>@endif 
             @if($reading->difference >= '2500')<button type="button" class="btn btn-soft-danger">Abnormal Water Usage</button>>@endif   
             </td>
             <td> <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $reading->logged_by }}" data-bs-original-title="Reading Logged By">
