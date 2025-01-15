@@ -65,7 +65,9 @@
             {{ $reading->difference }}
             </td>
             <td>
-Info
+            @if($reading->difference < '1000')<button type="button" class="btn btn-soft-info">Low Water Usage</button>@endif
+            @if($reading->difference >= '1000')<button type="button" class="btn btn-soft-success">Normal</button>@endif 
+            @if($reading->difference > '2500')<button type="button" class="btn btn-soft-danger">Abnormal water usage</button>>@endif   
             </td>
             <td> <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $reading->logged_by }}" data-bs-original-title="Reading Logged By">
             <iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $reading->logged_by }}"></iconify-icon>
