@@ -28,7 +28,7 @@ class WaterBalanceChart
         return (new OriginalAreaChart)
             ->setTitle('Water Balance Readings.')
             ->setSubtitle('Pool')
-            ->addData('Litres', $values)
+            ->addData('Daily Usage (Litres)', $values)
             ->setXAxisOption(new XAxisOption($labels));
     }
 }
