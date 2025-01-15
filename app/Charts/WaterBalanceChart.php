@@ -22,7 +22,7 @@ class WaterBalanceChart
 
         foreach ($watermeterreadings as $watermeterreading){
             $labels[]=$watermeterreading['created_at'];
-            $values[]=$watermeterreading['meter_reading'];
+            $values[]=$watermeterreading['difference'];
 
         }
         return (new OriginalAreaChart)
