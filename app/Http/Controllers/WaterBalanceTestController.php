@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class WaterBalanceTestController extends Controller
 {
-    public function index($poolID, LarapexChart $chart)
+    public function index($poolID)
     {
         $readings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
