@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\WaterBalanceTest;
+use App\Models\PoolList;
 use Illuminate\Http\Request;
 
 class WaterBalanceTestController extends Controller
