@@ -21,12 +21,12 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="3">Alkalinity</th>
-            <th colspan="6">Calcium Hardness</th>
-            <th colspan="3">ph</th>
-            <th colspan="3">Water Balance</th>
-            <th colspan="4">Logged By</th>
-            <th colspan="4">Logged At</th>
+            <th >Alkalinity</th>
+            <th >Calcium Hardness</th>
+            <th >ph</th>
+            <th >Water Balance</th>
+            <th >Logged By</th>
+            <th >Logged At</th>
 </tr>
     </thead>
     <tbody>
