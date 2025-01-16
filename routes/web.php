@@ -31,11 +31,15 @@ Route::get('water-meter-readings/view/{poolID}', [WaterMeterReadingController::c
 Route::get('/water-meter-readings/create/{poolID}', [WaterMeterReadingController::class, 'create'])->name('water-meter-readings.create');
 Route::post('/water-meter-readings', [WaterMeterReadingController::class, 'store'])->name('water-meter-readings.store');
 
+Route::get('/water-balance-checks/view/{poolID}', [WaterBalanceTestController::class, 'index'])->name('water-meter-readings.index');
+Route::get('/water-balance-checks/create/{poolID}', [WaterBalanceTestController::class, 'create'])->name('water-balance-checks.create');
+Route::post('/water-balance-checks', [WaterBalanceTestController::class, 'store'])->name('water-meter-readings.store');
+
 Route::get('/pools/create/{clientID}', [PoolController::class, 'create'])->name('pools.create');
 Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
 
 //regularuser access but only if they are associated with the company
-Route::post('/water_balance_checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
+//Route::post('/water-balance-checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
 
 Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');

@@ -16,7 +16,7 @@
     @endif
 
 
-        <form action="{{ route('water_balance_checks.waterBalanceTestForm') }}" method="POST">
+        <form action="{{ route('water-balance-checks.store') }}" method="POST">
             @csrf
             <div class="mb-3">
             <label for="alkalinity">Alkalinity:</label>
@@ -32,8 +32,7 @@
             </div>
             <div class="mb-3">
                 <!-- Here you might want to dynamically populate this if you have many pools -->
-            <label for="pool_id">Pool ID:</label>
-            <input type="number" name="pool_id" id="pool_id" class="form-control" required>
+                <input type="hidden" id="pool_id" name="pool_id" value="{{$poolID}}" />
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

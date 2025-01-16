@@ -11,7 +11,8 @@ class WaterBalanceTest extends Model
         'calcium_hardness',
         'ph',
         'pool_id',
-        'water_balance'
+        'water_balance',
+        'logged_by'
     ];
 
     // If you want to define the relationship with the Pool model

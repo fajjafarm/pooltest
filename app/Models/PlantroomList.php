@@ -15,7 +15,7 @@ class PlantroomList extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'client_id', 'plantroom_id', 'plantroom_name','plantroom_type', 'pumps', 'strainers', 'cl_injector', 'ph_injector', 
+        'client_id', 'plantroom_id', 'plantroom_name','plantroom_type', 'pool_filters', 'pool_strainers', 'other_strainers', 'cl_injector', 'ph_injector', 
         'pac_injector', 'info'
     ];
 }
