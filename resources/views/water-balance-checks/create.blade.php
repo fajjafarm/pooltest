@@ -16,7 +16,7 @@
     @endif
 
 
-        <form action="{{ route('water-balance-checks') }}" method="POST">
+        <form action="{{ route('water-balance-checks.store') }}" method="POST">
             @csrf
             <div class="mb-3">
             <label for="alkalinity">Alkalinity:</label>
