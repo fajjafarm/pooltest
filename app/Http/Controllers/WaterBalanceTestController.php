@@ -155,8 +155,28 @@ class WaterBalanceTestController extends Controller
             $cf =2.55;
             }
 
-        $water_balance2 = $af + $cf +$request->input('ph') ;
-
+        $water_balance = $af + $cf +$request->input('ph') ;
+        if ($water_balance < 9.6 ){
+            $water_balance2 ='Highly Corrosive';
+            }
+            if ($water_balance >= 9.6 &&  $water_balance <= 10.5){
+                $water_balance2 ='Corrosive';
+                }
+                if ($water_balance > 10.5 &&  $water_balance < 11){
+                    $water_balance2 ='Acceptable Balance';
+                    }
+                    if ($water_balance >= 11 &&  $water_balance < 11.3){
+                        $water_balance2 ='Ideal Balance';
+                        }
+                        if ($water_balance >= 11.3 &&  $water_balance < 11.7){
+                            $water_balance2 ='Acceptable Balance';
+                            }
+                            if ($water_balance >= 11.7 &&  $water_balance <= 12.6){
+                                $water_balance2 ='Scale Forming';
+                                }
+                                if ($water_balance > 12.6){
+                                    $water_balance2 ='Highly Scale Forming';
+                                    }
 
 
 
@@ -171,10 +191,10 @@ class WaterBalanceTestController extends Controller
         ]);
 
         $waterTest->save();
-        if ($water_balance2 < 100){
+        if ($water_balance < 100){
         return redirect()->back()->with('success', 'Water Balance Test Recorded');
         }
-        if ($water_balance2 >= 100){
+        if ($water_balance >= 100){
             return redirect()->back()->with('error', 'Water Balance Test Recorded as being Corrosive, please see supervisor for action');
             }
       //  return response()->json([
