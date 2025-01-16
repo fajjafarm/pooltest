@@ -155,7 +155,7 @@ class WaterBalanceTestController extends Controller
             $cf =2.55;
             }
 
-        $water_balance = $af + $cf +$request->input('ph') ;
+        $water_balance2 = $af + $cf +$request->input('ph') ;
 
         if ($water_balance < 9.6 ){
             $water_balance ='Highly Corrosive';
@@ -186,7 +186,7 @@ class WaterBalanceTestController extends Controller
             'calcium_hardness' => $request->input('calcium_hardness'),
             'ph' => $request->input('ph'),
             'pool_id' => $request->input('pool_id'),
-            'water_balance' => $water_balance,
+            'water_balance' => $water_balance2,
             'logged_by' => auth()->id() 
         ]);
 
