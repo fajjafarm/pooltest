@@ -1,11 +1,23 @@
 <?php
 
 namespace App\Models;
+use Illuminate\Support\Str;
 
 use Illuminate\Database\Eloquent\Model;
 
 class WaterBalanceTest extends Model
 {
+    protected $table = 'water_balance_tests';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::creating(function ($model) {
+            $model->{$model->getKeyName()} = (string) Str::ulid();
+        });
+    }
     protected $fillable = [
         'alkalinity',
         'calcium_hardness',
