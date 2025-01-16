@@ -31,7 +31,7 @@ Route::get('water-meter-readings/view/{poolID}', [WaterMeterReadingController::c
 Route::get('/water-meter-readings/create/{poolID}', [WaterMeterReadingController::class, 'create'])->name('water-meter-readings.create');
 Route::post('/water-meter-readings', [WaterMeterReadingController::class, 'store'])->name('water-meter-readings.store');
 
-Route::get('/water-balance-checks/view/{poolID}', [WaterBalanceTestController::class, 'index'])->name('water-meter-readings.index');
+Route::get('/water-balance-checks/view/{poolID}', [WaterBalanceTestController::class, 'index'])->name('water-balance-checks.index');
 Route::get('/water-balance-checks/create/{poolID}', [WaterBalanceTestController::class, 'create'])->name('water-balance-checks.create');
 Route::post('/water-balance-checks', [WaterBalanceTestController::class, 'store'])->name('water-balance-checks.store');
 
