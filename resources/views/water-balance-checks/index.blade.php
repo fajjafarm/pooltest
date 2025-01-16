@@ -40,7 +40,7 @@
             @if($balance->water_balance == 'Ideal Balance')<button type="button" class="btn btn-soft-success">Ideal Balance</div>@endif
             @if($balance->water_balance == 'Highly Scale Forming')<button type="button" class="btn btn-soft-danger">Highly Scale Forming</div>@endif 
             @if($balance->water_balance == 'Highly Corrosive')<button type="button" class="btn btn-soft-secondary">Highly Corrosive</div>@endif
-            @if($balance->water_balance == 'Corrosive')<div class="btn btn-soft-warning btn-icon btn-sm rounded-circle">Corrosive</div>@endif
+            @if($balance->water_balance == 'Corrosive')<button type="button" class="btn btn-soft-warning">Corrosive</div>@endif
             @if($balance->water_balance == 'Acceptable Balance')<button type="button" class="btn btn-soft-info">Acceptable Balance</div>@endif
             @if($balance->water_balance == 'Scale Forming')<button type="button" class="btn btn-soft-warning">Scale Forming</div>@endif   
             </td>
