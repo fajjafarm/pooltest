@@ -32,10 +32,19 @@
     <tbody>
         @foreach($balances as $balance)
         <tr>
+            
             <td>{{ $balance->alkalinity }}</td>
             <td>{{ $balance->calcium_hardness }}</td>
             <td>{{ $balance->ph }}</td>
-            <td>{{ $balance->water_balance }}</td>
+            <td>
+            @if($balance->water_balance == 'Ideal Balance')<div class="btn btn-soft-success btn-icon btn-sm rounded-circle">Ideal Balance</div>@endif
+            @if($balance->water_balance == 'Highly Scale Forming')<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle">Highly Scale Forming</div>@endif 
+            @if($balance->water_balance == 'Highly Corrosive')<div class="btn btn-soft-danger btn-icon btn-sm rounded-circle">Highly Corrosive</div>@endif
+            @if($balance->water_balance == 'Corrosive')<div class="btn btn-soft-warning btn-icon btn-sm rounded-circle">Corrosive</div>@endif
+            @if($balance->water_balance == 'Acceptable Balance')<div class="btn btn-soft-info btn-icon btn-sm rounded-circle">Acceptable Balance</div>@endif
+            @if($balance->water_balance == 'Scale Forming')<div class="btn btn-soft-warning btn-icon btn-sm rounded-circle">Scale Forming</div>@endif   
+            </td>
+         
             <td>
             <button type="button" tabindex="0" class="btn btn-info" data-bs-toggle="popover" data-bs-placement="left" data-bs-trigger="focus" data-bs-content="{{ $balance->performed_by }}" data-bs-original-title="Water Balance Logged By">
             <iconify-icon icon="solar:people-nearby-broken" class="fs-20 me-1" alt="{{ $balance->performed_by }}"></iconify-icon>
