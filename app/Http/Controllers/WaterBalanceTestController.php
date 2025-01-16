@@ -171,10 +171,10 @@ class WaterBalanceTestController extends Controller
         ]);
 
         $waterTest->save();
-        if ($water_balance < 100){
+        if ($water_balance2 < 100){
         return redirect()->back()->with('success', 'Water Balance Test Recorded');
         }
-        if ($water_balance >= 100){
+        if ($water_balance2 >= 100){
             return redirect()->back()->with('error', 'Water Balance Test Recorded as being Corrosive, please see supervisor for action');
             }
       //  return response()->json([
