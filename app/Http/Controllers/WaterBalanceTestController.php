@@ -10,11 +10,11 @@ class WaterBalanceTestController extends Controller
 {
     public function index($poolID)
     {
-        $readings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
+        $balances = WaterBalanceTests::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
         $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
 
-        return view('water-balance-checks.index', compact('readings' ,'poolID','poolName'));
+        return view('water-balance-checks.index', compact('balances' ,'poolID','poolName'));
     }
 
         public function create($poolID)
