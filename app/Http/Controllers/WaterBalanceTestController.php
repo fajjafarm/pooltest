@@ -157,27 +157,7 @@ class WaterBalanceTestController extends Controller
 
         $water_balance2 = $af + $cf +$request->input('ph') ;
 
-        if ($water_balance < 9.6 ){
-            $water_balance ='Highly Corrosive';
-            }
-            if ($water_balance >= 9.6 &&  $water_balance <= 10.5){
-                $water_balance ='Corrosive';
-                }
-                if ($water_balance > 10.5 &&  $water_balance < 11){
-                    $water_balance ='Acceptable Balance';
-                    }
-                    if ($water_balance >= 11 &&  $water_balance < 11.3){
-                        $water_balance ='Ideal Balance';
-                        }
-                        if ($water_balance >= 11.3 &&  $water_balance < 11.7){
-                            $water_balance ='Acceptable Balance';
-                            }
-                            if ($water_balance >= 11.7 &&  $water_balance <= 12.6){
-                                $water_balance ='Scale Forming';
-                                }
-                                if ($water_balance > 12.6){
-                                    $water_balance ='Highly Scale Forming';
-                                    }
+
 
 
 
