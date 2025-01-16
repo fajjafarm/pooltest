@@ -1,7 +1,7 @@
 @extends('layouts.vertical', ['title' => 'Water Balance Record for'.$poolName])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Water Balance Record'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Water Balance Test'])
     <div class="container mt-5">
    
 @if(session('success'))
@@ -10,9 +10,9 @@
 
 <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
-                    <h4 class="header-title">Water Balance Record for {{$poolName}} </h4>
+                    <h4 class="header-title">Water Balance Test for {{$poolName}} </h4>
                     <div>
-                        <a href="{{ route('backwashes.create', ['poolID' => $poolID ])}}" class="btn btn-success bg-gradient"><i
+                        <a href="{{ route('water-balance-checks.create', ['poolID' => $poolID ])}}" class="btn btn-success bg-gradient"><i
                                 class="ti ti-plus me-1"></i> Record a Water Balance Test</a>
                         
                     </div>
