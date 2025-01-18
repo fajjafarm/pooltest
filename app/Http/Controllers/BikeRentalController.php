@@ -9,7 +9,7 @@ class BikeRentalController extends Controller
 {
     public function index()
     {
-        $bikes = Bike::with('rentals')->get();
+        $bikes = Bike::with('bike_rentals')->get();
         return view('bikes.index', compact('bikes'));
     }
 
