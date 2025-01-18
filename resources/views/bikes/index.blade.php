@@ -42,7 +42,7 @@
     <input type="number" name="duration" placeholder="Duration">
     <input type="checkbox" name="helmet_borrowed" value="1"> Helmet
     <input type="checkbox" name="lock_borrowed" value="1"> Lock
-    <button type="submit">Rent Bike</button>
+    <button type="submit">Rent Bike </button>
 </form>
     </div>
 @endsection
