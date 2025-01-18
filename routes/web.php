@@ -12,6 +12,7 @@ use App\Http\Controllers\BackwashController;
 use App\Http\Controllers\PoolController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WaterMeterReadingController;
+use App\Http\Controllers\BikeRentalController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +24,10 @@ use App\Http\Controllers\WaterMeterReadingController;
 |
 */
 //super admin access only
+Route::get('/bikes', [BikeRentalController::class, 'index'])->name('bikes.index');
+Route::post('/bikes', [BikeRentalController::class, 'store'])->name('bikes.store');
+Route::put('/bikes/{bike}', [BikeRentalController::class, 'updateBikeStatus'])->name('bikes.update');
+
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
 Route::get('/clients/create/', [ClientController::class, 'create'])->name('clients.create');
 Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
