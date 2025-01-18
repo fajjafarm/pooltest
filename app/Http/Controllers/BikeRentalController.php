@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bike;
-use App\Models\Rental;
+use App\Models\BikeRental;
 use Illuminate\Http\Request;
 
 class BikeRentalController extends Controller
