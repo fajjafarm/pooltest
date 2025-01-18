@@ -1,5 +1,6 @@
 <?php 
 namespace App\Models;
+use App\Models\BikeRental;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,7 +10,7 @@ class Bike extends Model
 
     public function bike_rentals()
     {
-        return $this->hasMany(Rental::class);
+        return $this->hasMany(BikeRental::class);
     }
 }
 
