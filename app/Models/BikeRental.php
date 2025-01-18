@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class BikeRental extends Model
 {
+    protected $table = 'bike_rentals';
     public $incrementing = false;
     protected $keyType = 'string';
 
