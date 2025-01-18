@@ -2,6 +2,7 @@
 // app/Models/Rental.php
 namespace App\Models;
 use Illuminate\Support\Str;
+use App\Models\Bike;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +19,7 @@ class BikeRental extends Model
             $model->{$model->getKeyName()} = (string) Str::ulid();
         });
     }
-    protected $fillable = ['bike_id', 'order_number', 'name', 'duration', 'helmet_borrowed', 'lock_borrowed'];
+    protected $fillable = ['ulid','bike_id', 'order_number', 'name', 'duration', 'helmet_borrowed', 'lock_borrowed'];
     
 
     public function bike()
