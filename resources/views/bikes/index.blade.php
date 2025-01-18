@@ -15,7 +15,7 @@
     <div>
         <h3>{{ $bike->type }} - Status: {{ $bike->status }}</h3>
         <p>Rentals:
-        @foreach($bike->rentals as $rental)
+        @foreach($bike->bike_rentals as $rental)
             <br>- Order: {{ $rental->order_number }}, Name: {{ $rental->name }}, Duration: {{ $rental->duration }}, Helmet: {{ $rental->helmet_borrowed ? 'Yes' : 'No' }}, Lock: {{ $rental->lock_borrowed ? 'Yes' : 'No' }}
         @endforeach
         </p>
