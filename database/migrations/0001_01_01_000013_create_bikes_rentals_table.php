@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
 
-class CreateRentalsTable extends Migration
+class CreateBikeRentalsTable extends Migration
 {
     public function up()
     {
