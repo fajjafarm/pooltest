@@ -32,9 +32,9 @@ class BikeRentalController extends Controller
         return redirect()->route('bikes.index')->with('status', 'Bike rented successfully!');
     }
 
-    public function updateBikeStatus(Request $request, $id)
+    public function updateBikeStatus(Request $request, $bike_id)
     {
-        $bike = Bike::find($id);
+        $bike = Bike::find($bike_id);
         $bike->status = $request->status;
         $bike->save();
         return redirect()->back()->with('status', 'Bike status updated!');
