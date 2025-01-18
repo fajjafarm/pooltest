@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => 'Bike Rental Log')
+@extends('layouts.vertical', ['title' => 'Bike Rental Log'])
 
 @section('content')
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Bike Rental Log'])
