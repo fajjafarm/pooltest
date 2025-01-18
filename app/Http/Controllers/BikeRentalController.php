@@ -20,7 +20,7 @@ class BikeRentalController extends Controller
         $bike->status = 'hired';
         $bike->save();
 
-        Rental::create([
+        BikeRental::create([
             'bike_id' => $request->bike_id,
             'order_number' => $request->order_number,
             'name' => $request->name,
