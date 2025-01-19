@@ -16,7 +16,7 @@
         <h3>{{ $bike->type }} - Status: {{ $bike->status }}</h3>
         <p>Rentals:
         @foreach($bike->bike_rentals as $rental)
-            <br>- Order: {{ $rental->order_number }}, Name: {{ $rental->name }}, Duration: {{ $rental->duration }}, Helmet: {{ $rental->helmet_borrowed ? 'Yes' : 'No' }}, Lock: {{ $rental->lock_borrowed ? 'Yes' : 'No' }}
+            <br>- BikeID: {{ $rental->bike_id }}Order: {{ $rental->order_number }}, Name: {{ $rental->name }}, Duration: {{ $rental->duration }}, Helmet: {{ $rental->helmet_borrowed ? 'Yes' : 'No' }}, Lock: {{ $rental->lock_borrowed ? 'Yes' : 'No' }}
         @endforeach
         </p>
         <form method="POST" action="{{ route('bikes.update', $bike->id) }}">
