@@ -2,13 +2,13 @@
 
 @section('content')
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Bike Rental Log'])
-    <div class="container mt-5">
+    
    
 @if(session('success'))
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
 
-
+<div class="card">
 <h1>Bike Rental Log</h1>
 
 @foreach($bikes as $bike)
@@ -44,5 +44,5 @@
     <input type="checkbox" name="lock_borrowed" value="1"> Lock
     <button type="submit">Rent Bike </button>
 </form>
-    
+   
 @endsection
