@@ -137,6 +137,47 @@
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
         </div> <!-- end col-->
+        <div class="col-md-6">
+            <div class="card border-success border">
+                <div class="card-body">
+                <div class="table-responsive-sm">
+<table class="table table-striped mb-0 table-sm">
+    <thead>
+        <tr class="table-dark">
+            <th colspan="4">Kids Bikes</th>
+            </tr>
+<tr class="table-dark">
+            <th>#</th>
+            <th>Size</th>
+            <th>Status</th>
+            <th>Update</th>
+</tr>
+<tbody>
+                @foreach($kids as $kid)
+        <tr>
+        <td>{{$kid->id}}</td>
+            <td>{{$kid->size}}</td>
+            <td>{{$kid->status}}</td>
+            <td>        <form method="POST" action="{{ route('bikes.update', $kid->id) }}">
+            @csrf
+            @method('PUT')
+            <select name="status">
+                <option value="ready for hire">Ready for Hire</option>
+                <option value="hired">Hired</option>
+                <option value="awaiting check">Awaiting Check</option>
+                <option value="awaiting maintenance">Awaiting Maintenance</option>
+                <option value="reserved">Reserved</option>
+            </select>
+            <button type="submit">Update Status</button>
+        </form></td>
+
+            </tr>
+            @endforeach
+            </table></div>
+            </div>
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col-->
     </div>
     <!-- end row -->
     </div>
