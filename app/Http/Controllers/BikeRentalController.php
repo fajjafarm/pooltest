@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 use App\Models\Bike;
 use App\Models\BikeRental;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BikeRentalController extends Controller
 {
     public function index()
     {
         //$mountainbikes = Bike::where('type', 'mountain')->get();
-        $mountainbikes = Bike::where('type', '=', 'mountain')->get();
+        $mountainbikes = DB::table('bikes')->where('type', '=', 'mountain');
         
         $ebikes = Bike::where('type', 'mountain')->get();
         
