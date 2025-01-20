@@ -31,7 +31,7 @@
 <tbody>
         @foreach($mountainbikes as $mountainbike)
         <tr>
-        <td>{{$mountainbike->id}}</td>
+        <td>{{$mountainbike->bike_id}}</td>
             <td>{{$mountainbike->size}}</td>
             <td>{{$mountainbike->status}}</td>
             <td>        <form method="POST" action="{{ route('bikes.update', $mountainbike->id) }}">
