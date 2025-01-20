@@ -13,7 +13,7 @@
 
 
 <div class="row">
-        <div class="col-md-4">
+        
             <div class="card border-secondary border">
                 <div class="card-body">
                 <div class="table-responsive-sm">
@@ -53,7 +53,7 @@
             </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
-        </div> <!-- end col-->
+         <!-- end col-->
 
         <div class="col-md-4">
             <div class="card border-primary border border-dashed">
