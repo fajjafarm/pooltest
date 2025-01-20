@@ -57,6 +57,19 @@
         <div class="col-md-6">
             <div class="card border-primary border border-dashed">
                 <div class="card-body">
+                <div class="table-responsive-sm">
+<table class="table table-striped mb-0 table-sm">
+    <thead>
+        <tr class="table-dark">
+            <th colspan="4">Hybrid Bikes</th>
+            </tr>
+<tr class="table-dark">
+            <th>#</th>
+            <th>Size</th>
+            <th>Status</th>
+            <th>Update</th>
+</tr>
+<tbody>
                 @foreach($hybrids as $hybrid)
         <tr>
         <td>{{$hybrid->id}}</td>
@@ -86,6 +99,19 @@
         <div class="col-md-6">
             <div class="card border-success border">
                 <div class="card-body">
+                <div class="table-responsive-sm">
+<table class="table table-striped mb-0 table-sm">
+    <thead>
+        <tr class="table-dark">
+            <th colspan="4">e-Bikes</th>
+            </tr>
+<tr class="table-dark">
+            <th>#</th>
+            <th>Size</th>
+            <th>Status</th>
+            <th>Update</th>
+</tr>
+<tbody>
                 @foreach($ebikes as $ebike)
         <tr>
         <td>{{$ebike->id}}</td>
