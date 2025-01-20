@@ -41,7 +41,7 @@
                 <option value="ready for hire">Ready for Hire</option>
                 <option value="hired">Hired</option>
                 <option value="awaiting check">Awaiting Check</option>
-                <option value="awaiting maintenance">Awaiting Maintenance</option>
+                <option value="awaiting maintenance">Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
             <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
@@ -82,7 +82,7 @@
                 <option value="ready for hire">Ready for Hire</option>
                 <option value="hired">Hired</option>
                 <option value="awaiting check">Awaiting Check</option>
-                <option value="awaiting maintenance">Awaiting Maintenance</option>
+                <option value="awaiting maintenance">Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
             <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
@@ -123,7 +123,7 @@
                 <option value="ready for hire">Ready for Hire</option>
                 <option value="hired">Hired</option>
                 <option value="awaiting check">Awaiting Check</option>
-                <option value="awaiting maintenance">Awaiting Maintenance</option>
+                <option value="awaiting maintenance">Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
             <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
@@ -163,7 +163,7 @@
                 <option value="ready for hire">Ready for Hire</option>
                 <option value="hired">Hired</option>
                 <option value="awaiting check">Awaiting Check</option>
-                <option value="awaiting maintenance">Awaiting Maintenance</option>
+                <option value="awaiting maintenance">Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
             <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
