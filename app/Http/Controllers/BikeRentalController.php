@@ -9,8 +9,14 @@ class BikeRentalController extends Controller
 {
     public function index()
     {
-        $bikes = Bike::with('bike_rentals')->get();
-        return view('bikes.index', compact('bikes'));
+        $mountainbikes = Bike::where('type', 'mountain')->get();
+        
+        $ebikes = Bike::where('type', 'mountain')->get();
+        
+        $hybrids = Bike::where('type', 'mountain')->get();
+        
+        $kids = Bike::where('type', 'mountain')->get();
+        return view('bikes.index', compact('kid','mountainbikes','hybrids','ebikes'));
     }
 
     public function store(Request $request)

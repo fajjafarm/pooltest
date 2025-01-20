@@ -9,17 +9,32 @@
 @endif
 
 <div class="card">
-<h1>Bike Rental Log</h1>
 
-@foreach($bikes as $bike)
-    <div>
-        <h3>{{ $bike->type }} - Status: {{ $bike->status }}</h3>
-        <p>Rentals:
-        @foreach($bike->bike_rentals as $rental)
-            <br>- BikeID: {{ $rental->bike_id }}Order: {{ $rental->order_number }}, Name: {{ $rental->name }}, Duration: {{ $rental->duration }}, Helmet: {{ $rental->helmet_borrowed ? 'Yes' : 'No' }}, Lock: {{ $rental->lock_borrowed ? 'Yes' : 'No' }}
-        @endforeach
-        </p>
-        <form method="POST" action="{{ route('bikes.update', $bike->id) }}">
+
+
+<div class="row">
+        <div class="col-md-4">
+            <div class="card border-secondary border">
+                <div class="card-body">
+                <div class="table-responsive-sm">
+<table class="table table-striped mb-0 table-sm">
+    <thead>
+        <tr class="table-dark">
+            <th colspan="3">Mountain Bikes</th>
+            </tr>
+<tr class="table-dark">
+            <th>#</th>
+            <th>Size</th>
+            <th>Status</th>
+            <th>Update</th>
+</tr>
+<tbody>
+        @foreach($mountainbikes as $mountainbike)
+        <tr>
+        <td>{{$mountainbike->id}}</td>
+            <td>{{$mountainbike->size}}</td>
+            <td>{{$mountainbike->status}}</td>
+            <td>        <form method="POST" action="{{ route('bikes.update', $mountainbike->id) }}">
             @csrf
             @method('PUT')
             <select name="status">
@@ -30,19 +45,66 @@
                 <option value="reserved">Reserved</option>
             </select>
             <button type="submit">Update Status</button>
-        </form>
-    </div>
-@endforeach
+        </form></td>
 
-<form action="{{ route('bikes.store') }}" method="POST">
-    @csrf
-    <input type="text" name="bike_id" placeholder="Bike ID">
-    <input type="text" name="order_number" placeholder="Order Number">
-    <input type="text" name="name" placeholder="Name">
-    <input type="number" name="duration" placeholder="Duration">
-    <input type="checkbox" name="helmet_borrowed" value="1"> Helmet
-    <input type="checkbox" name="lock_borrowed" value="1"> Lock
-    <button type="submit">Rent Bike </button>
-</form>
-   
-@endsection
+            </tr>
+            @endforeach
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col-->
+
+        <div class="col-md-4">
+            <div class="card border-primary border border-dashed">
+                <div class="card-body">
+                @foreach($hybrids as $hybrid)
+        <tr>
+        <td>{{$hybrid->id}}</td>
+            <td>{{$hybrid->size}}</td>
+            <td>{{$hybrid->status}}</td>
+            <td>        <form method="POST" action="{{ route('bikes.update', $hybrid->id) }}">
+            @csrf
+            @method('PUT')
+            <select name="status">
+                <option value="ready for hire">Ready for Hire</option>
+                <option value="hired">Hired</option>
+                <option value="awaiting check">Awaiting Check</option>
+                <option value="awaiting maintenance">Awaiting Maintenance</option>
+                <option value="reserved">Reserved</option>
+            </select>
+            <button type="submit">Update Status</button>
+        </form></td>
+
+            </tr>
+            @endforeach
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col-->
+
+        <div class="col-md-4">
+            <div class="card border-success border">
+                <div class="card-body">
+                @foreach($mountainbikes as $mountainbike)
+        <tr>
+        <td>{{$mountainbike->id}}</td>
+            <td>{{$mountainbike->size}}</td>
+            <td>{{$mountainbike->status}}</td>
+            <td>        <form method="POST" action="{{ route('bikes.update', $mountainbike->id) }}">
+            @csrf
+            @method('PUT')
+            <select name="status">
+                <option value="ready for hire">Ready for Hire</option>
+                <option value="hired">Hired</option>
+                <option value="awaiting check">Awaiting Check</option>
+                <option value="awaiting maintenance">Awaiting Maintenance</option>
+                <option value="reserved">Reserved</option>
+            </select>
+            <button type="submit">Update Status</button>
+        </form></td>
+
+            </tr>
+            @endforeach
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col-->
+    </div>
+    <!-- end row -->
