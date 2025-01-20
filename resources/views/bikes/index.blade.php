@@ -97,8 +97,7 @@
         </div> <!-- end col-->
 
         <div class="col-md-6">
-            <div class="card border-success border">
-                <div class="card-body">
+
                 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
     <thead>
@@ -134,8 +133,7 @@
             @endforeach
             </table></div>
             </div>
-                </div> <!-- end card-body-->
-            </div> <!-- end card-->
+
         </div> <!-- end col-->
         <div class="col-md-6">
             <div class="card border-success border">
