@@ -11,7 +11,7 @@ class BikeRentalController extends Controller
     public function index()
     {
        // $mountainbikes = Bike::where('type', 'mountain')->get();
-        $mountainbikes = DB::table('bikes')->where('type', '=','mountain')->get();
+        $mountainbikes = DB::table('bikes')->where('type', '=','mountain bike')->get();
         
         $ebikes = Bike::where('type', 'mountain')->get();
         
