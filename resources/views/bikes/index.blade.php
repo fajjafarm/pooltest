@@ -20,7 +20,7 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="3">Mountain Bikes</th>
+            <th colspan="4">Mountain Bikes</th>
             </tr>
 <tr class="table-dark">
             <th>#</th>
@@ -49,6 +49,8 @@
 
             </tr>
             @endforeach
+            </table></div>
+            </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
         </div> <!-- end col-->
@@ -76,6 +78,8 @@
 
             </tr>
             @endforeach
+            </table></div>
+            </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
         </div> <!-- end col-->
@@ -103,11 +107,12 @@
 
             </tr>
             @endforeach
+            </table></div>
+            </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
         </div> <!-- end col-->
     </div>
     <!-- end row -->
-    </table></div>
     </div>
 @endsection
