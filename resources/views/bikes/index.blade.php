@@ -44,7 +44,7 @@
                 <option value="awaiting maintenance">Awaiting Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
-            <button type="submit">Update Status</button>
+            <button type="submit" class="btn btn-outline-secondary rounded-pill">Update</button>
         </form></td>
 
             </tr>
@@ -85,7 +85,7 @@
                 <option value="awaiting maintenance">Awaiting Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
-            <button type="submit">Update Status</button>
+            <button type="submit" class="btn btn-outline-secondary rounded-pill">Update</button>
         </form></td>
 
             </tr>
@@ -127,7 +127,7 @@
                 <option value="awaiting maintenance">Awaiting Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
-            <button type="submit">Update Status</button>
+            <button type="submit" class="btn btn-outline-secondary rounded-pill">Update</button>
         </form></td>
 
             </tr>
@@ -168,7 +168,8 @@
                 <option value="awaiting maintenance">Awaiting Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
-            <button type="submit">Update Status</button>
+            <button type="submit" class="btn btn-outline-secondary rounded-pill">Update</button>
+            
         </form></td>
 
             </tr>
