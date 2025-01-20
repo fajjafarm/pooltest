@@ -108,3 +108,6 @@
         </div> <!-- end col-->
     </div>
     <!-- end row -->
+    </table></div>
+    </div>
+@endsection
