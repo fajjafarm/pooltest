@@ -13,7 +13,7 @@
 
 
 <div class="row">
-        
+        <div class="col-md-6">
             <div class="card border-secondary border">
                 <div class="card-body">
                 <div class="table-responsive-sm">
@@ -53,9 +53,9 @@
             </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
-         <!-- end col-->
+        </div> <!-- end col-->
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card border-primary border border-dashed">
                 <div class="card-body">
                 @foreach($hybrids as $hybrid)
@@ -84,7 +84,7 @@
             </div> <!-- end card-->
         </div> <!-- end col-->
 
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card border-success border">
                 <div class="card-body">
                 @foreach($mountainbikes as $mountainbike)
