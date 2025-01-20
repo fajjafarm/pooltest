@@ -159,14 +159,15 @@
             <td>        <form method="POST" action="{{ route('bikes.update', $kid->id) }}">
             @csrf
             @method('PUT')
-            <select name="status">
-                <option value="ready for hire">Ready for Hire</option>
+
+            <select class="form-select" name="status" aria-label="Example select with button addon">
+               <option value="ready for hire">Ready for Hire</option>
                 <option value="hired">Hired</option>
                 <option value="awaiting check">Awaiting Check</option>
                 <option value="awaiting maintenance">Maintenance</option>
                 <option value="reserved">Reserved</option>
-            </select>
-            <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
+            </select><button class="btn btn-outline-secondary" type="submit">Update</button>
+            
             
         </form></td>
 
