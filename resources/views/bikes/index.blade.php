@@ -53,8 +53,7 @@
             </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
-        </div> <!-- end col-->
-
+        
         <div class="col-md-6">
             <div class="card border-primary border border-dashed">
                 <div class="card-body">
@@ -87,12 +86,12 @@
         <div class="col-md-6">
             <div class="card border-success border">
                 <div class="card-body">
-                @foreach($mountainbikes as $mountainbike)
+                @foreach($ebikes as $ebike)
         <tr>
-        <td>{{$mountainbike->id}}</td>
-            <td>{{$mountainbike->size}}</td>
-            <td>{{$mountainbike->status}}</td>
-            <td>        <form method="POST" action="{{ route('bikes.update', $mountainbike->id) }}">
+        <td>{{$ebike->id}}</td>
+            <td>{{$ebike->size}}</td>
+            <td>{{$ebike->status}}</td>
+            <td>        <form method="POST" action="{{ route('bikes.update', $ebike->id) }}">
             @csrf
             @method('PUT')
             <select name="status">

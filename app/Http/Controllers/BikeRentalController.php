@@ -13,11 +13,14 @@ class BikeRentalController extends Controller
        // $mountainbikes = Bike::where('type', 'mountain')->get();
         $mountainbikes = DB::table('bikes')->where('type', '=','mountain bike')->get();
         
-        $ebikes = Bike::where('type', 'mountain')->get();
+       // $ebikes = Bike::where('type', 'mountain')->get();
+        $ebikes = DB::table('bikes')->where('type', '=','ebikes')->get();
         
-        $hybrids = Bike::where('type', 'mountain')->get();
+       // $hybrids = Bike::where('type', 'mountain')->get();
+       $hybrids = DB::table('bikes')->where('type', '=','hybrid')->get();
         
-        $kids = Bike::where('type', 'mountain')->get();
+       // $kids = Bike::where('type', 'mountain')->get();
+        $kids = DB::table('bikes')->where('type', '=','kids')->get();
         return view('bikes.index', compact('kids','mountainbikes','hybrids','ebikes'));
     }
 
