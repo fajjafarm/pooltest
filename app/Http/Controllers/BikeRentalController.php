@@ -16,7 +16,7 @@ class BikeRentalController extends Controller
         $hybrids = Bike::where('type', 'mountain')->get();
         
         $kids = Bike::where('type', 'mountain')->get();
-        return view('bikes.index', compact('kid','mountainbikes','hybrids','ebikes'));
+        return view('bikes.index', compact('kids','mountainbikes','hybrids','ebikes'));
     }
 
     public function store(Request $request)
