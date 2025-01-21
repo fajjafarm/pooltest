@@ -20,20 +20,20 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="4">Mountain Bikes</th>
+            <th colspan="3">Mountain Bikes</th>
             </tr>
 <tr class="table-dark">
             <th>#</th>
             <th>Size</th>
             <th>Status</th>
-            <th>Update</th>
+            
 </tr>
 <tbody>
         @foreach($mountainbikes as $mountainbike)
         <tr>
         <td>{{$mountainbike->id}}</td>
             <td>{{$mountainbike->size}}</td>
-            <td>{{$mountainbike->status}}</td>
+            
             <td>        <form method="POST" action="{{ route('bikes.update', $mountainbike->id) }}">
             @csrf
             @method('PUT')
@@ -61,20 +61,20 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="4">Hybrid Bikes</th>
+            <th colspan="3">Hybrid Bikes</th>
             </tr>
 <tr class="table-dark">
             <th>#</th>
             <th>Size</th>
             <th>Status</th>
-            <th>Update</th>
+            
 </tr>
 <tbody>
                 @foreach($hybrids as $hybrid)
         <tr>
         <td>{{$hybrid->id}}</td>
             <td>{{$hybrid->size}}</td>
-            <td>{{$hybrid->status}}</td>
+            
             <td>        <form method="POST" action="{{ route('bikes.update', $hybrid->id) }}">
             @csrf
             @method('PUT')
@@ -103,20 +103,20 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="4">e-Bikes</th>
+            <th colspan="3">e-Bikes</th>
             </tr>
 <tr class="table-dark">
             <th>#</th>
             <th>Size</th>
             <th>Status</th>
-            <th>Update</th>
+            
 </tr>
 <tbody>
                 @foreach($ebikes as $ebike)
         <tr>
         <td>{{$ebike->id}}</td>
             <td>{{$ebike->size}}</td>
-            <td>{{$ebike->status}}</td>
+            
             <td>        <form method="POST" action="{{ route('bikes.update', $ebike->id) }}">
             @csrf
             @method('PUT')
