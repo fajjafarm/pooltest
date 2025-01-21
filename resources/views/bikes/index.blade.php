@@ -38,11 +38,11 @@
             @csrf
             @method('PUT')
             <select name="status">
-                <option value="ready for hire">Ready for Hire</option>
-                <option value="hired">Hired</option>
-                <option value="awaiting check">Awaiting Check</option>
-                <option value="awaiting maintenance">Maintenance</option>
-                <option value="reserved">Reserved</option>
+                <option value="ready for hire" @if($hybrid->status == 'ready for hire') selected @endif>Ready for Hire</option>
+                <option value="hired" @if($hybrid->status == 'hired') selected @endif>Hired</option>
+                <option value="awaiting check" @if($hybrid->status == 'awaiting check') selected @endif>Awaiting Check</option>
+                <option value="awaiting maintenance" @if($hybrid->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="reserved" @if($hybrid->status == 'reserved') selected @endif>Reserved</option>
             </select>
             <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
         </form></td>
@@ -79,11 +79,11 @@
             @csrf
             @method('PUT')
             <select name="status">
-                <option value="ready for hire">Ready for Hire</option>
-                <option value="hired">Hired</option>
-                <option value="awaiting check">Awaiting Check</option>
-                <option value="awaiting maintenance">Maintenance</option>
-                <option value="reserved">Reserved</option>
+                <option value="ready for hire" @if($hybrid->status == 'ready for hire') selected @endif>Ready for Hire</option>
+                <option value="hired" @if($hybrid->status == 'hired') selected @endif>Hired</option>
+                <option value="awaiting check" @if($hybrid->status == 'awaiting check') selected @endif>Awaiting Check</option>
+                <option value="awaiting maintenance" @if($hybrid->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="reserved" @if($hybrid->status == 'reserved') selected @endif>Reserved</option>
             </select>
             <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
         </form></td>
