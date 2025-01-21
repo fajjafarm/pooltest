@@ -37,15 +37,15 @@
             <td>        <form method="POST" action="{{ route('bikes.update', $mountainbike->id) }}">
             @csrf
             @method('PUT')
-            <select name="status">
+            <div class="input-group">
+            <select class="form-select" name="status" aria-label="Example select with button addon">
                 <option value="ready for hire" @if($mountainbike->status == 'ready for hire') selected @endif>Ready for Hire</option>
                 <option value="hired" @if($mountainbike->status == 'hired') selected @endif>Hired</option>
                 <option value="awaiting check" @if($mountainbike->status == 'awaiting check') selected @endif>Awaiting Check</option>
                 <option value="awaiting maintenance" @if($mountainbike->status == 'awaiting maintenance') selected @endif>Maintenance</option>
                 <option value="reserved" @if($mountainbike->status == 'reserved') selected @endif>Reserved</option>
             </select>
-            <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
-        </form></td>
+            <button class="btn btn-outline-secondary" type="submit">Update</button></div>
 
             </tr>
             @endforeach
@@ -78,14 +78,15 @@
             <td>        <form method="POST" action="{{ route('bikes.update', $hybrid->id) }}">
             @csrf
             @method('PUT')
-            <select name="status">
+            <div class="input-group">
+            <select class="form-select" name="status" aria-label="Example select with button addon">
                 <option value="ready for hire" @if($hybrid->status == 'ready for hire') selected @endif>Ready for Hire</option>
                 <option value="hired" @if($hybrid->status == 'hired') selected @endif>Hired</option>
                 <option value="awaiting check" @if($hybrid->status == 'awaiting check') selected @endif>Awaiting Check</option>
                 <option value="awaiting maintenance" @if($hybrid->status == 'awaiting maintenance') selected @endif>Maintenance</option>
                 <option value="reserved" @if($hybrid->status == 'reserved') selected @endif>Reserved</option>
             </select>
-            <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
+            <button class="btn btn-outline-secondary" type="submit">Update</button></div>
         </form></td>
 
             </tr>
@@ -119,14 +120,15 @@
             <td>        <form method="POST" action="{{ route('bikes.update', $ebike->id) }}">
             @csrf
             @method('PUT')
-            <select name="status">
+            <div class="input-group">
+            <select class="form-select" name="status" aria-label="Example select with button addon">
                 <option value="ready for hire">Ready for Hire</option>
                 <option value="hired">Hired</option>
                 <option value="awaiting check">Awaiting Check</option>
                 <option value="awaiting maintenance">Maintenance</option>
                 <option value="reserved">Reserved</option>
             </select>
-            <button type="submit" class="btn btn-outline-secondary rounded-pill btn-sm">Update</button>
+            <button class="btn btn-outline-secondary" type="submit">Update</button></div>
         </form></td>
 
             </tr>
