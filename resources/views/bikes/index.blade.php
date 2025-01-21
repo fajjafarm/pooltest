@@ -161,11 +161,11 @@
             @method('PUT')
 <div class="input-group">
             <select class="form-select" name="status" aria-label="Example select with button addon">
-               <option value="ready for hire" > Ready for Hire</option>
-                <option value="hired">Hired</option>
-                <option value="awaiting check"  >Awaiting Check</option>
-                <option value="awaiting maintenance">Maintenance</option>
-                <option value="reserved">Reserved</option>
+               <option value="ready for hire" @if($kid->status == 'ready for hire') selected @endif> Ready for Hire</option>
+                <option value="hired" @if($kid->status == 'hired') selected @endif>Hired</option>
+                <option value="awaiting check" @if($kid->status == 'awaiting check') selected @endif >Awaiting Check</option>
+                <option value="awaiting maintenance" @if($kid->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="reserved" @if($kid->status == 'reserved') selected @endif>Reserved</option>
             </select><button class="btn btn-outline-secondary" type="submit">Update</button></div>
             
             
