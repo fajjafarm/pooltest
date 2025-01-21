@@ -142,20 +142,20 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="4">Kids Bikes</th>
+            <th colspan="3">Kids Bikes</th>
             </tr>
 <tr class="table-dark">
             <th>#</th>
             <th>Size</th>
             <th>Status</th>
-            <th>Update</th>
+           
 </tr>
 <tbody>
                 @foreach($kids as $kid)
         <tr>
         <td>{{$kid->id}}</td>
             <td>{{$kid->size}}</td>
-            <td>{{$kid->status}}</td>
+            
             <td>        <form method="POST" action="{{ route('bikes.update', $kid->id) }}">
             @csrf
             @method('PUT')
@@ -164,7 +164,7 @@
                <option value="ready for hire" @if($kid->status == 'ready for hire') selected @endif> Ready for Hire</option>
                 <option value="hired" @if($kid->status == 'hired') selected @endif>Hired</option>
                 <option value="awaiting check" @if($kid->status == 'awaiting check') selected @endif >Awaiting Check</option>
-                <option value="awaiting maintenance" @if($kid->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="awaiting maintenance" @if($kid->status == 'awaiting maintenance') selected @endif> Awaiting Maintenance</option>
                 <option value="reserved" @if($kid->status == 'reserved') selected @endif>Reserved</option>
             </select><button class="btn btn-outline-secondary" type="submit">Update</button></div>
             
