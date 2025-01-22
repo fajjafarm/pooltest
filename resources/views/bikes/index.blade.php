@@ -162,17 +162,33 @@
             @csrf
             @method('PUT')
 <div class="input-group">
-            <select class="form-select" name="status" aria-label="Example select with button addon">
+            <select class="form-select" name="status" >
                <option value="ready for hire" @if($kid->status == 'ready for hire') selected @endif> Ready for Hire</option>
                 <option value="hired" @if($kid->status == 'hired') selected @endif>Hired</option>
                 <option value="awaiting check" @if($kid->status == 'awaiting check') selected @endif >Awaiting Check</option>
                 <option value="awaiting maintenance" @if($kid->status == 'awaiting maintenance') selected @endif> Awaiting Maintenance</option>
                 <option value="reserved" @if($kid->status == 'reserved') selected @endif>Reserved</option>
             </select><button class="btn btn-outline-secondary" type="submit">Update</button></div>
+            @foreach($hybrids as $hybrid)
+        <tr>
+        <td>{{$hybrid->id}}</td>
+            <td>{{$hybrid->size}}</td>
             
-            
+            <td>        <form method="POST" action="{{ route('bikes.update', $hybrid->id) }}">
+            @csrf
+            @method('PUT')
+            <div class="input-group">
+            <select class="form-select" name="status" aria-label="Example select with button addon">
+                <option value="ready for hire" @if($hybrid->status == 'ready for hire') selected @endif>Ready for Hire</option>
+                <option value="hired" @if($hybrid->status == 'hired') selected @endif>Hired</option>
+                <option value="awaiting check" @if($hybrid->status == 'awaiting check') selected @endif>Awaiting Check</option>
+                <option value="awaiting maintenance" @if($hybrid->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="reserved" @if($hybrid->status == 'reserved') selected @endif>Reserved</option>
+            </select>
+            <button class="btn btn-outline-secondary" type="submit">Update</button></div>
         </form></td>
 
+           
             </tr>
             @endforeach
             </table></div>
