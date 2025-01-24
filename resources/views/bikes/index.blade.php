@@ -46,7 +46,7 @@
                 <option value="reserved" @if($mountainbike->status == 'reserved') selected @endif>Reserved</option>
             </select>
             <button class="btn btn-outline-secondary" type="submit">Update</button></div>
-
+</form>
             </tr>
             @endforeach
             </table></div>
@@ -121,7 +121,7 @@
             @csrf
             @method('PUT')
             <div class="input-group">
-            <select class="form-select" name="status" aria-label="Example select with button addon">
+            <select class="form-select" name="status" >
                 <option value="ready for hire">Ready for Hire</option>
                 <option value="hired">Hired</option>
                 <option value="awaiting check">Awaiting Check</option>
