@@ -14,7 +14,7 @@ class BikeRentalController extends Controller
         $mountainbikes = DB::table('bikes')->where('type', '=','mountain bike')->get();
         
        // $ebikes = Bike::where('type', 'mountain')->get();
-        $ebikes = DB::table('bikes')->where('type', '=','ebikes')->get();
+        $ebikes = DB::table('bikes')->where('type', '=','ebike')->get();
         
        // $hybrids = Bike::where('type', 'mountain')->get();
        $hybrids = DB::table('bikes')->where('type', '=','hybrid')->get();
