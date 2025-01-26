@@ -138,9 +138,10 @@
             </tr>
             @endforeach
             </table></div>
-            </div></div>
+            </div></div></div>
 
         </div> <!-- end col-->
+        <div class="card">
         <!-- start kids-->
         <div class="col-md-6">
             <div class="card border-success border">
