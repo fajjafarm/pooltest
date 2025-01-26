@@ -52,7 +52,7 @@
             </table></div>
             </div>
                 </div> <!-- end card-body-->
-            </div> <!-- end card-->
+             <!-- end card-->
         <!-- start hybrids-->
         <div class="col-md-6">
             <div class="card border-primary border border-dashed">
@@ -184,5 +184,5 @@
         </div> <!-- end col-->
     </div>
     <!-- end row -->
-    </div>
+    </div></div>
 @endsection
