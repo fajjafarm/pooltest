@@ -53,7 +53,7 @@
             </div>
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
-        
+        <!-- start hybrids-->
         <div class="col-md-6">
             <div class="card border-primary border border-dashed">
                 <div class="card-body">
@@ -96,9 +96,10 @@
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
         </div> <!-- end col-->
-
+<!-- start ebikes-->
         <div class="col-md-6">
-
+        <div class="card border-success border">
+        <div class="card-body">
                 <div class="table-responsive-sm">
 <table class="table table-striped mb-0 table-sm">
     <thead>
@@ -135,8 +136,9 @@
             @endforeach
             </table></div>
             </div>
-
+</div>
         </div> <!-- end col-->
+        <!-- start kids-->
         <div class="col-md-6">
             <div class="card border-success border">
                 <div class="card-body">
