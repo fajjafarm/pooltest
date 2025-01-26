@@ -98,6 +98,7 @@
                 </div> <!-- end card-body-->
             </div> <!-- end card-->
         </div> <!-- end col-->
+        <div class="card">
 <!-- start ebikes-->
 <div class="col-md-6">
             <div class="card border-primary border border-dashed">
@@ -137,7 +138,7 @@
             </tr>
             @endforeach
             </table></div>
-            </div>
+            </div></div>
 
         </div> <!-- end col-->
         <!-- start kids-->
