@@ -12,7 +12,7 @@
 
 
 
-
+<div class="row">
         <div class="col-md-6">
             <div class="card border-secondary border">
                 <div class="card-body">
@@ -52,7 +52,7 @@
             </table></div>
             </div>
                 </div> <!-- end card-body-->
-             <!-- end card-->
+            </div> <!-- end card-->
         <!-- start hybrids-->
         <div class="col-md-6">
             <div class="card border-primary border border-dashed">
@@ -136,7 +136,7 @@
             @endforeach
             </table></div>
             </div>
-</div>
+
         </div> <!-- end col-->
         <!-- start kids-->
         <div class="col-md-6">
