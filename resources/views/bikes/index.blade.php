@@ -48,10 +48,11 @@
 </form>
             </tr>
             @endforeach
-            </table></div>
-            </div>
-                </div> <!-- end card-body-->
-            </div> <!-- end card-->
+            </table></div><!-- end table-->
+            </div><!-- end card-body-->
+                </div> <!-- end card-bordery-->
+            </div> <!-- end column-->
+            </div><!-- end card-body-->
 
 
         <!-- start hybrids-->
