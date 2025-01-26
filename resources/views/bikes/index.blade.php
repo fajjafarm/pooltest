@@ -97,11 +97,11 @@
             </div> <!-- end card-->
         </div> <!-- end col-->
 <!-- start ebikes-->
-        <div class="col-md-6">
-        <div class="card border-success border">
-        <div class="card-body">
+<div class="col-md-6">
+            <div class="card border-primary border border-dashed">
+                <div class="card-body">
                 <div class="table-responsive-sm">
-<table class="table table-striped mb-0 table-sm">
+                <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
             <th colspan="3">e-Bikes</th>
