@@ -12,7 +12,7 @@
 
 
 
-<div class="row">
+
         <div class="col-md-6">
             <div class="card border-secondary border">
                 <div class="card-body">
@@ -184,5 +184,5 @@
         </div> <!-- end col-->
     </div>
     <!-- end row -->
-    </div></div>
+    </div>
 @endsection
