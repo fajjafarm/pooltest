@@ -53,7 +53,7 @@
                 </div> <!-- end card-bordery-->
             </div> <!-- end column-->
             </div><!-- end card-body-->
-
+            <div class="card">
 
         <!-- start hybrids-->
         <div class="col-md-6">
