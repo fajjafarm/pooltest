@@ -51,12 +51,12 @@
             </table></div><!-- end table-->
             </div><!-- end card-body-->
                 </div> <!-- end card-bordery-->
-            </div> <!-- end column-->
+             <!-- end column-->
             </div><!-- end card-body-->
             <div class="card">
 
         <!-- start hybrids-->
-        <div class="col-md-6">
+       
             <div class="card border-primary border border-dashed">
                 <div class="card-body">
                 <div class="table-responsive-sm">
