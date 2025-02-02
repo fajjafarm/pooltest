@@ -26,7 +26,31 @@
 
     <div data-simplebar>
 
-        <!--- Sidenav Menu -->
+        <!--- my menu -->
+
+        <ul class="side-nav">
+            <li class="side-nav-title">Pools</li>
+
+            <li class="side-nav-item">
+                <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-text"> Submit Pool Test </span>
+                    <span class="badge bg-success rounded-pill">5</span>
+                </a>
+            </li>
+
+
+
+
+<!--- my menu -->
+
+
+
+
+
+
+
+
         <ul class="side-nav">
             <li class="side-nav-title">Dash</li>
 

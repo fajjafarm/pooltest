@@ -38,7 +38,7 @@ class BikeLockController extends Controller
 
     public function updateBikeLockStatus(Request $request, $lock_id)
     {
-        $bikelock = BikeLock::find($lock_id);
+        $bikelock = BikeLocks::find($lock_id);
         $bikelock->status = $request->status;
         $bikelock->save();
         return redirect()->back()->with('status', 'bikelock Lock status updated!');
