@@ -118,18 +118,18 @@
                 </a>
                 <div class="collapse" id="sidebarWaterBalanceTest">
                     <ul class="sub-menu">
-                        <li class="side-nav-item">
-                            <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
+                    <li class="side-nav-item">
+                            <a href="{{ route(water-balance-checks.index', '01JH15BR005DN3KR4BA71PQEK3') }}" class="side-nav-link">
                                 <span class="menu-text">Resort Plantroom</span>
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
+                            <a href="{{ route('water-balance-checks.index', '01JK4368XNXZRBA1K1WYK4KDD1') }}" class="side-nav-link">
                                 <span class="menu-text">Hotel Plantroom</span>
                             </a>
                         </li>
                         <li class="side-nav-item">
-                            <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
+                            <a href="{{ route('water-balance-checks.index', '01JH0YW54XDNBSDYTZYVKWME3Z') }}" class="side-nav-link">
                                 <span class="menu-text">Hot Tub Level 3</span>
                             </a>
                         </li>
