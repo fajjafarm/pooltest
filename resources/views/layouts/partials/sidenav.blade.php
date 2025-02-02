@@ -55,23 +55,32 @@
                 </a>
             </li>
 
-            <ul class="side-nav">
-            <li class="side-nav-title">Plantroom</li>
-
             <li class="side-nav-item">
-                <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
-                    <span class="menu-text"> Backwashing </span>
-                    <span class="badge bg-success rounded-pill">5</span>
+                <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false" aria-controls="sidebarHospital" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
+                    <span class="menu-text">Backwashing</span>
+                    <span class="menu-arrow"></span>
                 </a>
-            </li>
-            <li class="side-nav-item">
-                <a href="{{ route ('bikes.index') }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
-                    <span class="menu-text"> Water Meter Reading </span>
-                    <span class="badge bg-success rounded-pill">5</span>
-                </a>
-            </li>
+                <div class="collapse" id="sidebarHospital">
+                    <ul class="sub-menu">
+                        <li class="side-nav-item">
+                            <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
+                                <span class="menu-text">Resort Plantroom</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
+                                <span class="menu-text">Hotel Plantroom</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
+                                <span class="menu-text">Hot Tub Level 3</span>
+                            </a>
+                        </li>
+                        </ul>
+                </div>
+            </li>    
 
             <ul class="side-nav">
             <li class="side-nav-title">Bikes</li>
