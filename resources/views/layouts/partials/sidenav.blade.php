@@ -38,6 +38,41 @@
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
             </li>
+            <li class="side-nav-item">
+                <a href="{{ route ('second' ,['dashboards','clinic']) }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+                    <span class="menu-text"> Water Balance Test </span>
+                </a>
+            </li>
+
+            <ul class="side-nav">
+            <li class="side-nav-title">Bikes</li>
+
+            <li class="side-nav-item">
+                <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-text"> Asign Bikes </span>
+                    <span class="badge bg-success rounded-pill">5</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route ('second' ,['dashboards','clinic']) }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+                    <span class="menu-text"> Bike Hire Log </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route ('second' ,['dashboards','clinic']) }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+                    <span class="menu-text"> Bike Lock Log </span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route ('second' ,['dashboards','clinic']) }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+                    <span class="menu-text"> Bike Helmet Log </span>
+                </a>
+            </li>
 
 
 
