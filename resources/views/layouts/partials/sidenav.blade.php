@@ -44,6 +44,16 @@
                     <span class="menu-text"> Water Balance Test </span>
                 </a>
             </li>
+            <ul class="side-nav">
+            <li class="side-nav-title">Thermal Suite</li>
+
+            <li class="side-nav-item">
+                <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-text"> 20 Min Checks </span>
+                    <span class="badge bg-success rounded-pill">5</span>
+                </a>
+            </li>
 
             <ul class="side-nav">
             <li class="side-nav-title">Bikes</li>
