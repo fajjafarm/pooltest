@@ -59,7 +59,7 @@
             <li class="side-nav-title">Bikes</li>
 
             <li class="side-nav-item">
-                <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
+                <a href="{{ route ('second' ,['bikes']) }}" class="side-nav-link">
                     <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
                     <span class="menu-text"> Asign Bikes </span>
                     <span class="badge bg-success rounded-pill">5</span>
