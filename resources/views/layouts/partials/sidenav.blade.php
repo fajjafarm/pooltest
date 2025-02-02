@@ -56,6 +56,7 @@
             </li>
 
             <li class="side-nav-item">
+            <li class="side-nav-title">Pool Plant Tasks</li>
                 <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false" aria-controls="sidebarHospital" class="side-nav-link">
                     <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
                     <span class="menu-text">Backwashing</span>
