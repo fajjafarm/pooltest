@@ -119,7 +119,7 @@
                 <div class="collapse" id="sidebarWaterBalanceTest">
                     <ul class="sub-menu">
                     <li class="side-nav-item">
-                            <a href="{{ route(water-balance-checks.index', '01JH15BR005DN3KR4BA71PQEK3') }}" class="side-nav-link">
+                            <a href="{{ route('water-balance-checks.index', '01JH15BR005DN3KR4BA71PQEK3') }}" class="side-nav-link">
                                 <span class="menu-text">Resort Plantroom</span>
                             </a>
                         </li>
