@@ -111,12 +111,12 @@
                 </div>
             </li>     
             <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false" aria-controls="sidebarHospital" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarWaterBalanceTest" aria-expanded="false" aria-controls="sidebarWaterBalanceTest" class="side-nav-link">
                     <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
                     <span class="menu-text">Water Balance Tests</span>
                     <span class="menu-arrow"></span>
                 </a>
-                <div class="collapse" id="sidebarHospital">
+                <div class="collapse" id="sidebarWaterBalanceTest">
                     <ul class="sub-menu">
                         <li class="side-nav-item">
                             <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
