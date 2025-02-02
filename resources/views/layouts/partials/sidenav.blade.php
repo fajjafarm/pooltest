@@ -57,12 +57,12 @@
             <ul class="side-nav">
             <li class="side-nav-title">Plant Room</li>
             <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false" aria-controls="sidebarHospital" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarBackwashes" aria-expanded="false" aria-controls="sidebarBackwashes" class="side-nav-link">
                     <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
                     <span class="menu-text">Backwashing</span>
                     <span class="menu-arrow"></span>
                 </a>
-                <div class="collapse" id="sidebarHospital">
+                <div class="collapse" id="sidebarBackwashes">
                     <ul class="sub-menu">
                         <li class="side-nav-item">
                             <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
@@ -84,12 +84,12 @@
                 </div>
             </li>
             <li class="side-nav-item">
-                    <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false" aria-controls="sidebarHospital" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarWaterMEterREadings" aria-expanded="false" aria-controls="sidebarWaterMEterREadings" class="side-nav-link">
                     <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
                     <span class="menu-text">Water Meter Readings</span>
                     <span class="menu-arrow"></span>
                 </a>
-                <div class="collapse" id="sidebarHospital">
+                <div class="collapse" id="sidebarWaterMEterREadings">
                     <ul class="sub-menu">
                         <li class="side-nav-item">
                             <a href="{{ route ('second' , ['hospital','doctors']) }}" class="side-nav-link">
