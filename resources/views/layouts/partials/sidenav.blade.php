@@ -53,11 +53,11 @@
                     <span class="menu-text"> 20 Min Checks </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
-            </li>
-
+            </li></ul>
+            <ul class="side-nav">
+            <li class="side-nav-title">Plant Room</li>
             <li class="side-nav-item">
-            <li class="side-nav-title">Pool Plant Tasks</li>
-                <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false" aria-controls="sidebarHospital" class="side-nav-link">
+                    <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false" aria-controls="sidebarHospital" class="side-nav-link">
                     <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
                     <span class="menu-text">Backwashing</span>
                     <span class="menu-arrow"></span>
