@@ -92,7 +92,7 @@
                 <div class="collapse" id="sidebarWaterMEterREadings">
                     <ul class="sub-menu">
                         <li class="side-nav-item">
-                            <a href="{{ route('/backwashes/view/01JH15BR005DN3KR4BA71PQEK3') }}" class="side-nav-link">
+                            <a href="{{ route('/backwashes/view/', '01JH15BR005DN3KR4BA71PQEK3') }}" class="side-nav-link">
                                 <span class="menu-text">Resort Plantroom</span>
                             </a>
                         </li>
