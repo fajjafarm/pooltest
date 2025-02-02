@@ -33,7 +33,7 @@ class PoolController extends Controller
         ]);
 
         $pool = new PoolList;
-        $pool->id = Str::ulid(); // Generate ULID
+        $pool->pool_id = Str::ulid(); // Generate ULID
         $pool->fill($validatedData);
         $pool->save();
 
