@@ -43,7 +43,7 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
         }
         $chart = $chart->barChart()
         ->setTitle('Litres')
-        ->addData('litres',  $litres)
+        ->addData('litres',  $watermeterreading['meter_reading'])
         ->setXAxis( $labels);
         
            return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart','labels','litres','diffs'));
