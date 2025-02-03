@@ -33,7 +33,7 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
 
 
         $labels = [];
-        $values = [];
+        $litres = [];
 
         foreach ($watermeterreadings as $watermeterreading){
 
