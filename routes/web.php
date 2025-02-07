@@ -13,6 +13,7 @@ use App\Http\Controllers\PoolController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WaterMeterReadingController;
 use App\Http\Controllers\BikeRentalController;
+use App\Http\Controllers\ThermalCheckController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,9 @@ use App\Http\Controllers\BikeRentalController;
 |
 */
 //super admin access only
+Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
+Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
+
 Route::get('/bikes', [BikeRentalController::class, 'index'])->name('bikes.index');
 Route::post('/bikes', [BikeRentalController::class, 'store'])->name('bikes.store');
 Route::put('/bikes/{bike}', [BikeRentalController::class, 'updateBikeStatus'])->name('bikes.update');
