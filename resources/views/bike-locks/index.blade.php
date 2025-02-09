@@ -23,7 +23,7 @@
             </tr>
 <tr class="table-dark">
             <th>#</th>
-            <th>Size</th>
+            <th>Code</th>
             <th>Status</th>
             
 </tr>
