@@ -11,8 +11,8 @@ class CreateBikeHelmetsTable extends Migration
     {
         Schema::create('bikehelmets', function (Blueprint $table) {
             $table->id();
-            $table->string('colour')
-            $table->string('size')
+            $table->string('colour');
+            $table->string('size');
             $table->string('status')->default('ready for hire')->comment('ready for hire, hired, awaiting check, awaiting maintenance, missing');
             $table->timestamps();
         });
