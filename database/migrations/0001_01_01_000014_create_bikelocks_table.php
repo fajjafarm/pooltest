@@ -11,8 +11,8 @@ class CreateBikeLocksTable extends Migration
     {
         Schema::create('bikelocks', function (Blueprint $table) {
             $table->id();
-            $table->string('code')
-            $table->string('size')
+            $table->string('code');
+            $table->string('size');
             $table->string('status')->default('ready for hire')->comment('ready for hire, hired, awaiting check, awaiting maintenance, missing');
             $table->timestamps();
         });
