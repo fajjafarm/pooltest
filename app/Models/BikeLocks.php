@@ -8,7 +8,7 @@ class BikeLocks extends Model
 {
     protected $fillable = ['status'];
 
-    public function bike_locks()
+    public function bikelocks()
     {
         return $this->hasMany(BikeRental::class);
     }
