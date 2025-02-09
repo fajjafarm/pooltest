@@ -4,11 +4,11 @@ use App\Models\BikeRental;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BikeLocks extends Model
+class BikeHelmets extends Model
 {
     protected $fillable = ['status'];
 
-    public function bike_locks()
+    public function bike_helmetss()
     {
         return $this->hasMany(BikeRental::class);
     }
