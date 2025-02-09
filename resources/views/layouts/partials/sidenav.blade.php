@@ -33,7 +33,7 @@
 
             <li class="side-nav-item">
                 <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-icon"><i class="ti ti-eye"></i></span>
                     <span class="menu-text"> Submit Pool Test </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
@@ -44,7 +44,7 @@
 
             <li class="side-nav-item">
                 <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-icon"><i class="ti ti-time"></i></span>
                     <span class="menu-text"> 20 Min Checks </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
@@ -53,7 +53,7 @@
             <li class="side-nav-title">Plant Room</li>
             <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarBackwashes" aria-expanded="false" aria-controls="sidebarBackwashes" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
+                    <span class="menu-icon"><i class="ti ti-control-backward"></i></span>
                     <span class="menu-text">Backwashing</span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -107,7 +107,7 @@
             </li>     
             <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarWaterBalanceTest" aria-expanded="false" aria-controls="sidebarWaterBalanceTest" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
+                    <span class="menu-icon"><i class="ti ti-layout-column3"></i></span>
                     <span class="menu-text">Water Balance Tests</span>
                     <span class="menu-arrow"></span>
                 </a>
@@ -138,27 +138,27 @@
 
             <li class="side-nav-item">
                 <a href="{{ route('bikes.index') }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-icon"><i class="ti ti-shopping-cart-full"></i></span>
                     <span class="menu-text"> Asign Bikes </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
             </li>
             <li class="side-nav-item">
-                <a href="{{ route ('second' ,['dashboards','clinic']) }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+            <a href="{{ route('bikes.index') }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-notepad"></i></span>
                     <span class="menu-text"> Bike Hire Log </span>
                 </a>
             </li>
             <li class="side-nav-item">
-                <a href="{{ route ('second' ,['dashboards','clinic']) }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
-                    <span class="menu-text"> Bike Lock Log </span>
+            <a href="{{ route('bike-helemts.index') }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-face-smile"></i></span>
+                    <span class="menu-text"> Bike Helmet Log </span>
                 </a>
             </li>
             <li class="side-nav-item">
-                <a href="{{ route ('second' ,['dashboards','clinic']) }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
-                    <span class="menu-text"> Bike Helmet Log </span>
+            <a href="{{ route('bike-locks.index') }}" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-lock"></i></span>
+                    <span class="menu-text"> Bike Lock Log </span>
                 </a>
             </li>
 
