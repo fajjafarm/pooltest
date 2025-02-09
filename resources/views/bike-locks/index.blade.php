@@ -38,12 +38,12 @@
             @method('PUT')
             <div class="input-group">
             <select class="form-select" name="status" aria-label="Example select with button addon">
-                <option value="ready for hire" @if($lock->status == 'ready for hire') selected @endif>Ready for Hire</option>
-                <option value="hired" @if($lock->status == 'hired') selected @endif>Hired</option>
-                <option value="awaiting check" @if($lock->status == 'awaiting check') selected @endif>Awaiting Check</option>
-                <option value="awaiting maintenance" @if($lock->status == 'awaiting maintenance') selected @endif>Maintenance</option>
-                <option value="reserved" @if($lock->status == 'Reserved') selected @endif>Reserved</option>
-                <option value="missing" @if($lock->status == 'Missing') selected @endif>Missing</option>
+                <option value="ready for hire" @if($bikelock->status == 'ready for hire') selected @endif>Ready for Hire</option>
+                <option value="hired" @if($bikelock->status == 'hired') selected @endif>Hired</option>
+                <option value="awaiting check" @if($bikelock->status == 'awaiting check') selected @endif>Awaiting Check</option>
+                <option value="awaiting maintenance" @if($bikelock->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="reserved" @if($bikelock->status == 'Reserved') selected @endif>Reserved</option>
+                <option value="missing" @if($bikelock->status == 'Missing') selected @endif>Missing</option>
             </select>
             <button class="btn btn-outline-secondary" type="submit">Update</button></div>
 </form>
