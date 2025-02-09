@@ -13,6 +13,8 @@ use App\Http\Controllers\PoolController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WaterMeterReadingController;
 use App\Http\Controllers\BikeRentalController;
+use App\Http\Controllers\BikeLockController;
+use App\Http\Controllers\BikeHelmetController;
 use App\Http\Controllers\ThermalCheckController;
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,15 @@ use App\Http\Controllers\ThermalCheckController;
 //super admin access only
 Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
 Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
+
+
+Route::get('/bike-locks', [BikeLockController::class, 'index'])->name('bike-locks.index');
+Route::post('/bike-locks', [BikeLockController::class, 'store'])->name('bike-locks.store');
+Route::put('/bike-locks/{lock}', [BikeLockController::class, 'updateBikeLockStatus'])->name('bike-locks.update');
+
+Route::get('/bike-helmets', [BikeHelmetController::class, 'index'])->name('bike-helmets.index');
+Route::post('/bike-helmets', [BikeHelmetController::class, 'store'])->name('bike-helmets.store');
+Route::put('/bike-helmets/{helmet}', [BikeHelmetController::class, 'updateBikeHelmetStatus'])->name('bike-helmets.update');
 
 Route::get('/bikes', [BikeRentalController::class, 'index'])->name('bikes.index');
 Route::post('/bikes', [BikeRentalController::class, 'store'])->name('bikes.store');
