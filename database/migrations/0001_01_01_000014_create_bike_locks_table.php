@@ -9,7 +9,7 @@ class CreateBikeLocksTable extends Migration
 {
     public function up()
     {
-        Schema::create('bikelocks', function (Blueprint $table) {
+        Schema::create('bike_locks', function (Blueprint $table) {
             $table->id();
             $table->string('code');
             $table->string('size');
@@ -20,6 +20,6 @@ class CreateBikeLocksTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('bikelocks');
+        Schema::dropIfExists('bike_locks');
     }
 }
