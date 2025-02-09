@@ -28,12 +28,12 @@
             
 </tr>
 <tbody>
-        @foreach($locks as $lock)
+        @foreach($bikelocks as $bikelock)
         <tr>
-        <td>{{$lock->id}}</td>
-            <td>{{$lock->code}}</td>
+        <td>{{$bikelock->id}}</td>
+            <td>{{$bikelock->code}}</td>
             
-            <td>        <form method="POST" action="{{ route('bike-locks.update', $lock->id) }}">
+            <td>        <form method="POST" action="{{ route('bike-locks.update', $bikelock->id) }}">
             @csrf
             @method('PUT')
             <div class="input-group">
