@@ -1,28 +1,28 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\BikeLocks;
+use App\Models\BikeHelmets;
 use App\Models\BikeRental;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class BikeLockController extends Controller
+class BikeHelmetController extends Controller
 {
     public function index()
     {
        // $mountainbikes = Bike::where('type', 'mountain')->get();
-        $bikelocks = BikeLocks::all();
+        $bikehelmets = BikeHelmets::all();
         
 
-        return view('bike-locks.index', compact('bikelocks'));
+        return view('bike-helmets.index', compact('bikehelmets'));
     }
 
     public function store(Request $request)
     {
         // Logic to create a new rental
-        $bikelock = BikeLocks::find($request->lock_id);
-        $bikelock->status = 'hired';
-        $bikelock->save();
+        $bikehelmets = BikeHelmets::find($request->helmet_id);
+        $bikehelmets->status = 'hired';
+        $bikehelmets->save();
 
         BikeRental::create([
             'bike_id' => $request->bike_id,
@@ -33,14 +33,14 @@ class BikeLockController extends Controller
             'lock_borrowed' => $request->lock_borrowed ?? false,
         ]);
 
-        return redirect()->route('bike-locks.index')->with('status', 'Bike Lock rented successfully!');
+        return redirect()->route('bike-helmets.index')->with('status', 'Bike helmet rented successfully!');
     }
 
-    public function updateBikeLockStatus(Request $request, $lock_id)
+    public function updateBikeHelmetsStatus(Request $request, $helmet_id)
     {
-        $bikelock = BikeLocks::find($lock_id);
-        $bikelock->status = $request->status;
-        $bikelock->save();
-        return redirect()->back()->with('status', 'bikelock Lock status updated!');
+        $bikehelmet = BikeHelmets::find($lock_id);
+        $bikehelmet->status = $request->status;
+        $bikehelmet->save();
+        return redirect()->back()->with('status', 'bike helmet Lock status updated!');
     }
 }
