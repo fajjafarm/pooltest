@@ -38,7 +38,7 @@ class BikeHelmetController extends Controller
 
     public function updateBikeHelmetStatus(Request $request, $helmet_id)
     {
-        $bikehelmet = BikeHelmets::find($id);
+        $bikehelmet = BikeHelmets::find($helmet_id);
         $bikehelmet->status = $request->status;
         $bikehelmet->save();
         return redirect()->back()->with('status', 'bike helmet Lock status updated!');
