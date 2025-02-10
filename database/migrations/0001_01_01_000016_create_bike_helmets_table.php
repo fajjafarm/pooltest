@@ -9,7 +9,7 @@ class CreateBikeHelmetsTable extends Migration
 {
     public function up()
     {
-        Schema::create('bikehelmets', function (Blueprint $table) {
+        Schema::create('bike_helmets', function (Blueprint $table) {
             $table->id();
             $table->string('colour');
             $table->string('size');
@@ -20,6 +20,6 @@ class CreateBikeHelmetsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('bikehelmets');
+        Schema::dropIfExists('bike_helmets');
     }
 }
