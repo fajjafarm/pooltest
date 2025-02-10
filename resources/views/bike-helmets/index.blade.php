@@ -43,7 +43,7 @@
                 <option value="ready for hire" @if($bikehelmet->status == 'ready for hire') selected @endif>Ready for Hire</option>
                 <option value="hired" @if($bikehelmet->status == 'hired') selected @endif>Hired</option>
                 <option value="awaiting check" @if($bikehelmet->status == 'awaiting check') selected @endif>Awaiting Check</option>
-                <option value="awaiting maintenance" @if(bikehelmet->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="awaiting maintenance" @if($bikehelmet->status == 'awaiting maintenance') selected @endif>Maintenance</option>
                 <option value="reserved" @if($bikehelmet->status == 'Reserved') selected @endif>Reserved</option>
                 <option value="missing" @if($bikehelmet->status == 'Missing') selected @endif>Missing</option>
             </select>
