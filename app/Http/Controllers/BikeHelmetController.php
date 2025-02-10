@@ -36,7 +36,7 @@ class BikeHelmetController extends Controller
         return redirect()->route('bike-helmets.index')->with('status', 'Bike helmet rented successfully!');
     }
 
-    public function updateBikeHelmetsStatus(Request $request, $helmet_id)
+    public function updateBikeHelmetStatus(Request $request, $helmet_id)
     {
         $bikehelmet = BikeHelmets::find($lock_id);
         $bikehelmet->status = $request->status;
