@@ -19,7 +19,7 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="3">Bike Helmets</th>
+            <th colspan="4">Bike Helmets</th>
             </tr>
 <tr class="table-dark">
             <th>#</th>
