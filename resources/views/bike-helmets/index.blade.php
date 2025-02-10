@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Bike Rental Log'])
+@extends('layouts.vertical', ['title' => 'Bike Helmets Log'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Bike Rental Log'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Bike Helmets Log'])
     
    
 @if(session('success'))
@@ -19,31 +19,33 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="3">Bike Locks</th>
+            <th colspan="3">Bike Helmets</th>
             </tr>
 <tr class="table-dark">
             <th>#</th>
+            <th>Colour</th>
             <th>Size</th>
             <th>Status</th>
             
 </tr>
 <tbody>
-        @foreach($helmets as $helmet)
+        @foreach($bikehelmets as $bikehelmet)
         <tr>
-        <td>{{$helmet->id}}</td>
-            <td>{{$helmet->size}}</td>
+        <td>{{$bikehelmet->id}}</td>
+        <td>{{$bikehelmet->colour}}</td>
+            <td>{{$bikehelmet->size}}</td>
             
-            <td>        <form method="POST" action="{{ route('bike-helmets.update', $helmet->id) }}">
+            <td>        <form method="POST" action="{{ route('bike-helmets.update', $bikehelmet->id) }}">
             @csrf
             @method('PUT')
             <div class="input-group">
             <select class="form-select" name="status" aria-label="Example select with button addon">
-                <option value="ready for hire" @if($helmet->status == 'ready for hire') selected @endif>Ready for Hire</option>
-                <option value="hired" @if($helmet->status == 'hired') selected @endif>Hired</option>
-                <option value="awaiting check" @if($helmet->status == 'awaiting check') selected @endif>Awaiting Check</option>
-                <option value="awaiting maintenance" @if($helmet->status == 'awaiting maintenance') selected @endif>Maintenance</option>
-                <option value="reserved" @if($helmet->status == 'Reserved') selected @endif>Reserved</option>
-                <option value="missing" @if($helmet->status == 'Missing') selected @endif>Missing</option>
+                <option value="ready for hire" @if($bikehelmet->status == 'ready for hire') selected @endif>Ready for Hire</option>
+                <option value="hired" @if($bikehelmet->status == 'hired') selected @endif>Hired</option>
+                <option value="awaiting check" @if($bikehelmet->status == 'awaiting check') selected @endif>Awaiting Check</option>
+                <option value="awaiting maintenance" @if(bikehelmet->status == 'awaiting maintenance') selected @endif>Maintenance</option>
+                <option value="reserved" @if($bikehelmet->status == 'Reserved') selected @endif>Reserved</option>
+                <option value="missing" @if($bikehelmet->status == 'Missing') selected @endif>Missing</option>
             </select>
             <button class="btn btn-outline-secondary" type="submit">Update</button></div>
 </form>
