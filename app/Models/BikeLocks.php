@@ -14,7 +14,7 @@ class BikeLocks extends Model
     }
     public static function readyToHire()
     {
-        return static::where('status', 'ready to hire')->pluck('number')->toArray();
+        return static::where('status', 'ready to hire')->pluck('id')->toArray();
     }
 }
 
