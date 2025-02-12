@@ -2,6 +2,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bike;
+use App\Models\BikeLocks;
+use App\Models\BikeHelmets;
 use App\Models\BikeRental;
 use App\Models\BikeRentalOrder;
 use Illuminate\Http\Request;
@@ -33,8 +35,8 @@ class BikeRentalOrderController extends Controller
     }
     public function index()
     {
-        $helmets = Helmet::readyToHire();
-        $locks = Lock::readyToHire();
+        $helmets = BikeHelmets::readyToHire();
+        $locks = BikeLocks::readyToHire();
         $bikes = Bike::readyToHire();
         $orders = BikeRentalOrder::all();
         return view('bike-rental-orders.index', compact('orders', 'bikes', 'helmets', 'locks'));
