@@ -12,5 +12,9 @@ class BikeLocks extends Model
     {
         return $this->hasMany(BikeRental::class);
     }
+    public static function readyToHire()
+    {
+        return static::where('status', 'ready to hire')->pluck('number')->toArray();
+    }
 }
 
