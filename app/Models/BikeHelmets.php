@@ -14,7 +14,7 @@ class BikeHelmets extends Model
     }
     public static function readyToHire()
     {
-        return static::where('status', 'ready to hire')->pluck('id')->toArray();
+        return static::where('status', 'ready for hire')->pluck('id')->toArray();
     }
 }
 
