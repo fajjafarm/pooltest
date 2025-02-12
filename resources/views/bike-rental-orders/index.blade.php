@@ -19,16 +19,17 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="7">Bike Hire Orders</th>
+            <th colspan="8">Bike Hire Orders</th>
             </tr>
 <tr class="table-dark">
-            <th>ORder #</th>
+            <th>Order #</th>
             <th>Duration</th>
             <th>Date</th>
             <th>Bikes</th>
             <th>Helmets</th>
             <th>Locks</th>
             <th>Status</th>
+            <th>&nbsp;</th>
             
 </tr>
 <tbody>
@@ -36,7 +37,7 @@
 <tr>
                         <td>{{ $order->order_number }}</td>
                         <td>{{ $order->duration }} hours</td>
-                        <td>{{ $order->date->format('Y-m-d') }}</td>
+                        <td>{{ $order->date->format('d-m-Y') }}</td>
                         <td>
                             <select class="form-select" name="bike_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($bikes as $bike)
