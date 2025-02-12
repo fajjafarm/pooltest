@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Bike Helmets Log'])
+@extends('layouts.vertical', ['title' => 'Bike Orders'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Bike Helmets Log'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Bike Orders'])
     
    
 @if(session('success'))
@@ -12,7 +12,7 @@
 
 
 
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="card border-secondary border">
                 <div class="card-body">
                 <div class="table-responsive-sm">
