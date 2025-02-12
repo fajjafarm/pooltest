@@ -31,6 +31,7 @@ use App\Http\Controllers\BikeRentalOrderController;
 Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
 Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
 
+Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index']);
 Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store']);
 Route::put('/bike-rental-orders/{id}/status', [BikeRentalOrderController::class, 'updateStatus']);
 
