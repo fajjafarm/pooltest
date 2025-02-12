@@ -16,6 +16,7 @@ use App\Http\Controllers\BikeRentalController;
 use App\Http\Controllers\BikeLockController;
 use App\Http\Controllers\BikeHelmetController;
 use App\Http\Controllers\ThermalCheckController;
+use App\Http\Controllers\BikeRentalOrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +31,8 @@ use App\Http\Controllers\ThermalCheckController;
 Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
 Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
 
+Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store']);
+Route::put('/bike-rental-orders/{id}/status', [BikeRentalOrderController::class, 'updateStatus']);
 
 Route::get('/bike-locks', [BikeLockController::class, 'index'])->name('bike-locks.index');
 Route::post('/bike-locks', [BikeLockController::class, 'store'])->name('bike-locks.store');

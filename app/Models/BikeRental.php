@@ -6,24 +6,19 @@ use App\Models\Bike;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BikeRental extends Model
+class BikeRentalOrder extends Model
 {
-    protected $table = 'bike_rentals';
-    public $incrementing = false;
-    protected $keyType = 'string';
+    use \Illuminate\Database\Eloquent\Concerns\HasUlids; // This trait adds ULID support
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($model) {
-            $model->{$model->getKeyName()} = (string) Str::ulid();
-        });
-    }
-    protected $fillable = ['ulid','bike_id', 'order_number', 'name', 'duration', 'helmet_borrowed', 'lock_borrowed'];
-    
+    protected $table = 'bike_rental_orders';
+    protected $fillable = [
+        'order_number', 'duration', 'date', 'bike_numbers', 'helmet_numbers', 'lock_numbers', 'status'
+    ];
 
-    public function bike()
-    {
-        return $this->belongsTo(Bike::class);
-    }
+    protected $casts = [
+        'bike_numbers' => 'array',
+        'helmet_numbers' => 'array',
+        'lock_numbers' => 'array',
+        'date' => 'date',
+    ];
 }
