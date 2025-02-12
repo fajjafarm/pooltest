@@ -48,14 +48,14 @@
                         <td>
                             <select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($helmets as $helmet)
-                                    <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}>{{ $helmet }}</option>
+                                    <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_id) ? 'selected' : '' }}>{{ $helmet }}</option>
                                 @endforeach
                             </select>
                         </td>
                         <td>
                             <select class="form-select" name="lock_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($locks as $lock)
-                                    <option value="{{ $lock }}" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>{{ $lock }}</option>
+                                    <option value="{{ $lock }}" {{ in_array($lock, $order->lock_id) ? 'selected' : '' }}>{{ $lock }}</option>
                                 @endforeach
                             </select>
                         </td>
