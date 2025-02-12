@@ -41,7 +41,7 @@
                         <td>
                             <select class="form-select" name="bike_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($bikes as $bike)
-                                    <option value="{{ $bike }}" {{ contains($bike, $order->bike_numbers) ? 'selected' : '' }}>{{ $bike }}</option>
+                                    <option value="{{ $bike }}" {{ $order->bike_numbers->contains($bike) ? 'selected' : '' }}>{{ $bike }}</option>
                                 @endforeach
                             </select>
                         </td>
