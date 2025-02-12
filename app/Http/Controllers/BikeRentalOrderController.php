@@ -33,7 +33,10 @@ class BikeRentalOrderController extends Controller
     }
     public function index()
     {
+        $helmets = Helmet::readyToHire();
+        $locks = Lock::readyToHire();
+        $bikes = Bike::readyToHire();
         $orders = BikeRentalOrder::all();
-        return view('bike-rental-orders.index', compact('orders'));
+        return view('bike-rental-orders.index', compact('orders', 'bikes', 'helmets', 'locks'));
     }
 }
