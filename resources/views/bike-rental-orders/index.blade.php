@@ -33,24 +33,42 @@
 </tr>
 <tbody>
 @foreach ($orders as $order)
-        <tr>
-        <td>{{ $order->order_number }}</td>
+<tr>
+                        <td>{{ $order->order_number }}</td>
                         <td>{{ $order->duration }} hours</td>
                         <td>{{ $order->date->format('Y-m-d') }}</td>
-                        <td>{{ implode(', ', $order->bike_numbers) }}</td>
-                        <td>{{ implode(', ', $order->helmet_numbers) }}</td>
-                        <td>{{ implode(', ', $order->lock_numbers) }}</td>
                         <td>
-                            <span class="badge 
-                                @if($order->status == 'pending') bg-warning 
-                                @elseif($order->status == 'in progress') bg-primary 
-                                @elseif($order->status == 'returned') bg-success 
-                                @endif"
-                            >
-                                {{ $order->status }}
-                            </span>
+                            <select class="form-select" name="bike_numbers[{{ $order->id }}][]" multiple>
+                                @foreach($bikes as $bike)
+                                    <option value="{{ $bike }}" {{ in_array($bike, $order->bike_numbers) ? 'selected' : '' }}>{{ $bike }}</option>
+                                @endforeach
+                            </select>
                         </td>
-</tr>
+                        <td>
+                            <select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
+                                @foreach($helmets as $helmet)
+                                    <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}>{{ $helmet }}</option>
+                                @endforeach
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select" name="lock_numbers[{{ $order->id }}][]" multiple>
+                                @foreach($locks as $lock)
+                                    <option value="{{ $lock }}" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>{{ $lock }}</option>
+                                @endforeach
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select" name="status[{{ $order->id }}]">
+                                <option value="pending" {{ $order->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                                <option value="in progress" {{ $order->status == 'in progress' ? 'selected' : '' }}>In Progress</option>
+                                <option value="returned" {{ $order->status == 'returned' ? 'selected' : '' }}>Returned</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" onclick="updateOrder('{{ $order->id }}')">Update</button>
+                        </td>
+                    </tr>
             @endforeach
             </table></div><!-- end table-->
             </div><!-- end card-body-->

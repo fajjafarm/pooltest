@@ -6,26 +6,25 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
 
-class CreateBikeRentalsTable extends Migration
+class CreateBikeRentalOrdersTable extends Migration
 {
     public function up()
     {
-        Schema::create('bike_rentals', function (Blueprint $table) {
-            $table->ulid();
-            $table->unsignedBigInteger('bike_id');
-            $table->string('order_number');
-            $table->string('name');
-            $table->integer('duration'); // Duration in hours or days, specify in your application
-            $table->boolean('helmet_borrowed')->default(false);
-            $table->boolean('lock_borrowed')->default(false);
+        Schema::create('bike_rental_orders', function (Blueprint $table) {
+            $table->ulid('id')->primary();
+            $table->string('order_number')->unique();
+            $table->integer('duration');
+            $table->date('date');
+            $table->json('bike_numbers');
+            $table->json('helmet_numbers');
+            $table->json('lock_numbers');
+            $table->enum('status', ['pending', 'in progress', 'returned'])->default('pending');
             $table->timestamps();
-
-            $table->foreign('bike_id')->references('id')->on('bikes')->onDelete('cascade');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('bike_rentals');
+        Schema::dropIfExists('bike_rental_orders');
     }
 }

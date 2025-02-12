@@ -139,7 +139,7 @@
             <li class="side-nav-item">
                 <a href="{{ route('bike-rental-orders.index') }}" class="side-nav-link">
                     <span class="menu-icon"><i class="ti ti-receipt-2"></i></span>
-                    <span class="menu-text"> Asign Bikes </span>
+                    <span class="menu-text"> Assign Bikes </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
             </li>
