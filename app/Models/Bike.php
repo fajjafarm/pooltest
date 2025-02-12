@@ -14,7 +14,7 @@ class Bike extends Model
     }
     public static function readyToHire()
     {
-        return static::where('status', 'ready to hire')->pluck('id')->toArray();
+        return $this->where('status', 'ready to hire')->pluck('id')->toArray();
     }
 }
 
