@@ -18,7 +18,7 @@ class BikeRentalOrderController extends Controller
             'bike_numbers' => $request->bike_numbers,
             'helmet_numbers' => $request->helmet_numbers,
             'lock_numbers' => $request->lock_numbers,
-            'status' => 'pending', // Default status
+            'status' => 'pending', // Default statuss
         ]);
 
         return response()->json($order, 201);
