@@ -45,15 +45,7 @@
                                 @endforeach
                             </select>
                         </td>
-                        <td> 
-                        <select class="form-control" id="choices-multiple-default" data-choices
-                                        name="choices-multiple-default" multiple>
-                                        @foreach($helmets as $helmet)
-                                    <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}>{{ $helmet }}</option>
-                                @endforeach
-                            </select>
 
-</td>
 <td>
 
                         <select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
