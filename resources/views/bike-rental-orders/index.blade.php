@@ -19,7 +19,7 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="8">Bike Hire Orders</th>
+            <th colspan="9">Bike Hire Orders</th>
             </tr>
 <tr class="table-dark">
             <th>Order #</th>
@@ -48,7 +48,8 @@
                         <td> @foreach($helmets as $helmet)
                         <input class="form-control" id="choices-text-remove-button" data-choices
                         data-choices-limit="3" data-choices-removeItem type="text" value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}" />  @endforeach
-
+</td>
+<td>
 
                         <select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($helmets as $helmet)
