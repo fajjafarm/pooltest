@@ -47,10 +47,6 @@
                         </td>
 
 <td>                            <p class="mb-1 fw-bold text-muted">Multiple Select</p>
-                            <p class="text-muted fs-14">
-                                Select2 can take a regular select box like this...
-                            </p>
-
                             <select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple"
                                 data-placeholder="Choose ...">
                                 <optgroup label="Alaskan/Hawaiian Time Zone">
