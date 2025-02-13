@@ -46,12 +46,15 @@
                             </select>
                         </td>
 
-<td>
+<td><select class="select2 form-control select2-multiple" data-toggle="select2" multiple="multiple" name="helmet_numbers[{{ $order->id }}][]"
+data-placeholder="Choose ...">
+<optgroup label="Alaskan/Hawaiian Time Zone">
 
-                        <select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
+                        
                                 @foreach($helmets as $helmet)
                                     <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}>{{ $helmet }}</option>
                                 @endforeach
+                                </optgroup>
                             </select>
                         </td>
                         <td>
