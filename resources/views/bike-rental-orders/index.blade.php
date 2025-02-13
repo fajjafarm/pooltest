@@ -19,7 +19,7 @@
 <table class="table table-striped mb-0 table-sm">
     <thead>
         <tr class="table-dark">
-            <th colspan="9">Bike Hire Orders</th>
+            <th colspan="8">Bike Hire Orders</th>
             </tr>
 <tr class="table-dark">
             <th>Order #</th>
