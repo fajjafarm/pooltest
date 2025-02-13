@@ -45,10 +45,9 @@
                                 @endforeach
                             </select>
                         </td>
-                        <td> <label for="choices-multiple-remove-button" class="form-label text-muted">With remove
-                        button</label>
-                        <select class="form-control" id="choices-multiple-remove-button" data-choices
-                                        data-choices-removeItem name="choices-multiple-remove-button" multiple>
+                        <td> 
+                        <select class="form-control" id="choices-multiple-default" data-choices
+                                        name="choices-multiple-default" multiple>
                                         @foreach($helmets as $helmet)
                                     <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}>{{ $helmet }}</option>
                                 @endforeach
