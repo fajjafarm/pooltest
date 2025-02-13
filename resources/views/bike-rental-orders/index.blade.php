@@ -45,7 +45,8 @@
                                 @endforeach
                             </select>
                         </td>
-                        <td> 
+                        <td> <label for="choices-multiple-remove-button" class="form-label text-muted">With remove
+                        button</label>
                         <select class="form-control" id="choices-multiple-remove-button" data-choices
                                         data-choices-removeItem name="choices-multiple-remove-button" multiple>
                                         @foreach($helmets as $helmet)
