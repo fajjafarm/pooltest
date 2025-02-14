@@ -33,8 +33,8 @@ class BikeRentalOrderController extends Controller
         $order->update(['lock_numbers' => $request->lock_numbers]);
         $order->update(['helmet_numbers' => $request->helmet_numbers]);
         $order->update(['status' => 'in progress']);
-        return redirect()->back()->with('status', 'bike orders updated!');
-        //return response()->json($order);
+        //return redirect()->back()->with('status', 'bike orders updated!');
+        return response()->json($order);
     }
     public function index()
     {
