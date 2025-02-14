@@ -39,7 +39,7 @@
                         <td>{{ $order->duration }} hours</td>
                         <td>{{ $order->date->format('d-m-Y') }}</td>
                         <td>
-                            <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_id,'/status') }}">
+                            <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_number,'/status') }}">
             @csrf
             @method('PUT')
                             <select class="form-select" name="bike_numbers[{{ $order->id }}][]" multiple>
