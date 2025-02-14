@@ -34,7 +34,7 @@
 </tr>
 <tbody>
 @foreach ($orders as $order)
-<tr> <form method="PUT" action="{{ route('bike-rental-orders.update') }}">
+<tr> <form method="PUT" action="{{ route('bike-rental-orders.index') }}">
 <input type="hidden" value="{{$order->order_number}}" name="id">
             @csrf
             
