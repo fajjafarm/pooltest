@@ -42,14 +42,14 @@
                         <td>{{ $order->date->format('d-m-Y') }}</td>
                         <td>
 
-                            <select class="form-select" name="bike_numbers[{{ $order->order_number }}][]" multiple>
+                            <select class="form-select" name="bike_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($bikes as $bike)
                                     <option value="{{ $bike }}" {{ in_array($bike, $order->bike_numbers) ? 'selected' : '' }}>{{ $bike }}</option>
                                 @endforeach
                             </select>
                         </td>
 
-<td><select class="form-select" name="helmet_numbers[{{ $order->order_number }}][]" multiple>
+<td><select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
 
                         
                                 @foreach($helmets as $helmet)
@@ -59,14 +59,14 @@
                             </select>
                         </td>
                         <td>
-                            <select class="form-select" name="lock_numbers[{{ $order->order_number }}][]" multiple>
+                            <select class="form-select" name="lock_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($locks as $lock)
                                     <option value="{{ $lock }}" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>{{ $lock }}</option>
                                 @endforeach
                             </select>
                         </td>
                         <td>
-                            <select class="form-select" name="status[{{ $order->order_number }}]">
+                            <select class="form-select" name="status[{{ $order->id }}]">
                                 <option value="pending" {{ $order->status == 'pending' ? 'selected' : '' }}>Pending</option>
                                 <option value="in progress" {{ $order->status == 'in progress' ? 'selected' : '' }}>In Progress</option>
                                 <option value="returned" {{ $order->status == 'returned' ? 'selected' : '' }}>Returned</option>
