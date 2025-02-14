@@ -33,7 +33,12 @@ class BikeRentalOrderController extends Controller
         $order->update(['lock_numbers' => $request->lock_numbers]);
         $order->update(['helmet_numbers' => $request->helmet_numbers]);
         $order->update(['status' => 'in progress']);
-        return redirect()->route('bike-rental-orders.index');
+
+        $helmets = BikeHelmets::readyToHire();
+        $locks = BikeLocks::readyToHire();
+        $bikes = Bike::readyToHire();
+        $orders = BikeRentalOrder::all();
+        return view('bike-rental-orders.index', compact('orders', 'bikes', 'helmets', 'locks'));
         //return view('bike-rental-orders.index');
        // return redirect()->back()->with('status', 'bike orders updated!');
        // return response()->json($order);
