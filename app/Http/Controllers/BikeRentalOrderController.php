@@ -26,8 +26,9 @@ class BikeRentalOrderController extends Controller
         return response()->json($order, 201);
     }
 
-    public function updateStatus(Request $request, $id)
+    public function updateStatus(Request $request)
     {
+        $id = $request->input('id');
         $order = BikeRentalOrder::findOrFail($id);
         $order->update(['bike_numbers' => $request->bike_numbers]);
         $order->update(['lock_numbers' => $request->lock_numbers]);
