@@ -34,7 +34,7 @@
 </tr>
 <tbody>
 @foreach ($orders as $order)
-<tr> <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_id,'/status') }}">
+<tr> <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_number,'/status') }}">
             @csrf
             @method('PUT')
                         <td>{{ $order->order_number }}</td>
@@ -42,14 +42,14 @@
                         <td>{{ $order->date->format('d-m-Y') }}</td>
                         <td>
 
-                            <select class="form-select" name="bike_numbers[{{ $order->id }}][]" multiple>
+                            <select class="form-select" name="bike_numbers[{{ $order->order_number }}][]" multiple>
                                 @foreach($bikes as $bike)
                                     <option value="{{ $bike }}" {{ in_array($bike, $order->bike_numbers) ? 'selected' : '' }}>{{ $bike }}</option>
                                 @endforeach
                             </select>
                         </td>
 
-<td><select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
+<td><select class="form-select" name="helmet_numbers[{{ $order->order_number }}][]" multiple>
 
                         
                                 @foreach($helmets as $helmet)
@@ -59,14 +59,14 @@
                             </select>
                         </td>
                         <td>
-                            <select class="form-select" name="lock_numbers[{{ $order->id }}][]" multiple>
+                            <select class="form-select" name="lock_numbers[{{ $order->order_number }}][]" multiple>
                                 @foreach($locks as $lock)
                                     <option value="{{ $lock }}" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>{{ $lock }}</option>
                                 @endforeach
                             </select>
                         </td>
                         <td>
-                            <select class="form-select" name="status[{{ $order->id }}]">
+                            <select class="form-select" name="status[{{ $order->order_number }}]">
                                 <option value="pending" {{ $order->status == 'pending' ? 'selected' : '' }}>Pending</option>
                                 <option value="in progress" {{ $order->status == 'in progress' ? 'selected' : '' }}>In Progress</option>
                                 <option value="returned" {{ $order->status == 'returned' ? 'selected' : '' }}>Returned</option>
