@@ -73,7 +73,7 @@
                             </select>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary" type="submit">Update</button></form>
+                            <button class="btn btn-primary" type="submit">Update</button></form>
                         </td>
                     </tr>
             @endforeach
