@@ -34,14 +34,14 @@
 </tr>
 <tbody>
 @foreach ($orders as $order)
-<tr>
+<tr> <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_number,'/status') }}">
+            @csrf
+            @method('PUT')
                         <td>{{ $order->order_number }}</td>
                         <td>{{ $order->duration }} hours</td>
                         <td>{{ $order->date->format('d-m-Y') }}</td>
                         <td>
-                            <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_number,'/status') }}">
-            @csrf
-            @method('PUT')
+
                             <select class="form-select" name="bike_numbers[{{ $order->id }}][]" multiple>
                                 @foreach($bikes as $bike)
                                     <option value="{{ $bike }}" {{ in_array($bike, $order->bike_numbers) ? 'selected' : '' }}>{{ $bike }}</option>
@@ -73,8 +73,9 @@
                             </select>
                         </td>
                         <td>
-                            <button class="btn btn-primary" type="submit">Update</button></form>
+                            <button class="btn btn-primary" type="submit">Update</button>
                         </td>
+                        </form>
                     </tr>
             @endforeach
             </table></div><!-- end table-->
