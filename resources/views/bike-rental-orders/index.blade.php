@@ -34,7 +34,7 @@
 </tr>
 <tbody>
 @foreach ($orders as $order)
-<tr> <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_number,'/status') }}">
+<tr> <form method="PUT" action="{{ route('bike-rental-orders.update', $order->order_number,'/update') }}">
             @csrf
             @method('PUT')
                         <td>{{ $order->order_number }}</td>
