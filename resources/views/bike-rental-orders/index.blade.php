@@ -34,7 +34,8 @@
 </tr>
 <tbody>
 @foreach ($orders as $order)
-<tr> 
+<tr> <form method="POST" action="{{ route('bike-rental-orders.update', $order->order_number) }}">
+            @csrf
            
                         <td>{{ $order->order_number }}</td>
                         <td>{{ $order->duration }} hours</td>
@@ -74,7 +75,7 @@
                         <td>
                             <button class="btn btn-primary" type="submit">Update</button>
                         </td>
-                      
+                        </form>
                     </tr>
             @endforeach
             </table></div><!-- end table-->
