@@ -46,8 +46,17 @@ class BikeRentalOrderController extends Controller
                     
        // $setBike = Bike::setHire($bike_number);}}
         //set helmet hired
-
+        if(!empty($request->helmet_numbers)) {
+            foreach($request->helmet_numbers as $helmet_number) {
+        $helmet = Bike::find($helmet_number);
+        $helmet->status = 'hired';
+        $helmet->save(); }}
         //set lock hired
+        if(!empty($request->lock_numbers)) {
+            foreach($request->lock_numbers as $lock_number) {
+        $lock = Bike::find($lock_number);
+        $lock->status = 'hired';
+        $lock->save(); }}
 
         $helmets = BikeHelmets::readyToHire();
         $locks = BikeLocks::readyToHire();
