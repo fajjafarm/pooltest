@@ -31,17 +31,13 @@ use App\Http\Controllers\BikeRentalOrderController;
 Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
 Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
 
-//Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index'])->name('bike-rental-orders.index');
+Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index'])->name('bike-rental-orders.index');
 //Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');
-//Route::put('/bike-rental-orders/update/{id}', [BikeRentalOrderController::class, 'updateStatus'])->name('bike-rental-orders.update');
+Route::put('/bike-rental-orders/update/{id}', [BikeRentalOrderController::class, 'updateStatus'])->name('bike-rental-orders.update');
 
 Route::get('/bike-locks', [BikeLockController::class, 'index'])->name('bike-locks.index');
 Route::post('/bike-locks', [BikeLockController::class, 'store'])->name('bike-locks.store');
 Route::put('/bike-locks/{lock}', [BikeLockController::class, 'updateBikeLockStatus'])->name('bike-locks.update');
-
-Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index'])->name('bike-rental-orders.index');
-Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');
-Route::put('/bike-rental-orders/{id}', [BikeRentalOrderController::class, 'update'])->name('bike-rental-orders.update');
 
 Route::get('/bike-helmets', [BikeHelmetController::class, 'index'])->name('bike-helmets.index');
 Route::post('/bike-helmets', [BikeHelmetController::class, 'store'])->name('bike-helmets.store');
@@ -69,7 +65,7 @@ Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
 //regularuser access but only if they are associated with the company
 //Route::post('/water-balance-checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
 
-Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check.update');
+Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
 
 Route::get('/actionlog/{testId}', [ActionLogController::class, 'create'])->name('actionlog.create');
