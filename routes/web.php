@@ -40,7 +40,7 @@ Route::post('/bike-locks', [BikeLockController::class, 'store'])->name('bike-loc
 Route::put('/bike-locks/{lock}', [BikeLockController::class, 'updateBikeLockStatus'])->name('bike-locks.update');
 
 Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index'])->name('bike-rental-orders.index');
-//Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');
+Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');
 Route::put('/bike-rental-orders/{id}', [BikeRentalOrderController::class, 'updateStatus'])->name('bike-rental-orders.update');
 
 Route::get('/bike-helmets', [BikeHelmetController::class, 'index'])->name('bike-helmets.index');
@@ -69,7 +69,7 @@ Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
 //regularuser access but only if they are associated with the company
 //Route::post('/water-balance-checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
 
-Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check');
+Route::post('/equipment-check', [EquipmentCheckController::class, 'store'])->name('equipment-check.update');
 Route::get('/equipment-check', [EquipmentCheckController::class, 'index'])->name('equipment-check');
 
 Route::get('/actionlog/{testId}', [ActionLogController::class, 'create'])->name('actionlog.create');
