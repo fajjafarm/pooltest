@@ -39,7 +39,7 @@ class BikeRentalOrderController extends Controller
         if(!empty($request->bike_numbers)) {
             foreach($request->bike_numbers as $bike_number) {
                     
-        $setBike = Bike::setHire($bike_number);
+        $setBike = Bike::setHire($bike_number);}}
         //set helmet hired
 
         //set lock hired
