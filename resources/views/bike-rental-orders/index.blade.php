@@ -55,7 +55,7 @@
 
 <option value="None" >None</option>
                                 @foreach($helmets as $helmet)
-                                    <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}>{{ $helmet }}</option>
+                                    <option value="{{ $helmet }}" {{@if(!is_null($order->helmet_numbers)) in_array($helmet, $order->helmet_numbers) ? 'selected' : '' @endif}}>{{ $helmet }}</option>
                                 @endforeach
                               
                             </select>
