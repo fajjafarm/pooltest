@@ -32,7 +32,7 @@ Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'in
 Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
 
 Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index'])->name('bike-rental-orders.index');
-//Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');
+Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');
 Route::put('/bike-rental-orders/update/{id}', [BikeRentalOrderController::class, 'updateStatus'])->name('bike-rental-orders.update');
 
 Route::get('/bike-locks', [BikeLockController::class, 'index'])->name('bike-locks.index');
