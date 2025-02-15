@@ -44,6 +44,7 @@
                         <td>
 
                             <select class="form-select" name="bike_numbers[]" multiple>
+                            <option value="None" {{ in_array($lock, $order->bike_numbers) ? 'selected' : '' }}>None</option>
                                 @foreach($bikes as $bike)
                                     <option value="{{ $bike }}" {{ in_array($bike, $order->bike_numbers) ? 'selected' : '' }}>{{ $bike }}</option>
                                 @endforeach
@@ -52,7 +53,7 @@
 
 <td><select class="form-select" name="helmet_numbers[]" multiple>
 
-                        
+<option value="None" {{ in_array($lock, $order->helmet_numbers) ? 'selected' : '' }}>None</option>
                                 @foreach($helmets as $helmet)
                                     <option value="{{ $helmet }}" {{ in_array($helmet, $order->helmet_numbers) ? 'selected' : '' }}>{{ $helmet }}</option>
                                 @endforeach
@@ -61,6 +62,7 @@
                         </td>
                         <td>
                             <select class="form-select" name="lock_numbers[]" multiple>
+                            <option value="None" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>None</option>
                                 @foreach($locks as $lock)
                                     <option value="{{ $lock }}" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>{{ $lock }}</option>
                                 @endforeach
