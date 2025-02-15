@@ -38,7 +38,7 @@
 <tr> 
                         <td><form method="POST" action="{{ route('bike-rental-orders.update',$order->order_number)}}">
             @csrf
-            @method('PUT')
+            @method('put')
             <input type="hidden" value="{{$order->order_number}}" name="id">{{ $order->order_number }}</td>
                         <td>{{ $order->duration }} hours</td>
                         <td>{{ $order->date->format('d-m-Y') }}</td>
