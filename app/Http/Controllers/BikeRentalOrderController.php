@@ -35,6 +35,15 @@ class BikeRentalOrderController extends Controller
         $order->update(['helmet_numbers' => $request->helmet_numbers]);
         $order->update(['status' => 'in progress']);
 
+        //setbike hired
+        if(!empty($request->bike_numbers)) {
+            foreach($request->bike_numbers as $bike_number) {
+                    
+        $setBike = Bike::setHire($bike_number);
+        //set helmet hired
+
+        //set lock hired
+
         $helmets = BikeHelmets::readyToHire();
         $locks = BikeLocks::readyToHire();
         $bikes = Bike::readyToHire();

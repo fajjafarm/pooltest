@@ -16,5 +16,9 @@ class Bike extends Model
     {
         return static::where('status', 'ready for hire')->pluck('id')->toArray();
     }
+    public static function setHire()
+    {
+        return static::where('status', 'hired')->pluck('id')->toArray();
+    }
 }
 
