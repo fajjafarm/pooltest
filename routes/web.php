@@ -41,7 +41,7 @@ Route::put('/bike-locks/{lock}', [BikeLockController::class, 'updateBikeLockStat
 
 Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index'])->name('bike-rental-orders.index');
 Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');
-Route::put('/bike-rental-orders/{id}', [BikeRentalOrderController::class, 'updateStatus'])->name('bike-rental-orders.updateStatus');
+Route::put('/bike-rental-orders/{id}', [BikeRentalOrderController::class, 'update'])->name('bike-rental-orders.update');
 
 Route::get('/bike-helmets', [BikeHelmetController::class, 'index'])->name('bike-helmets.index');
 Route::post('/bike-helmets', [BikeHelmetController::class, 'store'])->name('bike-helmets.store');
