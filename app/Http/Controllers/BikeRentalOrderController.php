@@ -38,8 +38,13 @@ class BikeRentalOrderController extends Controller
         //setbike hired
         if(!empty($request->bike_numbers)) {
             foreach($request->bike_numbers as $bike_number) {
+        $bike = Bike::find($bike_number);
+        $bike->status = 'hired';
+        $bike->save(); }}
+
+    
                     
-        $setBike = Bike::setHire($bike_number);}}
+       // $setBike = Bike::setHire($bike_number);}}
         //set helmet hired
 
         //set lock hired
