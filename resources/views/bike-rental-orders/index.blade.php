@@ -34,11 +34,11 @@
 </tr>
 <tbody>
 @foreach ($orders as $order)
-<tr> 
+
 <form method="POST" action="{{ route('bike-rental-orders.update',$order->order_number)}}">
             @csrf
             @method('PUT')
-            <input type="hidden" value="{{$order->order_number}}" name="id">
+            <input type="hidden" value="{{$order->order_number}}" name="id"><tr> 
                         <td>{{ $order->order_number }}</td>
                         <td>{{ $order->duration }} hours</td>
                         <td>{{ $order->date->format('d-m-Y') }}</td>
@@ -77,8 +77,8 @@
                         <td>
                             <button class="btn btn-primary" type="submit">Update</button>
                         </td>
-                        </form>
-                    </tr>
+                        
+                    </tr></form>
             @endforeach
             </table></div><!-- end table-->
             </div><!-- end card-body-->
