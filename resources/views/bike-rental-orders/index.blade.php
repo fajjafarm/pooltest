@@ -50,7 +50,7 @@
                             </select>
                         </td>
 
-<td><select class="form-select" name="helmet_numbers[{{ $order->id }}][]" multiple>
+<td><select class="form-select" name="helmet_numbers[]" multiple>
 
                         
                                 @foreach($helmets as $helmet)
@@ -60,7 +60,7 @@
                             </select>
                         </td>
                         <td>
-                            <select class="form-select" name="lock_numbers[{{ $order->id }}][]" multiple>
+                            <select class="form-select" name="lock_numbers[]" multiple>
                                 @foreach($locks as $lock)
                                     <option value="{{ $lock }}" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>{{ $lock }}</option>
                                 @endforeach
