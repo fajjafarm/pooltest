@@ -43,7 +43,7 @@
                         <td>{{ $order->date->format('d-m-Y') }}</td>
                         <td>
 
-                            <select class="form-select" name="bike_numbers[]" multiple>
+                            <select class="form-select" name="bike_numbers[]" multiple required>
                                     <option value=0 >None</option>
                                 @foreach($bikes as $bike)
                                     <option value="{{ $bike }}" {{ in_array($bike, $order->bike_numbers) ? 'selected' : '' }}>{{ $bike }}</option>
@@ -61,7 +61,7 @@
                             </select>
                         </td>
                         <td>
-                            <select class="form-select" name="lock_numbers[]" multiple>
+                            <select class="form-select" name="lock_numbers[]" multiple required>
                                 <option value=0 >None</option>
                                 @foreach($locks as $lock)
                                     <option value="{{ $lock }}" {{ in_array($lock, $order->lock_numbers) ? 'selected' : '' }}>{{ $lock }}</option>
