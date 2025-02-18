@@ -10,6 +10,7 @@ use App\Http\Controllers\WaterBalanceTestController;
 use App\Http\Controllers\ActionLogController;
 use App\Http\Controllers\BackwashController;
 use App\Http\Controllers\PoolController;
+use App\Http\Controllers\PlantroomController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WaterMeterReadingController;
 use App\Http\Controllers\BikeRentalController;
@@ -61,6 +62,9 @@ Route::post('/water-balance-checks', [WaterBalanceTestController::class, 'store'
 
 Route::get('/pools/create/{clientID}', [PoolController::class, 'create'])->name('pools.create');
 Route::post('/pools', [PoolController::class, 'store'])->name('pools.store');
+
+Route::get('/plantroom/create/{clientID}', [PlantroomController::class, 'create'])->name('plantroom.create');
+Route::post('/plantroom', [PlantroomController::class, 'store'])->name('plantroom.store');
 
 //regularuser access but only if they are associated with the company
 //Route::post('/water-balance-checks/waterBalanceTestForm', [WaterBalanceTestController::class, 'submitWaterTest'])->name('water_balance_checks.waterBalanceTestForm');
