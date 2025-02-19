@@ -65,7 +65,7 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
     public function store(Request $request)
     {
         $latestreadings =0;
-        
+        //enter 0 sum checks for new plantrooms
         $latestreadings = WaterMeterReading::where('plantroom_id', $request->input('plantroom_id'))->orderBy('created_at', 'desc')->firstOrFail();
         
         $diff = $request->input('meter_reading')-$latestreadings->meter_reading;
