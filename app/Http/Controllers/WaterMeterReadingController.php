@@ -39,7 +39,7 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
         foreach ($watermeterreadings as $watermeterreading){
 
             $labels[]=date_format($watermeterreading['created_at'],'d/m/y');
-            $litres[]=$watermeterreading['meter_reading'];
+            $litres[]=$watermeterreading['difference'];
 
         }
         $chart = $chart->barChart()
