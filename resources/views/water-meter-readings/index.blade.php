@@ -18,7 +18,7 @@
                 <div class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
                     <h4 class="header-title">Location:{{ $plantroomID }} {{ $plantroomName }}</h4>
                     <div>
-                        <a href="{{ route('water-meter-readings.create', ['plantroomID' => $plantroomID ])}}" class="btn btn-success bg-gradient"><i
+                        <a href="{{ route('water-meter-readings.create', ['plantroomID' => $plantroomID ])}}" class=" btn btn-success bg-gradient"><i
                                 class="ti ti-plus me-1"></i> Add a Water Meter Reading</a>
                         
                     </div>
