@@ -17,7 +17,7 @@ class WaterMeterReadingController extends Controller
     {
         $readings = WaterMeterReading::where('plantroom_id', $plantroomID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
-        $plantroomName = PlantroomList::where('pool_id', $plantroomID)->value('pool_name');
+        $plantroomName = PlantroomList::where('plantroom_id', $plantroomID)->value('plantroom_name');
         $watermeterreadings = WaterMeterReading::where('plantroom_id', $plantroomID)->orderBy('created_at', 'asc')->get();
         $i=0;
         $diffs = array();
