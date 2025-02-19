@@ -59,7 +59,7 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
        // $plantroomID = $poolID;
         $plantroomName = PlantroomList::where('plantroom_id', $plantroomID)->value('plantroom_name');
         $WaterMeterReading = WaterMeterReading::all();
-        return view('water-meter-readings.create', compact('WaterMeterReading','plantroomID', 'plantroomName', 'poolID'));
+        return view('water-meter-readings.create', compact('WaterMeterReading','plantroomID', 'plantroomName'));
     }
 
     public function store(Request $request)
