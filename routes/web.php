@@ -53,7 +53,7 @@ Route::get('/clients/create/', [ClientController::class, 'create'])->name('clien
 Route::post('/clients', [ClientController::class, 'store'])->name('clients.store') ;
 
 Route::get('water-meter-readings/view/{plantroomID}', [WaterMeterReadingController::class, 'index'])->name('water-meter-readings.index');
-Route::get('/water-meter-readings/create/{plantroomID}', [WaterMeterReadingController::class, 'create'])->name('water-meter-readings.create');
+Route::get('/water-meter-readings/create/{ plantroomID}', [WaterMeterReadingController::class, 'create'])->name('water-meter-readings.create');
 Route::post('/water-meter-readings', [WaterMeterReadingController::class, 'store'])->name('water-meter-readings.store');
 
 Route::get('/water-balance-checks/view/{poolID}', [WaterBalanceTestController::class, 'index'])->name('water-balance-checks.index');
