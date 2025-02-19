@@ -50,7 +50,7 @@ Route::put('/bikes/{bike}', [BikeRentalController::class, 'updateBikeStatus'])->
 
 Route::get('/clients', [ClientController::class, 'index'])->name('clients.index');
 Route::get('/clients/create/', [ClientController::class, 'create'])->name('clients.create');
-Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
+Route::post('/clients', [ClientController::class, 'store'])->name('clients.store') ;
 
 Route::get('water-meter-readings/view/{plantroomID}', [WaterMeterReadingController::class, 'index'])->name('water-meter-readings.index');
 Route::get('/water-meter-readings/create/{plantroomID}', [WaterMeterReadingController::class, 'create'])->name('water-meter-readings.create');
