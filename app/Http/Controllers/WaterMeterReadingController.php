@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\WaterMeterReading;
 use App\Models\PoolList;
+use App\Models\PlantroomList;
 use App\Charts\WaterBalanceChart;
 use Illuminate\Http\Request;
 use ArielMejiaDev\LarapexCharts\LarapexChart;
@@ -12,12 +13,12 @@ use ArielMejiaDev\LarapexCharts\LarapexChart;
 
 class WaterMeterReadingController extends Controller
 {
-    public function index($poolID, LarapexChart $chart)
+    public function index($plantroomID, LarapexChart $chart)
     {
-        $readings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'desc')->get();
+        $readings = WaterMeterReading::where('plantroom_id', $plantroomID)->orderBy('created_at', 'desc')->get();
         // $poolName = PoolList::where('pool_name', $poolID)->get();
-        $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
-        $watermeterreadings = WaterMeterReading::where('plantroom_id', $poolID)->orderBy('created_at', 'asc')->get();
+        $plantroomName = PlantroomList::where('pool_id', $plantroomID)->value('pool_name');
+        $watermeterreadings = WaterMeterReading::where('plantroom_id', $plantroomID)->orderBy('created_at', 'asc')->get();
         $i=0;
         $diffs = array();
         $count = 0;
@@ -46,19 +47,19 @@ foreach($watermeterreadings as $i =>$watermeterreading) {
         ->addData('litres',  $litres)
         ->setXAxis( $labels);
         
-           return view('water-meter-readings.index', compact('readings' ,'poolID','poolName','chart','labels','litres','diffs'));
+           return view('water-meter-readings.index', compact('readings' ,'plantroomID','plantroomName','chart','labels','litres','diffs'));
     }
 
 
 
 
-    public function create($poolID)
+    public function create($plantroomID)
     {
-        $poolID = $poolID;
+        $plantroomID = $plantroomID;
         $plantroomID = $poolID;
-        $poolName = PoolList::where('pool_id', $poolID)->value('pool_name');
+        $plantroomName = PlantroomList::where('plantroom_id', $plantroomID)->value('plantroom_name');
         $WaterMeterReading = WaterMeterReading::all();
-        return view('water-meter-readings.create', compact('WaterMeterReading','plantroomID', 'poolName', 'poolID'));
+        return view('water-meter-readings.create', compact('WaterMeterReading','plantroomID', 'plantroomName', 'poolID'));
     }
 
     public function store(Request $request)
