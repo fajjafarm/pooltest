@@ -5,12 +5,12 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
-class CreateThermalAreasTable extends Migration
+class CreateThermalSuitesTable extends Migration
 {
     public function up()
     {
-        Schema::create('thermal_areas', function (Blueprint $table) {
-            $table->ulid('thermal_area_id')->primary();
+        Schema::create('thermal_suites', function (Blueprint $table) {
+            $table->ulid('thermal_suite_id')->primary();
             $table->unsignedBigInteger('client_id');
             $table->string('thermal_name');
             $table->string('thermal_type');
@@ -26,6 +26,6 @@ class CreateThermalAreasTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('thermal_areas');
+        Schema::dropIfExists('thermal_suites');
     }
 }
