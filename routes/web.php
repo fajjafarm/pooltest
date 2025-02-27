@@ -16,7 +16,7 @@ use App\Http\Controllers\WaterMeterReadingController;
 use App\Http\Controllers\BikeRentalController;
 use App\Http\Controllers\BikeLockController;
 use App\Http\Controllers\BikeHelmetController;
-use App\Http\Controllers\ThermalCheckController;
+use App\Http\Controllers\ThermalSuiteController;
 use App\Http\Controllers\BikeRentalOrderController;
 /*
 |--------------------------------------------------------------------------
