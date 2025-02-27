@@ -12,7 +12,7 @@
                         <div class="lh-1"><strong>Error - </strong> {{ session('notgood') }}</div>
                     </div>
     @endif
-        <h1>Add New Client</h1>
+        <h1>Add New Thermal Suite</h1>
     <form action="{{ route('thermal-suites.store') }}" method="POST">
         @csrf
         <div class="mb-3">
@@ -44,7 +44,7 @@
         </div>
         <div class="mb-3">
             <label for="check_interval">Check Interval (mins)</label>
-            <input type="email" name="check_interval" class="form-control" required>
+            <input type="text" name="check_interval" class="form-control" required>
         </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>
