@@ -29,8 +29,16 @@ use App\Http\Controllers\BikeRentalOrderController;
 |
 */
 //super admin access only
-Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
-Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/thermal-suites', [ThermalSuiteController::class, 'index'])->name('thermal-suites.index');
+    Route::get('/thermal-suites/create', [ThermalSuiteController::class, 'create'])->name('thermal-suites.create');
+    Route::post('/thermal-suites', [ThermalSuiteController::class, 'store'])->name('thermal-suites.store');
+    Route::post('/thermal-suites/{thermalSuite}/check', [ThermalSuiteController::class, 'check'])->name('thermal-suites.check');
+});
+
+//Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
+//Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
 
 Route::get('/bike-rental-orders', [BikeRentalOrderController::class, 'index'])->name('bike-rental-orders.index');
 Route::post('/bike-rental-orders', [BikeRentalOrderController::class, 'store'])->name('bike-rental-orders.store');

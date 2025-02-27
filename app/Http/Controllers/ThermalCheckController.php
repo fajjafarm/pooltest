@@ -1,36 +1,53 @@
 <?php
-
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\ThermalSuite;
 use App\Models\ThermalCheck;
-use App\Models\ThermalArea;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
-class ThermalCheckController extends Controller
+class ThermalSuiteController extends Controller
 {
     public function index()
     {
-        $thermalAreas = ThermalArea::all();
-        return view('thermal.check', compact('thermalAreas'));
+        $suites = ThermalSuite::with('thermalChecks')->get();
+        return view('thermal-suites.index', compact('suites'));
+    }
+
+    public function create()
+    {
+        return view('thermal-suites.create');
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'thermal_area_id' => 'required|exists:thermal_areas,id',
-            'status' => 'required|in:Occupied - Okay,Empty - Okay,Issue Spotted,N/A (Closed)',
-            'time_checked' => 'required|date_format:Y-m-d H:i:s',
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'location' => 'required|string|max:255',
+            'check_frequency_minutes' => 'required|integer|min:1',
         ]);
 
-        $check = ThermalCheck::create([
-            'thermal_area_id' => $request->thermal_area_id,
-            'status' => $request->status,
-            'time_checked' => $request->time_checked,
-            'user_id' => Auth::id(),
-            'issue_description' => $request->input('issue_description', null),
+        ThermalSuite::create($validated);
+
+        return redirect()->route('thermal-suites.index')
+            ->with('success', 'Thermal suite added successfully');
+    }
+
+    public function check(Request $request, ThermalSuite $thermalSuite)
+    {
+        $validated = $request->validate([
+            'status' => 'required|in:occupied_okay,occupied_issue,not_occupied_okay,not_occupied_issue',
+            'notes' => 'nullable|string',
         ]);
 
-        return redirect()->route('thermal.checks.index')->with('success', 'Check logged successfully.');
+        ThermalCheck::create([
+            'thermal_suite_id' => $thermalSuite->id,
+            'user_id' => auth()->id(), // Assuming authentication is set up
+            'checked_at' => now(),
+            'status' => $validated['status'],
+            'notes' => $validated['notes'],
+        ]);
+
+        return redirect()->route('thermal-suites.index')
+            ->with('success', 'Check recorded successfully');
     }
 }
