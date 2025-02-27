@@ -23,14 +23,7 @@ class CreateThermalChecksTable extends Migration
             $table->text('notes')->nullable();
             $table->timestamps();
 
-            $table->foreign('thermal_suite_id')
-                  ->references('id')
-                  ->on('thermal_suites')
-                  ->onDelete('cascade');
-            $table->foreign('user_id')
-                  ->references('id')
-                  ->on('users')
-                  ->onDelete('cascade');
+           
         });
     }
 
