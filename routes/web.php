@@ -33,7 +33,7 @@ use App\Http\Controllers\BikeRentalOrderController;
 
 Route::get('/thermal-suites', [ThermalSuiteController::class, 'index'])->name('thermal-suites.index');
 Route::get('/thermal-suites/create', [ThermalSuiteController::class, 'create'])->name('thermal-suites.create');
-Route::post('/thermal-suites', [ThermalSuiteController::class, 'store'])->name('thermal-suites.store');
+Route::post('/thermal-suites/store', [ThermalSuiteController::class, 'store'])->name('thermal-suites.store');
 Route::post('/thermal-suites/{thermalSuite}/check', [ThermalSuiteController::class, 'check'])->name('thermal-suites.check');
 
 
