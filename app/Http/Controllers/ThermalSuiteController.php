@@ -15,7 +15,7 @@ class ThermalSuiteController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'client_id' => 'required|exists:clients,id',
+            'client_id' => 'required|string|max:255',
             'thermal_name' => 'required|string|max:255',
             'thermal_type' => 'required|string|max:255',
             'sauna_temp' => 'required|numeric|between:0,999.99',
