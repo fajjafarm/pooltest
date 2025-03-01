@@ -11,7 +11,7 @@ return new class extends Migration
     {
         Schema::create('thermal_suites', function (Blueprint $table) {
             $table->ulid('id')->primary();
-            $table->('client_id');
+            $table->string('client_id');
             $table->string('thermal_name');
             $table->string('thermal_type');
             $table->decimal('sauna_temp', 5, 2);
