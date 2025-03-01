@@ -5,27 +5,26 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
 
-class CreateThermalSuitesTable extends Migration
+return new class extends Migration
 {
-    public function up()
+    public function up(): void
     {
         Schema::create('thermal_suites', function (Blueprint $table) {
-            $table->ulid('thermal_suite_id')->primary();
-            $table->unsignedBigInteger('client_id');
+            $table->ulid('id')->primary();
+            $table->('client_id');
             $table->string('thermal_name');
             $table->string('thermal_type');
-            $table->decimal('sauna_temp', 8, 2);
-            $table->decimal('steamroom_temp', 8, 2);
-            $table->decimal('lounger_temp', 8, 2);
-            $table->string('check_interval', 10, 2);
+            $table->decimal('sauna_temp', 5, 2);
+            $table->decimal('steamroom_temp', 5, 2);
+            $table->decimal('lounger_temp', 5, 2);
+            $table->integer('check_interval'); // in minutes
+            $table->text('notes')->nullable();
             $table->timestamps();
-
-            
         });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('thermal_suites');
     }
-}
+};

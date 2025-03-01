@@ -1,25 +1,39 @@
 <?php
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
-class ThermalArea extends Model
+class ThermalSuite extends Model
 {
-    use HasFactory;
+    protected $keyType = 'string';
+    public $incrementing = false;
 
-    // Specify the table name if it differs from the default (optional)
-    protected $table = 'thermal_suites';
-
-    // Define fillable properties for mass assignment
     protected $fillable = [
+        'client_id',
         'thermal_name',
         'thermal_type',
+        'sauna_temp',
+        'steamroom_temp',
+        'lounger_temp',
+        'check_interval',
+        'notes'
     ];
 
-    // Relationship with ThermalCheck
-    public function thermalChecks()
+    protected static function boot()
     {
-        return $this->hasMany(ThermalCheck::class, 'thermal_area_id');
+        parent::boot();
+
+        static::creating(function ($model) {
+            if (empty($model->id)) {
+                $model->id = Str::ulid();
+            }
+        });
+    }
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
     }
 }
