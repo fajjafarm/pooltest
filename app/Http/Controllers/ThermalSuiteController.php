@@ -9,7 +9,7 @@ class ThermalSuiteController extends Controller
 {
     public function create()
     {
-        return view('thermal_suites.create');
+        return view('thermal-suites.create');
     }
 
     public function store(Request $request)
@@ -27,7 +27,7 @@ class ThermalSuiteController extends Controller
 
         ThermalSuite::create($validated);
 
-        return redirect()->route('thermal_suites.create')
+        return redirect()->route('thermal-suites.create')
             ->with('success', 'Thermal Suite added successfully');
     }
 }
