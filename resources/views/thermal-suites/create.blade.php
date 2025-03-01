@@ -29,7 +29,7 @@
                 <label for="client_id">Client</label>
                 <select name="client_id" class="form-control @error('client_id') is-invalid @enderror">
                     <!-- Populate with your clients -->
-                    <option value="">Select Client</option>
+                    <option value="1">1</option>
                 </select>
                 @error('client_id')
                     <div class="invalid-feedback">{{ $message }}</div>
