@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\ThermalSuite;
 use App\Models\ThermalCheck;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ThermalSuiteController extends Controller
 {
@@ -28,8 +29,12 @@ class ThermalSuiteController extends Controller
             'lounger_temp' => 'required|string|max:255',
             'check_interval' => 'required|integer|min:1',
         ]);
+        $thermal = new ThermalSuite;
+        $thermal->thermal_suite_id = Str::ulid(); // Generate ULID
+        $thermal->fill($validated);
+        $thermal->save();
 
-        ThermalSuite::create($validated);
+        //ThermalSuite::create($validated);
 
         return redirect()->route('thermal-suites.index')
             ->with('success', 'Thermal suite added successfully');
