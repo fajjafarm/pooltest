@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Check: {{ $thermalSuite->thermal_name }}'])
+@extends('layouts.vertical', ['title' => 'Check:' $thermalSuite->thermal_name])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Check: {{ $thermalSuite->thermal_name }}'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Check:' $thermalSuite->thermal_name])
 
     <body>
 
