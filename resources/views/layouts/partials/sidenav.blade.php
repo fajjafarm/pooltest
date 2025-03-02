@@ -40,16 +40,6 @@
             </li>
 
             <ul class="side-nav">
-            <li class="side-nav-title">Thermal Suite</li>
-
-            <li class="side-nav-item">
-                <a href="{{ route ('second' ,['dashboards','index']) }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
-                    <span class="menu-text"> 20 Min Checks </span>
-                    <span class="badge bg-success rounded-pill">5</span>
-                </a>
-            </li></ul>
-            <ul class="side-nav">
             <li class="side-nav-title">Thermal Suites</li>
             <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarThermalChecks" aria-expanded="false" aria-controls="sidebarThermalChecks" class="side-nav-link">
