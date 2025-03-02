@@ -52,11 +52,11 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th>Check Time</th>
-                                <th>Gap</th>
-                                <th>User ID</th>
                                 <th>Status</th>
+                                <th>Gap</th>
                                 <th>Notes</th>
+                                <th>Check Time</th>
+                                <th>User ID</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,17 +65,7 @@
                             @endphp
                             @foreach($checks as $check)
                                 <tr>
-                                    <td>{{ Carbon\Carbon::parse($check->checked_at)->format('H:i:s d-m-Y') }}</td>
-                                    <td>
-                                        @if($previousCheck)
-                                     
-                                        {{ round((Carbon\Carbon::parse($check->checked_at)->diffInMinutes($previousCheck->checked_at)),0) }} mins
-                                        @else
-                                       {{ $timeSinceLastCheck}} mins ago
-                                        @endif
-                                    </td>
-                                    <td>{{ $check->user_id }}</td>
-                                    <td>
+                                <td>
                                         @switch($check->status)
                                             @case('occupied_okay')
                                                 <span class="badge bg-success">Occupied - Okay</span>
@@ -91,7 +81,19 @@
                                                 @break
                                         @endswitch
                                     </td>
+                                    <td>
+                                        @if($previousCheck)
+                                     
+                                        {{ round((Carbon\Carbon::parse($check->checked_at)->diffInMinutes($previousCheck->checked_at)),0) }} mins
+                                        @else
+                                       {{ $timeSinceLastCheck}} 
+                                        @endif
+                                    </td>
                                     <td>{{ $check->extra_info ?? '-' }}</td>
+                                    <td>{{ Carbon\Carbon::parse($check->checked_at)->format('H:i:s d-m-Y') }}</td>
+                                    <td>{{ $check->user_id }}</td>
+
+                                    
                                 </tr>
                                 @php
                                     $previousCheck = $check;
