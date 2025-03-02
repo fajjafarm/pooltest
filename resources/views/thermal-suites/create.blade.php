@@ -12,7 +12,7 @@
                         <div class="lh-1"><strong>Error - </strong> {{ session('notgood') }}</div>
                     </div>
     @endif
-
+</div>
     <div class="container mt-5">
         <h1>Add New Thermal Suite</h1>
 
@@ -22,7 +22,7 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('thermal-suites.store') }}">
+        <form action="{{ route('thermal-suites.store') }}" method="POST">
             @csrf
 
             <div class="form-group">
