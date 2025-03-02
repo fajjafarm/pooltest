@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Check: $thermalSuite->thermal_name'])
+@extends('layouts.vertical', ['title' => 'Thermal Suite Checks'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Check: $thermalSuite->thermal_name'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Thermal Suite Checks'])
 
     <body>
 
@@ -18,7 +18,7 @@
 <div class="alert alert-info">
     Last check: {{ $timeSinceLastCheck }}
 </div>
-
+<h3>Add a check for: {{ $thermalSuite->thermal_name }}</h3>
 <form method="POST" action="{{ route('thermal_suite_checks.store', $thermalSuite->id) }}">
     @csrf
 
