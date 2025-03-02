@@ -44,6 +44,71 @@
     </div>
 
 </form>
+ <!-- Previous Checks Section -->
+ <div class="mt-5">
+            <h2>Previous Checks</h2>
+            @if($thermalSuite->checks()->count() > 0)
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Check Time</th>
+                                <th>Gap</th>
+                                <th>User ID</th>
+                                <th>Status</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                                $previousCheck = null;
+                            @endphp
+                            @foreach($checks as $check)
+                                <tr>
+                                    <td>{{ $check->checked_at->format('Y-m-d H:i:s') }}</td>
+                                    <td>
+                                        @if($previousCheck)
+                                            {{ $check->checked_at->diffInMinutes($previousCheck->checked_at) }} mins
+                                        @else
+                                            First Check
+                                        @endif
+                                    </td>
+                                    <td>{{ $check->user_id }}</td>
+                                    <td>
+                                        @switch($check->status)
+                                            @case('occupied_okay')
+                                                <span class="badge bg-success">Occupied - Okay</span>
+                                                @break
+                                            @case('occupied_issue')
+                                                <span class="badge bg-warning">Occupied - Issue</span>
+                                                @break
+                                            @case('empty_okay')
+                                                <span class="badge bg-primary">Empty - Okay</span>
+                                                @break
+                                            @case('empty_issue')
+                                                <span class="badge bg-danger">Empty - Issue</span>
+                                                @break
+                                        @endswitch
+                                    </td>
+                                    <td>{{ $check->extra_info ?? '-' }}</td>
+                                </tr>
+                                @php
+                                    $previousCheck = $check;
+                                @endphp
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="mt-3">
+                    {{ $checks->links() }}
+                </div>
+            @else
+                <p>No previous checks recorded.</p>
+            @endif
+        </div>
+    </div>
     </div>
 </body>
 @endsection

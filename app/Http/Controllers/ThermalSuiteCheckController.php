@@ -17,8 +17,17 @@ class ThermalSuiteCheckController extends Controller
         $timeSinceLastCheck = $lastCheck 
             ? Carbon::parse($lastCheck->checked_at)->diffForHumans()
             : 'No previous checks recorded';
+// Add paginated checks
+$checks = $thermalSuite->checks()
+->orderBy('checked_at', 'desc')
+->paginate(20);
 
-        return view('thermal_suite_checks.create', compact('thermalSuite', 'timeSinceLastCheck'));
+return view('thermal_suite_checks.create', compact(
+'thermalSuite', 
+'timeSinceLastCheck',
+'checks'
+));
+        //return view('thermal_suite_checks.create', compact('thermalSuite', 'timeSinceLastCheck'));
     }
 
     public function store(Request $request, $thermal_suite_id)
