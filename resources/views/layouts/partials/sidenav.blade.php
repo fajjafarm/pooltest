@@ -49,6 +49,28 @@
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
             </li></ul>
+            <li class="side-nav-title">Thermal Suites</li>
+            <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#sidebarThermalChecks" aria-expanded="false" aria-controls="sidebarThermalChecks" class="side-nav-link">
+                    <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
+                    <span class="menu-text">Record a Check</span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarThermalSuite">
+                    <ul class="sub-menu">
+                        <li class="side-nav-item">
+                            <a href="{{ route('thermal_suite_checks.create', '01JNBZ3KEY3WX9K92ZCE2H6RXC')/check }}" class="side-nav-link">
+                                <span class="menu-text">Resort Thermal Suite</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="{{ route('thermal_suite_checks.create', '01JNBZ6V3ABY6KDC6J458TX6V4')/check }}" class="side-nav-link">
+                                <span class="menu-text">Hotel Thermal Suite</span>
+                            </a>
+</li>                      
+                        </ul>
+                </div>
+            </li>
             <ul class="side-nav">
             <li class="side-nav-title">Plant Room</li>
             <li class="side-nav-item">

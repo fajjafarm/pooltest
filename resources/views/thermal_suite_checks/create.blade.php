@@ -16,26 +16,43 @@
     @endif
 
 
-        <form action="{{ route('water-balance-checks.store') }}" method="POST">
-            @csrf
-            <div class="mb-3">
-            <label for="alkalinity">Alkalinity:</label>
-            <input type="number" name="alkalinity" id="alkalinity" step="0.01" class="form-control" required>
-            </div>
-            <div class="mb-3">
-            <label for="calcium_hardness">Calcium Hardness:</label>
-            <input type="number" name="calcium_hardness" id="calcium_hardness" step="0.01" class="form-control" required>
-            </div>
-            <div class="mb-3">
-            <label for="ph">pH:</label>
-            <input type="number" name="ph" id="ph" step="0.01" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <!-- Here you might want to dynamically populate this if you have many pools -->
-                <input type="hidden" id="pool_id" name="pool_id" value="{{$poolID}}" />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <h1>Check Thermal Suite: {{ $thermalSuite->thermal_name }}</h1>
+
+<div class="alert alert-info">
+    Last check: {{ $timeSinceLastCheck }}
+</div>
+
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+<form method="POST" action="{{ route('thermal_suite_checks.store', $thermalSuite->id) }}">
+    @csrf
+
+    <div class="mb-3">
+        <button type="submit" name="status" value="occupied_okay" 
+                class="btn btn-success mr-2">Occupied - Okay</button>
+        <button type="submit" name="status" value="occupied_issue" 
+                class="btn btn-warning mr-2">Occupied - Issue</button>
+        <button type="submit" name="status" value="empty_okay" 
+                class="btn btn-primary mr-2">Empty - Okay</button>
+        <button type="submit" name="status" value="empty_issue" 
+                class="btn btn-danger">Empty - Issue</button>
+    </div>
+
+    <div class="form-group">
+        <label for="extra_info">Extra Information</label>
+        <textarea name="extra_info" 
+                  class="form-control @error('extra_info') is-invalid @enderror"
+                  rows="3">{{ old('extra_info') }}</textarea>
+        @error('extra_info')
+            <div class="invalid-feedback">{{ $message }}</div>
+        @enderror
+    </div>
+
+</form>
     </div>
 </body>
 @endsection
