@@ -16,9 +16,9 @@
     @endif
 
 <div class="alert alert-info">
-    Last check: {{ $timeSinceLastCheck }}
+{{ $thermalSuite->thermal_name }} Last checked: {{ $timeSinceLastCheck }}
 </div>
-<h3>Add a check for: {{ $thermalSuite->thermal_name }}</h3>
+<h3>The {{ $thermalSuite->thermal_name }} is currently:</h3><br/><br/>
 <form method="POST" action="{{ route('thermal_suite_checks.store', $thermalSuite->id) }}">
     @csrf
 
