@@ -23,15 +23,4 @@ class ThermalSuiteCheck extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-
-public function checks()
-{
-    return $this->hasMany(ThermalSuiteCheck::class, 'thermal_suite_id');
-}
-
-public function lastCheck()
-{
-    return $this->checks()->latest('checked_at')->first();
-}
 }
