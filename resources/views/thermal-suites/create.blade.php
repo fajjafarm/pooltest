@@ -47,8 +47,7 @@
 
             <div class="form-group">
                 <label for="thermal_type">Thermal Type</label>
-                <label for="thermal_type">Type:</label>
-            <select class="form-select" name="status" aria-label="Example select with button addon">
+                          <select class="form-select" name="thermal_type" aria-label="Example select with button addon">
                 <option value="Mixed:Sauna/Steamroom/Loungers" >Mixed:Sauna/Steamroom/Loungers</option>
                 <option value="Mixed:Sauna/Steamroom" >Mixed:Sauna/SteamRoom</option>
                 <option value="Sauna" >Sauna</option>
