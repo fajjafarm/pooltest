@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ThermalSuite;
+use App\Models\ThermalSuiteCheck;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
