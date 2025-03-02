@@ -34,6 +34,9 @@ use App\Http\Controllers\BikeRentalOrderController;
 Route::get('/thermal-suites/create', [ThermalSuiteController::class, 'create'])->name('thermal-suites.create');
 Route::post('/thermal-suites', [ThermalSuiteController::class, 'store'])->name('thermal-suites.store');
 
+Route::get('/thermal-suites/{thermal_suite_id}/check', [ThermalSuiteCheckController::class, 'create'])->name('thermal_suite_checks.create');
+Route::post('/thermal-suites/{thermal_suite_id}/check', [ThermalSuiteCheckController::class, 'store'])->name('thermal_suite_checks.store');
+
 
 //Route::get('/thermal/check/view{ThermalID}', [ThermalCheckController::class, 'index'])->name('thermal.checks.index');
 //Route::post('/thermal/check', [ThermalCheckController::class, 'store'])->name('thermal.checks.store');
