@@ -69,7 +69,7 @@
                                     <td>
                                         @if($previousCheck)
                                      
-                                        {{ (Carbon\Carbon::parse($check->checked_at)->diffInMinutes($previousCheck->checked_at))->round() }} mins
+                                        {{ round((Carbon\Carbon::parse($check->checked_at)->diffInMinutes($previousCheck->checked_at)),0) }} mins
                                         @else
                                             First Check
                                         @endif
