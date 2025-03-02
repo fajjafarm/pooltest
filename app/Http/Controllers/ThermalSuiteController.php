@@ -26,8 +26,8 @@ class ThermalSuiteController extends Controller
         ]);
 
         ThermalSuite::create($validated);
-
-        return redirect()->route('thermal-suites.create')
-            ->with('success', 'Thermal Suite added successfully');
+        return response()->json($validated);
+       // return redirect()->route('thermal-suites.create')
+       //     ->with('success', 'Thermal Suite added successfully');
     }
 }
