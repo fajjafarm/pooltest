@@ -1,7 +1,7 @@
-@extends('layouts.vertical', ['title' => 'Submit Water Balance Test'])
+@extends('layouts.vertical', ['title' => 'Check: {{ $thermalSuite->thermal_name }}'])
 
 @section('content')
-    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Submit Water Balance Test'])
+    @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Check: {{ $thermalSuite->thermal_name }}'])
 
     <body>
 
@@ -15,18 +15,9 @@
                     </div>
     @endif
 
-
-    <h1>Check Thermal Suite: {{ $thermalSuite->thermal_name }}</h1>
-
 <div class="alert alert-info">
     Last check: {{ $timeSinceLastCheck }}
 </div>
-
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
 
 <form method="POST" action="{{ route('thermal_suite_checks.store', $thermalSuite->id) }}">
     @csrf
