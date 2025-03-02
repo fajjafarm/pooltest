@@ -71,7 +71,7 @@
                                      
                                         {{ round((Carbon\Carbon::parse($check->checked_at)->diffInMinutes($previousCheck->checked_at)),0) }} mins
                                         @else
-                                            First Check
+                                       {{ $timeSinceLastCheck}} mins ago
                                         @endif
                                     </td>
                                     <td>{{ $check->user_id }}</td>
