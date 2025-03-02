@@ -86,8 +86,7 @@
                                      
                                         {{ round((Carbon\Carbon::parse($check->checked_at)->diffInMinutes($previousCheck->checked_at)),0) }} mins
                                         @else
-                                       {{ $timeSinceLastCheck}} 
-                                        @endif
+                                       {{ $timeSinceLastCheck}}                                         @endif
                                     </td>
                                     <td>{{ $check->extra_info ?? '-' }}</td>
                                     <td>{{ Carbon\Carbon::parse($check->checked_at)->format('H:i:s d-m-Y') }}</td>
