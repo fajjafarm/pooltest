@@ -46,7 +46,7 @@
 </form>
  <!-- Previous Checks Section 2-->
  <div class="mt-5">
-            <h2>Previous Checks</h2>
+            <h3>Previous Checks</h3>
             @if($thermalSuite->checks()->count() > 0)
                 <div class="table-responsive">
                     <table class="table table-striped">
