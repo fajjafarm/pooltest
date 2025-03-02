@@ -49,6 +49,7 @@
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
             </li></ul>
+            <ul class="side-nav">
             <li class="side-nav-title">Thermal Suites</li>
             <li class="side-nav-item">
                     <a data-bs-toggle="collapse" href="#sidebarThermalChecks" aria-expanded="false" aria-controls="sidebarThermalChecks" class="side-nav-link">
@@ -70,7 +71,7 @@
 </li>                      
                         </ul>
                 </div>
-            </li>
+            </li></ul>
             <ul class="side-nav">
             <li class="side-nav-title">Plant Room</li>
             <li class="side-nav-item">
