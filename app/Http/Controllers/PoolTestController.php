@@ -2,7 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PoolTest;
-use App\Models\Pool;
+use App\Models\PoolList;
 use Illuminate\Http\Request;
 
 class PoolTestController extends Controller
