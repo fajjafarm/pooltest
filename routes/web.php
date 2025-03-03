@@ -10,6 +10,7 @@ use App\Http\Controllers\WaterBalanceTestController;
 use App\Http\Controllers\ActionLogController;
 use App\Http\Controllers\BackwashController;
 use App\Http\Controllers\PoolController;
+use App\Http\Controllers\PoolTestController;
 use App\Http\Controllers\PlantroomController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\WaterMeterReadingController;
@@ -30,7 +31,7 @@ use App\Http\Controllers\BikeRentalOrderController;
 |
 */
 //super admin access only
-
+Route::resource('pool-tests', PoolTestController::class)->only(['index', 'store']);
 
 Route::get('/thermal-suites/create', [ThermalSuiteController::class, 'create'])->name('thermal-suites.create');
 Route::post('/thermal-suites', [ThermalSuiteController::class, 'store'])->name('thermal-suites.store');

@@ -1,54 +1,47 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use App\Models\PoolTest;
+use App\Models\Pool;
 use Illuminate\Http\Request;
-use App\Models\PoolTest; // Ensure you have this model defined
 
 class PoolTestController extends Controller
 {
-    /**
-     * Show the form for creating a new pool test entry.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function create()
+    public function index()
     {
-        return view('pooltest.create');
+        $tests = PoolTest::with(['pool', 'user'])
+            ->orderBy('created_at', 'desc')
+            ->paginate(10);
+        
+        $pools = Pool::all();
+        
+        return view('pool-tests.index', compact('tests', 'pools'));
     }
 
-    /**
-     * Store a newly created pool test in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'dpd1' => 'required|numeric',
-            'dpd3' => 'required|numeric',
-            'ph' => 'required|numeric',
-            'comments' => 'nullable|string',
+        $validated = $request->validate([
+            'pool_id' => 'required|exists:pools,id',
+            'dpd1' => 'required|numeric|min:0',
+            'dpd3' => 'required|numeric|min:0',
+            'ph' => 'required|numeric|min:0|max:14',
+            'sample_location' => 'required|in:pool,control_panel',
+            'action_taken' => 'required|in:none,Changed Chlorine,Changed Acid,Changed PAC,Recalibrated Controller,Backwashed,Supervisor Notified,Code Brown,Code Yellow,Shocked'
         ]);
 
-        $pooltest = new PoolTest([
-        'dpd1' => $request->input('dpd1'),
-        'dpd3' => $request->input('dpd3'),
-        'ccl' => $request->input('dpd3')-$request->input('dpd1'),
-        'ph' => $request->input('ph'),
-        'comments' => $request->input('comments'),
-        ]);
-        $pooltest->save();
-        $ccl = $request->input('dpd3')-$request->input('dpd1');
-       // PoolTest::create($validatedData);
-       if ( $ccl > 1){
+        $validated['user_id'] = auth()->id();
+
+        PoolTest::create($validated);
+
+        return redirect()->back()->with('success', 'Pool test recorded successfully');
+
+    //   if ( $ccl > 1){
         
-        return redirect()->route('pooltest.create')->with('notgood', 'Combined Chlorine High! Action created');
-        }
-        if ($ccl <=1 ){
-            return redirect()->route('pooltest.create')->with('success', 'Pool test data submitted successfully!');
-            }
+      //  return redirect()->route('pooltest.create')->with('notgood', 'Combined Chlorine High! Action created');
+     //   }
+      //  if ($ccl <=1 ){
+       //     return redirect()->route('pooltest.create')->with('success', 'Pool test data submitted successfully!');
+        //    }
         
     }
 }
