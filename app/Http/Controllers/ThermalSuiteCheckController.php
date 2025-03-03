@@ -20,7 +20,7 @@ class ThermalSuiteCheckController extends Controller
 // Add paginated checks
 $checks = $thermalSuite->checks()
 ->orderBy('checked_at', 'desc')
-->paginate(20);
+->paginate(20); 
 
 return view('thermal_suite_checks.create', compact(
 'thermalSuite', 
