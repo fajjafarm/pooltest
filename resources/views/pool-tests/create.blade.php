@@ -68,7 +68,6 @@
             <thead>
                 <tr class="bg-gray-200">
                     <th class="border p-2">Date/Time</th>
-                    <th class="border p-2">Pool</th>
                     <th class="border p-2">DPD1</th>
                     <th class="border p-2">DPD3</th>
                     <th class="border p-2">CCL</th>
@@ -84,7 +83,6 @@
                 @foreach($tests as $index => $test)
                     <tr>
                         <td class="border p-2">{{ $test->created_at }}</td>
-                        <td class="border p-2">{{ $test->pools->pool_name ?? 'No Tests'}}</td>
                         <td class="border p-2">{{ $test->dpd1 }}</td>
                         <td class="border p-2">{{ $test->dpd3 }}</td>
                         <td class="border p-2">{{ $test->ccl }}</td>
