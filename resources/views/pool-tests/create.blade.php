@@ -84,7 +84,7 @@
                 @foreach($tests as $index => $test)
                     <tr>
                         <td class="border p-2">{{ $test->created_at }}</td>
-                        <td class="border p-2">{{ $test->pool->pool_name }}</td>
+                        <td class="border p-2">{{ $test->pool->pool_name ?? 'No Tests'}}</td>
                         <td class="border p-2">{{ $test->dpd1 }}</td>
                         <td class="border p-2">{{ $test->dpd3 }}</td>
                         <td class="border p-2">{{ $test->ccl }}</td>
