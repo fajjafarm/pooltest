@@ -28,7 +28,7 @@ class PoolTestController extends Controller
             'sample_location' => 'required|in:pool,control_panel',
             'action_taken' => 'required|in:none,Changed Chlorine,Changed Acid,Changed PAC,Recalibrated Controller,Backwashed,Supervisor Notified,Code Brown,Code Yellow,Shocked'
         ]);
-
+        $validated['ccl'] = $request->dpd3 - $request->dpd1;
         $validated['user_id'] = auth()->id();
 
         PoolTest::create($validated);

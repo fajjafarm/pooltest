@@ -15,6 +15,7 @@ class PoolTest extends Model
         'dpd1',
         'dpd3',
         'ph',
+        'ccl',
         'user_id',
         'sample_location',
         'status',
