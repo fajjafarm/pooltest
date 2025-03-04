@@ -13,7 +13,7 @@
         <h1 class="text-2xl mb-4">Pool Test Recorder</h1>
 
         <!-- Form -->
-        <form method="POST" action="{{ route('pool-tests.store',$pool->id) }}" class="mb-8">
+        <form method="POST" action="{{ route('pool-tests.store',$pool_id) }}" class="mb-8">
             @csrf
             <div class="grid grid-cols-2 gap-4">
                 <div>
