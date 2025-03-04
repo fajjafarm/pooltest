@@ -35,7 +35,7 @@ class PoolTest extends Model
 
     public function pool()
     {
-        return $this->belongsTo(Pool::class);
+        return $this->belongsTo(PoolList::class);
     }
 
     public function user()
