@@ -13,7 +13,7 @@ class PoolTestController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate(10);
         
-        $pools = Pool::all();
+        $pools = PoolList::all();
         
         return view('pool-tests.index', compact('tests', 'pools'));
     }
