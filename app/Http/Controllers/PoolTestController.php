@@ -15,7 +15,7 @@ class PoolTestController extends Controller
         
         $pools = PoolList::all();
         
-        return view('pool-tests.index', compact('tests', 'pools'));
+        return view('pool-tests.create', compact('tests', 'pools'));
     }
 
     public function store(Request $request)
