@@ -21,7 +21,7 @@ class PoolTestController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'pool_id' => 'required|exists:pools,id',
+            'pool_id' => 'required|exists:pool_list,pool_id',
             'dpd1' => 'required|numeric|min:0',
             'dpd3' => 'required|numeric|min:0',
             'ph' => 'required|numeric|min:0|max:14',
