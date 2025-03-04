@@ -31,7 +31,7 @@ use App\Http\Controllers\BikeRentalOrderController;
 //super admin access only
 //Route::resource('pool-tests/{pool_id}', PoolTestController::class)->only(['index', 'store']);
 
-Route::get('pool-tests/{pool_id}', [PoolTestController::class, 'create'])->name('pool-tests.create');
+Route::get('pool-tests/{pool_id}', [PoolTestController::class, 'index'])->name('pool-tests.create');
 Route::post('pool-tests/{pool_id}', [PoolTestController::class, 'store'])->name('pool-tests.store');
 
 Route::get('/thermal-suites/create', [ThermalSuiteController::class, 'create'])->name('thermal-suites.create');
