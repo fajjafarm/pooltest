@@ -80,6 +80,7 @@
                 </tr>
             </thead>
             <tbody>
+            @if($tests->count() > 0)
                 @foreach($tests as $index => $test)
                     <tr>
                         <td class="border p-2">{{ $test->created_at }}</td>
@@ -103,6 +104,7 @@
                         </td>
                     </tr>
                 @endforeach
+                @endif
             </tbody>
         </table>
 
