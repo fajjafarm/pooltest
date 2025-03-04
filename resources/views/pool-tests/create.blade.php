@@ -17,12 +17,8 @@
             @csrf
             <div class="grid grid-cols-2 gap-4">
                 <div>
-                    <label>Pool</label>
-                    <select name="pool_id" class="w-full border p-2">
-                        @foreach($pools as $pool)
-                            <option value="{{ $pool->id }}">{{ $pool->name }}</option>
-                        @endforeach
-                    </select>
+                <input type="hidden" name="pool_id" value="{{$pool_id}}">
+                    
                 </div>
                 
                 <div>
