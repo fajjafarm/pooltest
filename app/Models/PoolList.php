@@ -10,7 +10,7 @@ class PoolList extends Model
     use HasFactory;
 
     protected $table = 'pool_list';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'pool_id';
     public $incrementing = false;
     protected $keyType = 'string';
 
