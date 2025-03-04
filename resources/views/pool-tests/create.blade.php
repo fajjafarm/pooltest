@@ -80,7 +80,7 @@
                 </tr>
             </thead>
             <tbody>
-            @if($tests)
+            @if(!empty($tests))
                 @foreach($tests as $index => $test)
                     <tr>
                         <td class="border p-2">{{ $test->created_at }}</td>
