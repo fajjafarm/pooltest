@@ -64,9 +64,10 @@
         </form>
 
          <!-- Results Table -->
-         <table class="w-full border-collapse">
-            <thead>
-                <tr class="bg-gray-200">
+         <div class="table-responsive-sm">
+         <table class="table table-striped mb-0 table-sm">
+    <thead>
+                <tr class="table-dark">
                     <th class="border p-2">Date/Time</th>
                     <th class="border p-2">DPD1</th>
                     <th class="border p-2">DPD3</th>
