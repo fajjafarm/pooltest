@@ -17,25 +17,25 @@
                 <div class="card-body">
                 <form method="POST" action="{{ route('pool-tests.store',$pool_id) }}" class="mb-8">
                 @csrf
-                        <div class="mb-6">
+                        <div class="mb-3">
                         <input type="hidden" name="pool_id" value="{{$pool_id}}">
                         <label>DPD1</label>
                     <input type="number" name="dpd1" step="0.01" class="form-label" required>
 
                         </div>
-                        <div class="mb-6">
+                        <div class="mb-3">
                         <label>DPD3</label>
                     <input type="number" name="dpd3" step="0.01" class="form-label" required>
 
                         </div>
 
-                        <div class=" mb-6">
+                        <div class=" mb-3">
                         <label>pH</label>
                     <input type="number" name="ph" step="0.01" class="form-label" required>
 
                         </div>
                         
-                        <div class=" mb-6">
+                        <div class=" mb-3">
                     <label>Sample Location</label>
                     <select name="sample_location" class="form-select">
                     <option value="control_panel">Control Panel</option>
@@ -43,7 +43,7 @@
                         
                     </select>
                 </div>
-                <div class=" mb-6">
+                <div class=" mb-3">
                     <label>Action Taken</label>
                     <select name="action_taken" class="form-select">
                         <option value="none">None</option>
