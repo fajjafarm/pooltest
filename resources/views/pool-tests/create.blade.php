@@ -10,8 +10,7 @@
 
 <div class="card">
 <div class="container mx-auto p-4">
-        <h1 class="text-2xl mb-4">Pool Test Recorder</h1>
-        <div class="col-lg-6">
+               <div class="col-lg-6">
             <div class="card">
                
 
@@ -22,18 +21,18 @@
                         <input type="hidden" name="pool_id" value="{{$pool_id}}">
                         <label>DPD1</label>
                     <input type="number" name="dpd1" step="0.01" class="form-label" required>
-<small id="ClHelp" class="form-text text-muted">DPD1 should be greater than 1.5 and less than 2.5 during normal operation</small>
+
                         </div>
                         <div class="mb-6">
                         <label>DPD3</label>
                     <input type="number" name="dpd3" step="0.01" class="form-label" required>
-<small id="ClHelp" class="form-text text-muted">DPD3 wait for the two minute before recording the result</small>
+
                         </div>
 
                         <div class=" mb-6">
                         <label>pH/label>
                     <input type="number" name="ph" step="0.01" class="form-label" required>
-<small id="ClHelp" class="form-text text-muted">DPD3 wait for the two minute before recording the result</small>
+
                         </div>
                         
                         <div class=" mb-6">
