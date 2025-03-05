@@ -8,7 +8,7 @@
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
 
-
+<div class="card">
 <div class="container mx-auto p-4">
                <div class="col-lg-6">
             <div class="card">
@@ -117,7 +117,7 @@
             {{ $tests->links() }}
         </div>
         
-         
+            </div><!-- end card-body-->
             
    
    
