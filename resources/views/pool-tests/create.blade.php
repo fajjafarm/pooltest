@@ -30,7 +30,7 @@
                         </div>
 
                         <div class=" mb-6">
-                        <label>pH/label>
+                        <label>pH</label>
                     <input type="number" name="ph" step="0.01" class="form-label" required>
 
                         </div>
