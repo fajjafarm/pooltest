@@ -33,21 +33,21 @@
 
             <li class="side-nav-item">
                 <a href="{{ route('pool-tests.create', '01JH15BR005DN3KR4BA71PQEK3') }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-eye"></i></span>
+                    <span class="menu-icon"><i class="ti ti-bar-chart"></i></span>
                     <span class="menu-text"> Resort Pool </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
             </li>
             <li class="side-nav-item">
                 <a href="{{ route('pool-tests.create', '01JK4368XNXZRBA1K1WYK4KDD1') }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-eye"></i></span>
+                    <span class="menu-icon"><i class="ti ti-bar-chart"></i></span>
                     <span class="menu-text"> Hotel Pool </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
             </li>
             <li class="side-nav-item">
                 <a href="{{ route('pool-tests.create', '01JH0YW54XDNBSDYTZYVKWME3Z') }}" class="side-nav-link">
-                    <span class="menu-icon"><i class="ti ti-eye"></i></span>
+                    <span class="menu-icon"><i class="ti ti-bar-chart"></i></span>
                     <span class="menu-text"> Hot Tub Level 3 </span>
                     <span class="badge bg-success rounded-pill">5</span>
                 </a>
@@ -58,11 +58,13 @@
      
                         <li class="side-nav-item">
                             <a href="{{ route('thermal_suite_checks.create', '01JNBZ3KEY3WX9K92ZCE2H6RXC') }}" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
                                 <span class="menu-text">Resort Thermal Suite</span>
                             </a>
                         </li>
                         <li class="side-nav-item">
                             <a href="{{ route('thermal_suite_checks.create', '01JNBZ6V3ABY6KDC6J458TX6V4') }}" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
                                 <span class="menu-text">Hotel Thermal Suite</span>
                             </a>
 </li>                      
