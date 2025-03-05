@@ -73,7 +73,7 @@
          <table class="table table-striped mb-0 table-sm">
     <thead>
                 <tr class="table-dark">
-                <th class="border p-2">Time Gap</th>
+                <th class="border p-2">Gap</th>
                     <th class="border p-2">DPD1</th>
                     <th class="border p-2">DPD3</th>
                     <th class="border p-2">CCL</th>
