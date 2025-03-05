@@ -73,7 +73,7 @@
          <table class="table table-striped mb-0 table-sm">
     <thead>
                 <tr class="table-dark">
-                    <th class="border p-2">Date/Time</th>
+                <th class="border p-2">Time Gap</th>
                     <th class="border p-2">DPD1</th>
                     <th class="border p-2">DPD3</th>
                     <th class="border p-2">CCL</th>
@@ -81,22 +81,14 @@
                     <th class="border p-2">Location</th>
                     <th class="border p-2">Status</th>
                     <th class="border p-2">Action</th>
-                    <th class="border p-2">Time Gap</th>
+                    <th class="border p-2">Date/Time</th>
                 </tr>
             </thead>
             <tbody>
             @if(!empty($tests))
                 @foreach($tests as $index => $test)
                     <tr>
-                        <td class="border p-2">{{ $test->created_at }}</td>
-                        <td class="border p-2">{{ $test->dpd1 }}</td>
-                        <td class="border p-2">{{ $test->dpd3 }}</td>
-                        <td class="border p-2">{{ $test->ccl }}</td>
-                        <td class="border p-2">{{ $test->ph }}</td>
-                        <td class="border p-2">{{ $test->sample_location }}</td>
-                        <td class="border p-2">{{ $test->status }}</td>
-                        <td class="border p-2">{{ $test->action_taken }}</td>
-                        <td class="border p-2">
+                    <td class="border p-2">
                             @if($index < $tests->count() - 1)
                                 <?php
                                     $current = $test->created_at;
@@ -106,6 +98,15 @@
                                 ?>
                             @endif
                         </td>
+                        <td class="border p-2">{{ $test->dpd1 }}</td>
+                        <td class="border p-2">{{ $test->dpd3 }}</td>
+                        <td class="border p-2">{{ $test->ccl }}</td>
+                        <td class="border p-2">{{ $test->ph }}</td>
+                        <td class="border p-2">{{ $test->sample_location }}</td>
+                        <td class="border p-2">{{ $test->status }}</td>
+                        <td class="border p-2">{{ $test->action_taken }}</td>
+
+                        <td class="border p-2">{{ $test->created_at }}</td>
                     </tr>
                 @endforeach
                 @endif
