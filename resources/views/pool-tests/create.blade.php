@@ -20,18 +20,18 @@
                         <div class="mb-3">
                         <input type="hidden" name="pool_id" value="{{$pool_id}}">
                         <label>DPD1</label>
-                    <input type="number" name="dpd1" step="0.01" class="form-control" required>
+                    <input type="number" name="dpd1" step="0.01" class="form-control" placeholder="Enter DPD1 Reading" required>
 
                         </div>
                         <div class="mb-3">
                         <label>DPD3</label>
-                    <input type="number" name="dpd3" step="0.01" class="form-label" required>
+                    <input type="number" name="dpd3" step="0.01" class="form-control" placeholder="Wait 2 mins then enter DPD3 reading" required>
 
                         </div>
 
                         <div class=" mb-3">
                         <label>pH</label>
-                    <input type="number" name="ph" step="0.01" class="form-label" required>
+                    <input type="number" name="ph" step="0.01" class="form-control" required>
 
                         </div>
                         
