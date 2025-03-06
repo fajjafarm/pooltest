@@ -38,7 +38,7 @@
                         <div class=" mb-3">
                     <label>Sample Location</label>
                     <select name="sample_location" class="form-select">
-                    <option value="control_panel">Control Panel</option>
+                    <option value="Control Panel">Control Panel</option>
                         <option value="pool">Pool</option>
                         
                     </select>
@@ -73,22 +73,22 @@
          <table class="table table-striped mb-0 table-sm">
     <thead>
                 <tr class="table-dark">
-                <th class="border p-2">Gap</th>
-                    <th class="border p-2">DPD1</th>
-                    <th class="border p-2">DPD3</th>
-                    <th class="border p-2">CCL</th>
-                    <th class="border p-2">pH</th>
-                    <th class="border p-2">Location</th>
-                    <th class="border p-2">Status</th>
-                    <th class="border p-2">Action</th>
-                    <th class="border p-2">Date/Time</th>
+                <th >Gap</th>
+                    <th >DPD1</th>
+                    <th >DPD3</th>
+                    <th >CCL</th>
+                    <th >pH</th>
+                    <th >Location</th>
+                    <th >Status</th>
+                    <th >Action</th>
+                    <th >Date/Time</th>
                 </tr>
             </thead>
             <tbody>
             @if(!empty($tests))
                 @foreach($tests as $index => $test)
                     <tr>
-                    <td class="border p-2">
+                    <td class=>
                             @if($index < $tests->count() - 1)
                                 <?php
                                     $current = $test->created_at;
@@ -98,15 +98,15 @@
                                 ?>
                             @endif
                         </td>
-                        <td class="border p-2">{{ $test->dpd1 }}</td>
-                        <td class="border p-2">{{ $test->dpd3 }}</td>
-                        <td class="border p-2">{{ $test->ccl }}</td>
-                        <td class="border p-2">{{ $test->ph }}</td>
-                        <td class="border p-2">{{ $test->sample_location }}</td>
-                        <td class="border p-2">{{ $test->status }}</td>
-                        <td class="border p-2">{{ $test->action_taken }}</td>
+                        <td >{{ $test->dpd1 }}</td>
+                        <td >{{ $test->dpd3 }}</td>
+                        <td >{{ $test->ccl }}</td>
+                        <td >{{ $test->ph }}</td>
+                        <td >{{ $test->sample_location }}</td>
+                        <td >{{ $test->status }}</td>
+                        <td >{{ $test->action_taken }}</td>
 
-                        <td class="border p-2">{{ $test->created_at }}</td>
+                        <td >{{ $test->created_at }}</td>
                     </tr>
                 @endforeach
                 @endif
