@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PoolTestController extends Controller
 {
-    public function index($pool_id = null)
+    public function index($pool_id)
     {
         // Build the query
         $query = PoolTest::with(['pool', 'user'])
