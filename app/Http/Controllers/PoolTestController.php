@@ -9,7 +9,7 @@ class PoolTestController extends Controller
 {
     public function index($pool_id)
     {
-        $tests = PoolTest::findOrFail($pool_id)
+        $tests = PoolTest::with(['pool', 'user'])
             ->orderBy('created_at', 'desc')
             ->paginate(10);
         
