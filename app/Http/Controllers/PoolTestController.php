@@ -21,7 +21,7 @@ class PoolTestController extends Controller
         // Get paginated results
         $tests = $query->paginate(10);
         
-        $pools = Pool::all();
+        $pools = PoolList::all();
         
         return view('pool-tests.index', compact('tests', 'pools', 'pool_id'));
     }
