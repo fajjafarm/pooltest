@@ -10,7 +10,7 @@ class PoolTestController extends Controller
     public function index($pool_id)
     {
         // Build the query
-        $query = PoolTest::with(['pool', 'user'])
+        $query = PoolTest::all();
             ->orderBy('created_at', 'desc');
         
         // If pool_id is provided, filter by it
