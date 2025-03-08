@@ -7,15 +7,23 @@ use Illuminate\Http\Request;
 
 class PoolTestController extends Controller
 {
-    public function index($pool_id)
+    public function index($pool_id = null)
     {
-        $tests = PoolTest::with(['pool', 'user'])
-            ->orderBy('created_at', 'desc')
-            ->paginate(10);
+        // Build the query
+        $query = PoolTest::with(['pool', 'user'])
+            ->orderBy('created_at', 'desc');
         
-        $pools = PoolList::findOrFail($pool_id);
+        // If pool_id is provided, filter by it
+        if ($pool_id) {
+            $query->where('pool_id', $pool_id);
+        }
         
-        return view('pool-tests.create', compact('tests', 'pools', 'pool_id'));
+        // Get paginated results
+        $tests = $query->paginate(10);
+        
+        $pools = Pool::all();
+        
+        return view('pool-tests.index', compact('tests', 'pools', 'pool_id'));
     }
 
     public function store(Request $request)
