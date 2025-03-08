@@ -15,7 +15,7 @@ class PoolTestController extends Controller
         
         // If pool_id is provided, filter by it
         if ($pool_id) {
-            $query->where('pool_id', $pool_id)->orderBy('created_at', 'desc');
+            $query->where('pool_id', $pool_id);
         }
         
         // Get paginated results
