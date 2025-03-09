@@ -32,7 +32,7 @@ class PoolTestController extends Controller
 
             $validated['ccl'] = $request->dpd3 - $request->dpd1;
             $validated['user_id'] = auth()->id() ?? throw new \Exception('User not authenticated');
-            dd($validated)
+            dd($validated);
 
 
             PoolTest::create($validated);
