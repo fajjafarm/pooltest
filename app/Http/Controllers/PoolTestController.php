@@ -34,7 +34,29 @@ class PoolTestController extends Controller
     $validated['ccl'] = $request->dpd3 - $request->dpd1;
     $validated['user_id'] = auth()->id() ?? throw new \Exception('User not authenticated');
 
-    PoolTest::create($validated);
+          // Calculate status based on readings
+          $status = 'Normal';
+          $dpd1 = $validated['dpd1'];
+          $ccl = $validated['ccl'];
+          $ph = $validated['ph'];
+  
+          $needsSupervisor = false;
+          if ($dpd1 < 1.5 || $dpd1 > 3 || 
+              $ccl > 1 || $ccl > ($dpd1 / 2) || 
+              $ph < 7.2 || $ph > 7.7) {
+              $status = 'Inform Supervisor';
+              $needsSupervisor = true;
+          }
+  
+          $validated['status'] = $status;
+  
+          PoolTest::create($validated);
+  
+          // Return different messages based on whether supervisor attention is needed
+          if ($needsSupervisor) {
+              return redirect()->route('pool-tests.create', $pool_id)
+                  ->with('warning', 'Pool test recorded successfully but readings are out of range - please inform a supervisor');
+          }
 
     return redirect()->route('pool-tests.create', $pool_id)
         ->with('success', 'Pool test recorded successfully');
