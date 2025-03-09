@@ -129,7 +129,7 @@ class PoolTest extends Model
     public static function getActionOptions()
     {
         return [
-            'none',
+            'None',
             'Changed Chlorine',
             'Changed Acid',
             'Changed PAC',
