@@ -25,8 +25,8 @@ class PoolTestController extends Controller
         'dpd1' => 'required|numeric|min:0',
         'dpd3' => 'required|numeric|min:0',
         'ph' => 'required|numeric|min:0|max:14',
-        'sample_location' => 'required|in:pool,control_panel',
-        'action_taken' => 'required|in:none,Changed Chlorine,Changed Acid,Changed PAC,Recalibrated Controller,Backwashed,Supervisor Notified,Code Brown,Code Yellow,Shocked'
+        'sample_location' => 'required|string',
+        'action_taken' => 'required|string'
     ]);
 
     dd($validated); // Dump validated data to confirm it passes
