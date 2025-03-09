@@ -46,7 +46,7 @@
                 <div class=" mb-3">
                     <label>Action Taken</label>
                     <select name="action_taken" class="form-select">
-                        <option value="none">None</option>
+                        <option value="None">None</option>
                         <option value="Changed Chlorine">Changed Chlorine</option>
                         <option value="Changed Acid">Changed Acid</option>
                         <option value="Changed PAC">Changed PAC</option>

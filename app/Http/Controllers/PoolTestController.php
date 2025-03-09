@@ -25,12 +25,12 @@ class PoolTestController extends Controller
 
         try {
             $validated = $request->validate([
-                'pool_id' => 'required|exists:pool_list,pool_id',
+                'pool_id' => 'required',
                 'dpd1' => 'required|numeric|min:0',
                 'dpd3' => 'required|numeric|min:0',
                 'ph' => 'required|numeric|min:0|max:14',
                 'sample_location' => 'required|in:Pool,Control Panel',
-                'action_taken' => 'required|in:none,Changed Chlorine,Changed Acid,Changed PAC,Recalibrated Controller,Backwashed,Supervisor Notified,Code Brown,Code Yellow,Shocked'
+                'action_taken' => 'required|in:None,Changed Chlorine,Changed Acid,Changed PAC,Recalibrated Controller,Backwashed,Supervisor Notified,Code Brown,Code Yellow,Shocked'
             ]);
 
             $validated['ccl'] = $request->dpd3 - $request->dpd1;
