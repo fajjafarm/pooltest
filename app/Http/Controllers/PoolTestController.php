@@ -29,7 +29,7 @@ class PoolTestController extends Controller
         'action_taken' => 'required|string'
     ]);
 
-    dd($validated); // Dump validated data to confirm it passes
+   // dd($validated); // Dump validated data to confirm it passes
 
     $validated['ccl'] = $request->dpd3 - $request->dpd1;
     $validated['user_id'] = auth()->id() ?? throw new \Exception('User not authenticated');
