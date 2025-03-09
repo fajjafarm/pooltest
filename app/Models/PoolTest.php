@@ -54,7 +54,7 @@ class PoolTest extends Model
      */
     public function pool()
     {
-        return $this->belongsTo(PoolList::class, 'pool_id', 'id');
+        return $this->belongsTo(PoolList::class, 'pool_id', 'pool_id');
     }
 
     /**
