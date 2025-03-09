@@ -15,7 +15,7 @@
                
 
                 <div class="card-body">
-                <form method="POST" action="{{ route('pool-tests.store',$pool_id) }}" class="mb-8">
+                <form method="POST" action="{{ route('pool-tests.store', $pool_id) }}" class="mb-8">
                 @csrf
                         <div class="mb-3">
                         <input type="hidden" name="pool_id" value="{{$pool_id}}">
