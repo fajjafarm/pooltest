@@ -15,6 +15,9 @@
 @if(session('success'))
     <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
 @endif
+@if(session('warning'))
+    <div style="color: yellow; margin-bottom: 10px;">{{ session('warning') }}</div>
+@endif
 
 <div class="card">
 
