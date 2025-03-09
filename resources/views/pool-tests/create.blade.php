@@ -39,7 +39,7 @@
                     <label>Sample Location</label>
                     <select name="sample_location" class="form-select">
                     <option value="Control Panel">Control Panel</option>
-                        <option value="pool">Pool</option>
+                        <option value="Pool">Pool</option>
                         
                     </select>
                 </div>
