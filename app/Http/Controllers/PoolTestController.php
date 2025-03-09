@@ -22,7 +22,7 @@ class PoolTestController extends Controller
     {
         try {
             $validated = $request->validate([
-                'pool_id' => 'required|integer|exists:pool_lists,id',
+                'pool_id' => 'required|char|exists:pool_lists,pool_id',
                 'dpd1' => 'required|numeric|min:0',
                 'dpd3' => 'required|numeric|min:0',
                 'ph' => 'required|numeric|min:0|max:14',
