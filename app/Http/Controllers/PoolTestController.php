@@ -20,6 +20,9 @@ class PoolTestController extends Controller
 
     public function store(Request $request)
     {
+        dd($request->all())
+
+
         try {
             $validated = $request->validate([
                 'pool_id' => 'required|exists:pool_lists,pool_id',
