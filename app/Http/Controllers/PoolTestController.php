@@ -36,7 +36,7 @@ class PoolTestController extends Controller
 
     PoolTest::create($validated);
 
-    return redirect()->route('pool-tests.index', $pool_id)
+    return redirect()->route('pool-tests.create', $pool_id)
         ->with('success', 'Pool test recorded successfully');
 }
 }
