@@ -53,6 +53,7 @@ class PoolTest extends Model
         'dpd3',
         'ccl',
         'ph',
+        'status',
         'sample_location',
         'action_taken',
     ];
@@ -69,6 +70,7 @@ class PoolTest extends Model
         'dpd3' => 'float',
         'ccl' => 'float',
         'ph' => 'float',
+        'status' => 'float',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
