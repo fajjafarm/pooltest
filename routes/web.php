@@ -32,7 +32,7 @@ use App\Http\Controllers\BikeRentalOrderController;
 //Route::resource('pool-tests/{pool_id}', PoolTestController::class)->only(['index', 'store']);
 
 Route::get('pool-tests/{pool_id}', [PoolTestController::class, 'index'])->name('pool-tests.create');
-Route::post('pool-tests/add/{pool_id}', [PoolTestController::class, 'store'])->name('pool-tests.store');
+Route::post('pool-tests/{pool_id}', [PoolTestController::class, 'store'])->name('pool-tests.store');
 
 Route::get('/thermal-suites/create', [ThermalSuiteController::class, 'create'])->name('thermal-suites.create');
 Route::post('/thermal-suites', [ThermalSuiteController::class, 'store'])->name('thermal-suites.store');
