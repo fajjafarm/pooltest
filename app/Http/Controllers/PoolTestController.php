@@ -10,6 +10,7 @@ class PoolTestController extends Controller
     public function index($pool_id)
     {
         $tests = PoolTest::with(['pool', 'user'])
+        ->where('pool_id', $pool_id)
             ->orderBy('created_at', 'desc')
             ->paginate(10);
         
