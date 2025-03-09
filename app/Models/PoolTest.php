@@ -16,8 +16,11 @@ class PoolTest extends Model
         'dpd3',
         'ph',
         'sample_location',
-        'action_taken'
+        'action_taken',
+        'ccl',
+        'user_id'
     ];
+}
 
     protected static function boot()
     {
