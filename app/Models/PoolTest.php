@@ -118,7 +118,7 @@ class PoolTest extends Model
      */
     public static function getSampleLocations()
     {
-        return ['pool', 'control_panel'];
+        return ['Pool', 'Control Panel'];
     }
 
     /**
