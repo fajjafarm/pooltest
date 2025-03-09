@@ -3,54 +3,142 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Str;
 
 class PoolTest extends Model
 {
-    protected $keyType = 'string';
-    public $incrementing = false;
+    use HasFactory;
 
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'pool_tests';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
     protected $fillable = [
         'pool_id',
+        'user_id',
         'dpd1',
         'dpd3',
+        'ccl',
         'ph',
         'sample_location',
         'action_taken',
-        'ccl',
-        'user_id'
     ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'pool_id' => 'string', // ULID is stored as a 26-character string
+        'user_id' => 'integer',
+        'dpd1' => 'float',
+        'dpd3' => 'float',
+        'ccl' => 'float',
+        'ph' => 'float',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
 
-    protected static function boot()
-    {
-        parent::boot();
-        static::creating(function ($model) {
-            if (empty($model->id)) {
-                $model->id = Str::ulid();
-            }
-            // Calculate status based on results
-            $model->status = $model->calculateStatus();
-        });
-    }
-
+    /**
+     * Get the pool that this test belongs to.
+     */
     public function pool()
     {
-        return $this->belongsTo(PoolList::class);
+        return $this->belongsTo(PoolList::class, 'pool_id', 'id');
     }
 
+    /**
+     * Get the user who performed this test.
+     */
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
-    private function calculateStatus()
+    /**
+     * Calculate Combined Chlorine Level (CCL) if not already set.
+     *
+     * @return float
+     */
+    public function calculateCCL()
     {
-        // Add your status calculation logic here
-        // Example:
-        if ($this->ccl < 0.5 || $this->ccl > 5.0 || $this->ph < 7.2 || $this->ph > 7.8) {
-            return 'needs_attention';
+        if ($this->ccl === null) {
+            return $this->dpd3 - $this->dpd1;
         }
-        return 'normal';
+        return $this->ccl;
+    }
+
+    /**
+     * Check if CCL is within acceptable range (<= 1).
+     *
+     * @return bool
+     */
+    public function isCCLacceptable()
+    {
+        return $this->calculateCCL() <= 1;
+    }
+
+    /**
+     * Scope a query to only include tests with high CCL.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeHighCCL($query)
+    {
+        return $query->whereRaw('dpd3 - dpd1 > 1');
+    }
+
+    /**
+     * Scope a query to filter by sample location.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  string  $location
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeBySampleLocation($query, $location)
+    {
+        return $query->where('sample_location', $location);
+    }
+
+    /**
+     * Get available sample location options.
+     *
+     * @return array
+     */
+    public static function getSampleLocations()
+    {
+        return ['pool', 'control_panel'];
+    }
+
+    /**
+     * Get available action taken options.
+     *
+     * @return array
+     */
+    public static function getActionOptions()
+    {
+        return [
+            'none',
+            'Changed Chlorine',
+            'Changed Acid',
+            'Changed PAC',
+            'Recalibrated Controller',
+            'Backwashed',
+            'Supervisor Notified',
+            'Code Brown',
+            'Code Yellow',
+            'Shocked'
+        ];
     }
 }
