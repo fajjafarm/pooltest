@@ -1,4 +1,5 @@
-<?php
+
+<?php 
 namespace App\Http\Controllers;
 
 use App\Models\PoolTest;
@@ -20,28 +21,27 @@ class PoolTestController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'pool_id' => 'required|string',
-            'dpd1' => 'required|numeric|min:0',
-            'dpd3' => 'required|numeric|min:0',
-            'ph' => 'required|numeric|min:0|max:14',
-            'sample_location' => 'required|in:pool,control_panel',
-            'action_taken' => 'required|in:none,Changed Chlorine,Changed Acid,Changed PAC,Recalibrated Controller,Backwashed,Supervisor Notified,Code Brown,Code Yellow,Shocked'
-        ]);
-        $validated['ccl'] = $request->dpd3 - $request->dpd1;
-        $validated['user_id'] = auth()->id();
+        try {
+            $validated = $request->validate([
+                'pool_id' => 'required|integer|exists:pool_lists,id',
+                'dpd1' => 'required|numeric|min:0',
+                'dpd3' => 'required|numeric|min:0',
+                'ph' => 'required|numeric|min:0|max:14',
+                'sample_location' => 'required|in:pool,control_panel',
+                'action_taken' => 'required|in:none,Changed Chlorine,Changed Acid,Changed PAC,Recalibrated Controller,Backwashed,Supervisor Notified,Code Brown,Code Yellow,Shocked'
+            ]);
 
-        PoolTest::create($validated);
+            $validated['ccl'] = $request->dpd3 - $request->dpd1;
+            $validated['user_id'] = auth()->id() ?? throw new \Exception('User not authenticated');
 
-        return redirect()->back()->with('success', 'Pool test recorded successfully');
+            PoolTest::create($validated);
 
-    //   if ( $ccl > 1){
-        
-      //  return redirect()->route('pooltest.create')->with('notgood', 'Combined Chlorine High! Action created');
-     //   }
-      //  if ($ccl <=1 ){
-       //     return redirect()->route('pooltest.create')->with('success', 'Pool test data submitted successfully!');
-        //    }
-        
+            return redirect()->back()->with('success', 'Pool test recorded successfully');
+
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->withInput()
+                ->with('error', 'Failed to record pool test: ' . $e->getMessage());
+        }
     }
 }
