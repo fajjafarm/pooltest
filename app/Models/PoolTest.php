@@ -20,7 +20,7 @@ class PoolTest extends Model
         'ccl',
         'user_id'
     ];
-}
+
 
     protected static function boot()
     {
