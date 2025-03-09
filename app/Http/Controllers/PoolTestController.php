@@ -25,7 +25,7 @@ class PoolTestController extends Controller
 
         try {
             $validated = $request->validate([
-                'pool_id' => 'required|exists:pool_lists,pool_id',
+                'pool_id' => 'required|exists:pool_list,pool_id',
                 'dpd1' => 'required|numeric|min:0',
                 'dpd3' => 'required|numeric|min:0',
                 'ph' => 'required|numeric|min:0|max:14',
@@ -35,7 +35,7 @@ class PoolTestController extends Controller
 
             $validated['ccl'] = $request->dpd3 - $request->dpd1;
             $validated['user_id'] = auth()->id() ?? throw new \Exception('User not authenticated');
-            dd($validated->all());
+           // dd($validated->all());
 
 
             PoolTest::create($validated);
