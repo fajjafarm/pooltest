@@ -26,6 +26,7 @@
                
 
                 <div class="card-body">
+                <h4 class="header-title">Pool Test for {{$pools}} </h4>
                 <form method="POST" action="{{ route('pool-tests.store', $pool_id) }}" class="mb-8">
                 @csrf
                         <div class="mb-3">
