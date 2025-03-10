@@ -49,8 +49,9 @@
                         <div class=" mb-3">
                     <label>Sample Location</label>
                     <select name="sample_location" class="form-select">
-                    <option value="Pool">Pool</option>
                     <option value="Control Panel">Control Panel</option>
+                    <option value="Pool">Pool</option>
+                    
                         
                         
                     </select>
