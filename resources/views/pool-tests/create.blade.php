@@ -4,7 +4,7 @@
     @include('layouts.partials.page-title', ['subtitle' => 'Pages', 'title' => 'Submit a Pool Test'])
     
     @if($errors->any())
-    <div style="color: red; margin-bottom: 10px;">
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
         <ul>
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -13,10 +13,10 @@
     </div>
 @endif
 @if(session('success'))
-    <div style="color: green; margin-bottom: 10px;">{{ session('success') }}</div>
+<div class="alert alert-success">{{ session('success') }}</div>
 @endif
 @if(session('warning'))
-    <div style="color: yellow; margin-bottom: 10px;">{{ session('warning') }}</div>
+<div class="alert alert-danger d-flex align-items-center" role="alert">{{ session('warning') }}</div>
 @endif
 
 <div class="card">
