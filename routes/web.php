@@ -18,6 +18,8 @@ use App\Http\Controllers\BikeHelmetController;
 use App\Http\Controllers\ThermalSuiteController;
 use App\Http\Controllers\ThermalSuiteCheckController;
 use App\Http\Controllers\BikeRentalOrderController;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\TrainingSessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +32,12 @@ use App\Http\Controllers\BikeRentalOrderController;
 */
 //super admin access only
 //Route::resource('pool-tests/{pool_id}', PoolTestController::class)->only(['index', 'store']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
+    Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
+    Route::post('/training', [TrainingSessionController::class, 'store'])->name('training.store');
+});
 
 Route::get('/pool-tests/{pool_id}', [PoolTestController::class, 'index'])->name('pool-tests.create');
 Route::post('/pool-tests/{pool_id}', [PoolTestController::class, 'store'])->name('pool-tests.store');
