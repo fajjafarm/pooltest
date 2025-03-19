@@ -9,12 +9,12 @@ class CreatePoolTestsTable extends Migration
     {
         Schema::create('pool_tests', function (Blueprint $table) {
             $table->ulid('id')->primary();
-            $table->foreignId('pool_id')->constrained();
+            $table->foreignUlid('pool_id')->constrained();
             $table->decimal('dpd1', 5, 2);
             $table->decimal('dpd3', 5, 2);
             $table->decimal('ccl', 5, 2)->virtualAs('dpd3 - dpd1');
             $table->decimal('ph', 5, 2);
-            $table->foreignId('user_id')->constrained();
+            $table->foreignUlid('user_id')->constrained();
             $table->string('sample_location');
             $table->string('status');
             $table->string('action_taken')->default('none');
