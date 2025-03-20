@@ -66,7 +66,7 @@ return [
         ],
     ],
 
-        /'users' => [
+        'users' => [
              'driver' => 'database',
              'table' => 'users',
          ],
