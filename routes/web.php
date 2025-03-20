@@ -41,17 +41,15 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('{first}/{second}/{third}', [RoutingController::class, 'thirdLevel'])->name('third');
     Route::get('{first}/{second}', [RoutingController::class, 'secondLevel'])->name('second');
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
-});
 
-Auth::routes(); // Adds login, logout, register, etc.
 
-Route::middleware(['auth'])->group(function () {
+
 
     Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
     Route::post('/training', [TrainingSessionController::class, 'store'])->name('training.store');
 
-});
+
 Route::get('/pool-tests/{pool_id}', [PoolTestController::class, 'index'])->name('pool-tests.create');
 Route::post('/pool-tests/{pool_id}', [PoolTestController::class, 'store'])->name('pool-tests.store');
 
@@ -119,3 +117,5 @@ Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.s
 
 
 Route::get('/dashboards/pooltests', [PoolTestController::class, 'pooltests'])->name('pooltests');
+
+});
