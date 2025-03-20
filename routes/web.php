@@ -32,7 +32,7 @@ use App\Http\Controllers\TrainingSessionController;
 */
 //super admin access only
 //Route::resource('pool-tests/{pool_id}', PoolTestController::class)->only(['index', 'store']);
-require __DIR__ . '/auth.php';
+
 
 
    Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
@@ -107,7 +107,7 @@ Route::post('/pooltest', [PoolTestController::class, 'store'])->name('pooltest.s
 
 
 Route::get('/dashboards/pooltests', [PoolTestController::class, 'pooltests'])->name('pooltests');
-
+require __DIR__ . '/auth.php';
 Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('', [RoutingController::class, 'index'])->name('root');
     Route::get('/home', fn()=>view('dashboards.index'))->name('home');
