@@ -22,8 +22,7 @@ return new class extends Migration
             $table->string('checked_by');
             $table->timestamps();
         });
-    }
-    {
+    
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
             $table->string('queue')->index();
