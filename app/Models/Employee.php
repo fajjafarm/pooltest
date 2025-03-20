@@ -2,23 +2,34 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
 class Employee extends Authenticatable
 {
     use \Illuminate\Database\Eloquent\Concerns\HasUlids;
+    use Notifiable; // Required for password resets and notifications
 
     public $incrementing = false;
     protected $keyType = 'string';
 
     protected $fillable = [
-        'first_name',  // Changed from 'name'
-        'surname',     // Added
-        'email', 
-        'password', 
-        'start_date', 
-        'end_date', 
+        'first_name',
+        'surname',
+        'email',
+        'password',
+        'start_date',
+        'end_date',
         'position'
+    ];
+
+    protected $hidden = [
+        'password', // Hide password in serialization
+        'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified_at' => 'datetime',
     ];
 
     protected static function boot()
@@ -31,7 +42,6 @@ class Employee extends Authenticatable
         });
     }
 
-    // Add a computed property for full name if needed
     public function getFullNameAttribute()
     {
         return "{$this->first_name} {$this->surname}";
