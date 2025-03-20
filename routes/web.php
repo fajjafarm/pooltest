@@ -33,7 +33,7 @@ use App\Http\Controllers\TrainingSessionController;
 //super admin access only
 //Route::resource('pool-tests/{pool_id}', PoolTestController::class)->only(['index', 'store']);
 require __DIR__ . '/auth.php';
-Auth::routes(); // Adds login, logout, register, etc.
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/users/{user:id}', [UserController::class, 'show'])->name('users.show'); // Updated
