@@ -14,9 +14,9 @@ class CreateUserTrainingSessionTable extends Migration
             $table->text('comments')->nullable();
             $table->timestamps();
     });
-
+    }
     public function down()
     {
         Schema::dropIfExists('user_training_session');
     }
-}}
+}
