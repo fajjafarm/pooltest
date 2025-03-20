@@ -34,6 +34,7 @@ use App\Http\Controllers\TrainingSessionController;
 //Route::resource('pool-tests/{pool_id}', PoolTestController::class)->only(['index', 'store']);
 require __DIR__ . '/auth.php';
 
+
 Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('', [RoutingController::class, 'index'])->name('root');
     Route::get('/home', fn()=>view('dashboards.index'))->name('home');
@@ -42,13 +43,15 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
 });
 
+Auth::routes(); // Adds login, logout, register, etc.
 
+Route::middleware(['auth'])->group(function ()) {
 
     Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
     Route::post('/training', [TrainingSessionController::class, 'store'])->name('training.store');
 
-
+}
 Route::get('/pool-tests/{pool_id}', [PoolTestController::class, 'index'])->name('pool-tests.create');
 Route::post('/pool-tests/{pool_id}', [PoolTestController::class, 'store'])->name('pool-tests.store');
 
