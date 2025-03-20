@@ -45,7 +45,7 @@ Route::group(['prefix' => '/', 'middleware' => 'auth'], function () {
 
 Auth::routes(); // Adds login, logout, register, etc.
 
-Route::middleware(['auth'])->group(function ()); {
+Route::middleware(['auth'])->group(function () {
 
     Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
