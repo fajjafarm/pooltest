@@ -18,7 +18,7 @@ use App\Http\Controllers\BikeHelmetController;
 use App\Http\Controllers\ThermalSuiteController;
 use App\Http\Controllers\ThermalSuiteCheckController;
 use App\Http\Controllers\BikeRentalOrderController;
-use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\TrainingSessionController;
 /*
 |--------------------------------------------------------------------------
@@ -36,10 +36,10 @@ require __DIR__ . '/auth.php';
 Auth::routes(); // Adds login, logout, register, etc.
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/employees/{employee:id}', [EmployeeController::class, 'show'])->name('employees.show');
+    Route::get('/users/{user:id}', [UserController::class, 'show'])->name('users.show'); // Updated
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
     Route::post('/training', [TrainingSessionController::class, 'store'])->name('training.store');
-
+});
 
    Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
@@ -121,4 +121,3 @@ Route::get('/dashboards/pooltests', [PoolTestController::class, 'pooltests'])->n
     Route::get('{first}/{second}', [RoutingController::class, 'secondLevel'])->name('second');
     Route::get('{any}', [RoutingController::class, 'root'])->name('any');
 
-});

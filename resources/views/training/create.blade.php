@@ -71,19 +71,19 @@
     <label>Trainer</label>
     <input type="text" name="trainer" class="form-control" required>
 </div>
-            <div class="form-group">
-                <label>Employees</label>
-                @foreach($employees as $employee)
-                    <div class="form-check">
-                        <input type="checkbox" name="employees[]" value="{{ $employee->id }}"
-                            class="form-check-input">
-                        <label>{{ $employee->name }}</label>
-                        <textarea name="comments[{{ $employee->id }}]" 
-                            class="form-control" 
-                            placeholder="Comments for {{ $employee->name }}"></textarea>
-                    </div>
-                @endforeach
-            </div>
+<div class="form-group">
+    <label>Employees</label>
+    @foreach($users as $user) 
+        <div class="form-check">
+            <input type="checkbox" name="users[]" value="{{ $user->id }}" >
+                class="form-check-input">
+            <label>{{ $user->full_name }}</label>
+            <textarea name="comments[{{ $user->id }}]" 
+                class="form-control" 
+                placeholder="Comments for {{ $user->full_name }}"></textarea>
+        </div>
+    @endforeach
+</div>
 
             <button type="submit" class="btn btn-primary">Save Training Session</button>
         </form>

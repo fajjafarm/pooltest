@@ -7,13 +7,12 @@ class CreateEmployeeTrainingSessionTable extends Migration
 {
     public function up()
     {
-        Schema::create('employee_training_session', function (Blueprint $table) {
+        Schema::create('user_training_session', function (Blueprint $table) { // Changed table name
             $table->ulid('id')->primary();
-            $table->foreignUlid('employee_id')->constrained()->onDelete('cascade');
-            $table->foreignUlid('training_session_id')->constrained()->onDelete('cascade');
+            $table->foreignUlid('user_id')->constrained('users')->onDelete('cascade'); // Changed to user_id
+            $table->foreignUlid('training_session_id')->constrained('training_sessions')->onDelete('cascade');
             $table->text('comments')->nullable();
             $table->timestamps();
-        });
     }
 
     public function down()

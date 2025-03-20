@@ -11,7 +11,7 @@ class Qualification extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'employee_id', 'name', 'acquired_date', 'expiry_date'
+        'user_id', 'name', 'acquired_date', 'expiry_date' // Changed to user_id
     ];
 
     protected static function boot()
@@ -24,8 +24,8 @@ class Qualification extends Model
         });
     }
 
-    public function employee()
+    public function user() // Changed to user()
     {
-        return $this->belongsTo(Employee::class);
+        return $this->belongsTo(User::class);
     }
 }

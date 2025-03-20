@@ -15,14 +15,14 @@
         <div class="col-md-6">
             <div class="card border-secondary border">
             <div class="container">
-            <h1>{{ $employee->first_name }} {{ $employee->surname }}</h1>
+        <h1>{{ $user->full_name }}</h1>
         
         <div class="card mb-4">
             <div class="card-body">
-                <p>Position: {{ $employee->position }}</p>
-                <p>Start Date: {{ $employee->start_date }}</p>
-                @if($employee->end_date)
-                    <p>End Date: {{ $employee->end_date }}</p>
+                <p>Position: {{ $user->position }}</p>
+                <p>Start Date: {{ $user->start_date }}</p>
+                @if($user->end_date)
+                    <p>End Date: {{ $user->end_date }}</p>
                 @endif
             </div>
         </div>
