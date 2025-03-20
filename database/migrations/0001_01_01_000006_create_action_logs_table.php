@@ -21,8 +21,8 @@ class CreateActionLogsTable extends Migration
         $table->string('escalation')->nullable();
         $table->text('comments')->nullable();
         $table->string('progress')->nullable();
-        $table->string('logged_by');->nullable();
-        $table->string('actioned_by');->nullable();
+        $table->string('logged_by')->nullable();
+        $table->string('actioned_by')->nullable();
         $table->timestamps();
     });
 }
