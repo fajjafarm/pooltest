@@ -9,8 +9,7 @@ class CreatePoolTestsTable extends Migration
     {
         Schema::create('pool_tests', function (Blueprint $table) {
             $table->ulid('id')->primary();
-            $table->unsignedBigInteger('pool_id');
-            $table->foreign('pool_id')->references('id')->on('pool_list');
+            $table->char('pool_id');
             $table->decimal('dpd1', 5, 2);
             $table->decimal('dpd3', 5, 2);
             $table->decimal('ccl', 5, 2)->virtualAs('dpd3 - dpd1');
