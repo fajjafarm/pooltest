@@ -51,7 +51,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
     Route::post('/training', [TrainingSessionController::class, 'store'])->name('training.store');
 
-}
+});
 Route::get('/pool-tests/{pool_id}', [PoolTestController::class, 'index'])->name('pool-tests.create');
 Route::post('/pool-tests/{pool_id}', [PoolTestController::class, 'store'])->name('pool-tests.store');
 
