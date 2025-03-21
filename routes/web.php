@@ -35,11 +35,11 @@ use App\Http\Controllers\TrainingSessionController;
 require __DIR__ . '/auth.php';
 
 
-Route::middleware(['auth'])->group(function () {
+
     Route::get('/users/{user:id}', [UserController::class, 'show'])->name('users.show'); // Updated
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
     Route::post('/training', [TrainingSessionController::class, 'store'])->name('training.store');
-});
+
 
    Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
     Route::get('/training/create', [TrainingSessionController::class, 'create'])->name('training.create');
