@@ -31,7 +31,7 @@ use App\Http\Controllers\TrainingSessionController;
 |
 */
 //super admin access only
-//Route::resource('pool-tests/{pool_id}', PoolTestController::class)->only(['index', 'store']);
+//Route::resource('pool-tests/{pool_id}', PoolTesttController::class)->only(['index', 'store']);
 require __DIR__ . '/auth.php';
 
 
